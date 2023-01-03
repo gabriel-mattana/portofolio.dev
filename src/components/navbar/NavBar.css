@@ -1,0 +1,25 @@
+#navbar{
+    top:0;
+    margin: 0;
+    position:sticky;
+    width: 100%;
+    height:80px;
+    background-color: grey;
+    table-layout: fixed;
+}
+
+
+#navbar .navitem{
+    text-decoration: none;
+    
+}
+
+#navbar .navitem:hover{
+    background-color: rgb(131, 131, 131);
+}
+
+#navbar .navbrand{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
