@@ -1,25 +1,39 @@
-#navbar{
-    top:0;
-    margin: 0;
-    position:sticky;
-    width: 100%;
-    height:80px;
+header {
+    display: flex;
     background-color: grey;
-    table-layout: fixed;
+    overflow: hidden;
+    color: wheat;
+    height: 50px;
 }
 
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
 
-#navbar .navitem{
+.navitem {
     text-decoration: none;
-    
+    height: 100%;   
+    background-color: grey;
+    border: 0;
+    color: wheat;
+
 }
 
-#navbar .navitem:hover{
-    background-color: rgb(131, 131, 131);
+.navitem:hover{
+    background-color: rgb(175, 175, 175);
+}
+.navitem:active
+{
+    background-color: rgb(180, 35, 35);
 }
 
-#navbar .navbrand{
+.navbrand button{
     background-color: black;
+    min-width: 200px;
     color: white;
-    font-size: 25px;
+    font-size: 100%;
+
 }
+

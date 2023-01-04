@@ -1,23 +1,20 @@
 import React from "react";
 import NavItem from "./NavItem";
-import NavBrand from "./NavBrand";
 import "./NavBar.css";
 
 function NavBar() {
   return (
-    <table id="navbar">
-      <tbody>
-        <tr>
-          <NavBrand title="Gabriel Mattana" />
-
-          <NavItem href="#home" label="Home" />
-          <NavItem href="#projects" label="Projects" />
-          <NavItem href="#videogames" label="Video games" />
-          <NavItem href="#programing" label="Programing" />
-          <NavItem href="#contact" label="Contact" />
-        </tr>
-      </tbody>
-    </table>
+    <header>
+      <div className="navbrand">
+        <NavItem href=".project.html" label="Gabriel Mattana" />
+      </div>
+      <div className="navbar">
+        <NavItem href="#projects" label="Projects" />
+        <NavItem href="#videogames" label="Video games" />
+        <NavItem href="#programing" label="Programing" />
+        <NavItem href="#contact" label="Contact" />
+      </div>
+    </header>
   );
 }
 
