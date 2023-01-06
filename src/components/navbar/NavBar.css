@@ -27,7 +27,7 @@ header {
 }
 .navitem:active
 {
-    background-color: rgb(180, 35, 35);
+    background-color: rgb(253, 253, 253);
 }
 
 .navbrand button{

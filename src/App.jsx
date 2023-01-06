@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './components/navbar/NavBar';
+import ContentDisplayer from "./components/content/ContentDisplayer"
+import Footer from "./components/footer/Footer";
 import './App.css';
 
 class App extends Component {
@@ -7,13 +9,8 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar/>
-        {/* <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
+        <ContentDisplayer/>
+        <Footer/>
       </div>
     );
   }
