@@ -1,12 +1,18 @@
 import React from "react";
 
+function NavButton(props) 
+{
 
-function NavButton(props) {
+  function UpdateContent() {
+    console.log("Clicked on " + props.label);
+  }
 
-console.log("NavItem " + props.label + " rendered");
+  console.log("NavItem " + props.label + " rendered");
 
   return (
-      <button className="navbutton" href={props.href}>{props.label}</button>
+    <button className="navbutton" onClick={UpdateContent}>
+      {props.label}
+    </button>
   );
 }
 
