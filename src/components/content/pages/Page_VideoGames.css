@@ -1,0 +1,38 @@
+.miniature-displayer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+}
+
+img{
+    flex:20%;
+}
+
+.miniature{
+    flex: 20%;
+    text-align: center;
+    margin: 10px;
+    background-color: black;
+    color: wheat;
+}
+
+.miniature img{
+    margin: 0;
+    width: 400px;
+}
+
+.miniature .details
+{ 
+    margin: 0;
+    background-size:cover;
+}
+
+h1{
+    text-align: center;
+}
+
+.image{
+    background: url("/public/images/HandleTheCrate_title.png");
+    background-size: cover;
+}
+
