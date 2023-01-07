@@ -13,7 +13,7 @@ header {
     overflow: hidden;
 }
 
-.navitem {
+.navbutton{
     text-decoration: none;
     height: 100%;   
     background-color: grey;
@@ -22,10 +22,10 @@ header {
     min-width: 120px;
 }
 
-.navitem:hover{
+.navbutton:hover{
     background-color: rgb(175, 175, 175);
 }
-.navitem:active
+.navbutton:active
 {
     background-color: rgb(253, 253, 253);
 }

@@ -10,7 +10,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "tar": "^6.1.13",
-    "watch": "^1.0.2"
+    "watch": "^0.13.0"
   },
   "scripts": {
     "start": "react-scripts start",
