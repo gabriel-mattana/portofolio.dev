@@ -1,5 +1,9 @@
 import React from "react";
 import NavButton from "./NavButton";
+import Page_Project from "../content/pages/Page_Projects";
+import Page_VideoGames from "../content/pages/Page:_VideoGames";
+import Page_Programming from "../content/pages/Page_Programming";
+import Page_Contact from "../content/pages/Page_Contact";
 import "./NavBar.css";
 
 function NavBar() {
@@ -9,10 +13,10 @@ function NavBar() {
         <NavButton href=".project.html" label="Gabriel Mattana" />
       </div>
       <div className="navbar">
-        <NavButton href="#projects" label="Projects" />
-        <NavButton href="#videogames" label="Video games" />
-        <NavButton href="#programing" label="Programing" />
-        <NavButton href="#contact" label="Contact" />
+        <NavButton link={<Page_Project />} label="Projects" />
+        <NavButton link={<Page_VideoGames />} label="Video games" />
+        <NavButton link={<Page_Programming />}label="Programming" />
+        <NavButton link={<Page_Contact />} label="Contact" />
       </div>
     </header>
   );

@@ -1,7 +1,8 @@
 import React from "react";
 import {ContentDisplayerInstance} from "../content/ContentDisplayer";
 
-function NavButton(props) 
+
+export default function NavButton(props) 
 {
 
   function UpdateContent() {
@@ -9,7 +10,7 @@ function NavButton(props)
     console.log("Clicked on " + props.label);
     var displayer = ContentDisplayerInstance;
     console.log(displayer);
-    displayer.UpdateContent("hahaha");
+    displayer.UpdateContent(props.link);
   }
 
   console.log("NavItem " + props.label + " rendered");
@@ -21,4 +22,3 @@ function NavButton(props)
   );
 }
 
-export default NavButton;

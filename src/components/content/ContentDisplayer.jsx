@@ -10,12 +10,14 @@ class ContentDisplayer extends React.Component {
         super();
         console.log("Content displayer created");
         ContentDisplayerInstance = ContentDisplayerInstance || this; 
-        this.state = {content:<h1>Empty</h1>}
+        this.state = {
+            content:<h1>Empty</h1>,
+        }
     }
 
     UpdateContent(props)
     {
-        this.setState({content: <h1>{props}</h1>});
+        this.setState({content: props});
     }
 
    render() {
