@@ -1,5 +1,5 @@
 import React from "react";
-import {ContentDisplayerInstance as PageDisplayerInstance} from "../content/PageDisplayer";
+import {MainContainerInstance} from "../content/MainContainer";
 
 
 export default function NavButton(props) 
@@ -7,7 +7,7 @@ export default function NavButton(props)
   function UpdateContent() {
     
     console.log("Clicked on " + props.label);
-    PageDisplayerInstance.UpdateContent(props.link);
+    MainContainerInstance.UpdateContent(props.link);
   }
 
   console.log("NavItem " + props.label + " rendered");

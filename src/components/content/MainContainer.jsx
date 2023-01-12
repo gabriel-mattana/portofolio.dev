@@ -1,15 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 
 
-let PageDisplayerInstance;
+let MainContainerInstance;
 
-class PageDisplayer extends React.Component {
+class MainContainer extends React.Component {
 
     constructor()
     {
         super();
-        console.log("Content displayer created");
-        PageDisplayerInstance = PageDisplayerInstance || this; 
+        console.log("main container created");
+        MainContainerInstance = MainContainerInstance || this; 
+
         this.state = {
             content:<h1>Empty</h1>,
         }
@@ -28,5 +29,5 @@ class PageDisplayer extends React.Component {
   }
 }
 
-export {PageDisplayerInstance as ContentDisplayerInstance};
-export default PageDisplayer;
+export {MainContainerInstance};
+export default MainContainer;
