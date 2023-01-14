@@ -3,6 +3,7 @@ import "./Page_VideoGames.css";
 import MiniaturesDisplayer from "../../displayers/MiniaturesDisplayer";
 import { videoGames } from "../data";
 
+
 export default function Page_VideoGames()
 {
     return(

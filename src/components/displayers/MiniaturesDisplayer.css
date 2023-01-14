@@ -1,0 +1,39 @@
+.miniature-displayer{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: grey;
+    justify-content:flex-start;
+}
+
+.miniature{
+    flex-basis: 32%;
+    text-align: center;
+    background-color: black;
+    margin: 10px 0 0 1%;
+    color: wheat;
+    position: relative;
+}
+
+
+
+/* @media (max-width:800px) {
+    
+    .miniature{
+        flex: 49%;
+    }
+}
+
+@media (max-width:540px) {
+    
+    .miniature{
+        flex: 100%;
+        min-width: none;
+
+    }
+} */
+
+img{
+    
+    width: 100%;
+}
+
