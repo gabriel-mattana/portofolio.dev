@@ -14,23 +14,28 @@
     position: relative;
 }
 
-
-
-/* @media (max-width:800px) {
+ @media (max-width:800px) {
     
+    .miniature-displayer{
+        padding-right: 1%;
+    }
+
     .miniature{
-        flex: 49%;
+        flex: 48%;
     }
 }
 
 @media (max-width:540px) {
     
-    .miniature{
-        flex: 100%;
-        min-width: none;
-
+    .miniature-displayer{
+        padding: 0 ;
     }
-} */
+
+    .miniature{
+        margin: 10px 0;
+        flex: 100%;
+    }
+} 
 
 img{
     
