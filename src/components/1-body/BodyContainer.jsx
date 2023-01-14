@@ -1,15 +1,15 @@
 import React from "react";
 
 
-let MainContainerInstance;
+let Body_Instance;
 
-class MainContainer extends React.Component {
+class BodyContainer extends React.Component {
 
     constructor()
     {
         super();
         console.log("main container created");
-        MainContainerInstance = MainContainerInstance || this; 
+        Body_Instance = Body_Instance || this; 
 
         this.state = {
             content:<h1>Empty</h1>,
@@ -29,5 +29,5 @@ class MainContainer extends React.Component {
   }
 }
 
-export {MainContainerInstance};
-export default MainContainer;
+export {Body_Instance as MainContainerInstance};
+export default BodyContainer;

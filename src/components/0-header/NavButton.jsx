@@ -1,5 +1,5 @@
 import React from "react";
-import {MainContainerInstance} from "../content/MainContainer";
+import {MainContainerInstance} from "../1-body/BodyContainer";
 
 
 export default function NavButton(props) 
