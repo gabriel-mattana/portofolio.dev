@@ -1,6 +1,6 @@
 import React from "react";
 import NavButton from "./NavButton";
-import CollectionPresenter from "../1-body/displayers/CollectionPresenter";
+import PageTemplate from "../1-body/PageTemplate";
 import "./NavBar.css";
 
 import { videoGames } from "../1-body/data";
@@ -9,13 +9,13 @@ function NavBar() {
   return (
     <header>
       <div className="navbrand">
-        <NavButton link={<CollectionPresenter />} label="Gabriel Mattana" />
+        <NavButton link={<PageTemplate />} label="Gabriel Mattana" />
       </div>
       <div className="navbar">
-        <NavButton link={<CollectionPresenter />} label="Projects" />
-        <NavButton link={<CollectionPresenter content={videoGames}/>} label="Video games" />
-        <NavButton link={<CollectionPresenter />} label="Programming" />
-        <NavButton link={<CollectionPresenter />} label="Contact" />
+        <NavButton link={<PageTemplate />} label="Projects" />
+        <NavButton link={<PageTemplate content={videoGames}/>} label="Video games" />
+        <NavButton link={<PageTemplate />} label="Programming" />
+        <NavButton link={<PageTemplate />} label="Contact" />
       </div>
     </header>
   );

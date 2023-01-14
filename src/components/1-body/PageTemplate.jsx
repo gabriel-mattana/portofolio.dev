@@ -1,8 +1,8 @@
 import React from "react";
-import MiniaturesDisplayer from "./MiniaturesDisplayer";
+import MiniaturesDisplayer from "./displayers/MiniaturesDisplayer";
 
 
-export default function CollectionPresenter({content})
+export default function PageTemplate({content})
 {
     return(
         <React.Fragment>
