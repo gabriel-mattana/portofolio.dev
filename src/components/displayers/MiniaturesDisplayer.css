@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     background-color: grey;
     justify-content:flex-start;
+    padding: 0 10%;
 }
 
 .miniature{
@@ -16,10 +17,6 @@
 
  @media (max-width:800px) {
     
-    .miniature-displayer{
-        padding-right: 1%;
-    }
-
     .miniature{
         flex: 48%;
     }
@@ -27,8 +24,9 @@
 
 @media (max-width:540px) {
     
-    .miniature-displayer{
-        padding: 0 ;
+    .miniature-displayer
+    {
+        padding: 0 5px;
     }
 
     .miniature{

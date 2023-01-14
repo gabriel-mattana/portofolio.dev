@@ -7,30 +7,36 @@ const data_template = {
     year: String
 }
 
-var bigBlue = Object.assign({}, data_template);
-bigBlue.key = 1;
-bigBlue.img = "/images/HandleTheCrate_title.png";
-bigBlue.title = "Big Blue";
-bigBlue.year = "2022";
+var BluePeace = Object.assign({}, data_template);
+BluePeace.key = 1;
+BluePeace.img = "/images/BluePeace.png";
+BluePeace.title = "Blue Peace";
+BluePeace.year = "2022";
+
+var FallenStar = Object.assign({}, data_template);
+FallenStar.key = 2;
+FallenStar.img = "/images/FallenStar.png";
+FallenStar.title = "Fallen star";
+FallenStar.year = "2022";
 
 var handleTheCrate = Object.assign({}, data_template);
-handleTheCrate.key = 2;
-handleTheCrate.img = "/images/HandleTheCrate_title.png";
+handleTheCrate.key = 3;
+handleTheCrate.img = "/images/HandleTheCrate.png";
 handleTheCrate.title = "Handle the Crate";
 handleTheCrate.year = "2022";
 
 var clockTower = Object.assign({}, data_template);
-clockTower.key = 3;
-clockTower.img = "/images/HandleTheCrate_title.png";
+clockTower.key = 4;
+clockTower.img = "/images/ClockTower.png";
 clockTower.title = "Clock Tower";
 clockTower.year = "2022";
 
 var marryMe = Object.assign({}, data_template);
-marryMe.key = 4;
-marryMe.img = "/images/HandleTheCrate_title.png";
+marryMe.key = 5;
+marryMe.img = "/images/MarryMe.png";
 marryMe.title = "Marry me";
-marryMe.year = "2022";
+marryMe.year = "2021";
 
-var videoGames = [bigBlue, handleTheCrate, clockTower, marryMe];
+var videoGames = [BluePeace, FallenStar, handleTheCrate, clockTower, marryMe];
 
 export {videoGames}
