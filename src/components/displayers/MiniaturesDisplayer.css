@@ -1,9 +1,9 @@
 .miniature-displayer{
     display:flex;
     flex-wrap: wrap;
-    background-color: grey;
     justify-content:flex-start;
     padding: 0 10%;
+    margin: 20px;
 }
 
 .miniature{

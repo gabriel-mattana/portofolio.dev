@@ -23,7 +23,7 @@ class MainContainer extends React.Component {
 
    render() {
 
-    return <main id="page-displayer">page Displayer 
+    return <main id="main-container">page Displayer 
             {this.state.content}
             </main>;
   }

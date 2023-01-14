@@ -3,7 +3,7 @@ header {
     background-color: grey;
     overflow: hidden;
     color: wheat;
-    height: 50px;
+    height: 70px;
 }
 
 .navbar{
@@ -11,12 +11,13 @@ header {
     justify-content: space-evenly;
     width: 100%;
     overflow: hidden;
+    background-color: #191919;
 }
 
 .navbutton{
     text-decoration: none;
+    background-color: transparent;
     height: 100%;   
-    background-color: grey;
     border: 0;
     color: wheat;
     min-width: 120px;
