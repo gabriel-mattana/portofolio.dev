@@ -1,5 +1,6 @@
 .App{
   color: rgb(230, 230, 230);
+  background-color: #212121;
 }
 
 body
@@ -9,5 +10,5 @@ body
 
 #main-container{
   min-height:100vh;
-  background-color: #212121;
+  
 }
