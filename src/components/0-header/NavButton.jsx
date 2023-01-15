@@ -1,13 +1,12 @@
 import React from "react";
-import {MainContainerInstance} from "../1-body/BodyContainer";
-
+import {Body_Instance} from "../1-body/BodyContainer";
 
 export default function NavButton(props) 
 {
   function UpdateContent() {
     
     console.log("Clicked on " + props.label);
-    MainContainerInstance.UpdateContent(props.link);
+    Body_Instance.UpdateContent(props.link);
   }
 
   console.log("NavItem " + props.label + " rendered");

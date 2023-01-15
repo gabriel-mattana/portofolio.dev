@@ -11,13 +11,17 @@ class Data{
 
 
 var bluePeace = new Data("Blue peace", "/games/blue_peace.jpg", "2022");
-var fallenStar = new Data("Fallen Star", "/games/fallen_star.jpg", "2022");
-var handleTheCrate = new Data("HandleTheCrate", "/games/handle_the_crate.jpg", "2022");
-var clockTower = new Data("Clock Tower", "/games/clock_tower.jpg", "2022");
-var marryMe = new Data("MarryMe", "/games/marry_me.jpg", "2021");
+var fallenStar = new Data("Fallen star", "/games/fallen_star.jpg", "2022");
+var handleTheCrate = new Data("Handle the crate", "/games/handle_the_crate.jpg", "2022");
+var clockTower = new Data("Clock tower", "/games/clock_tower.jpg", "2022");
+var marryMe = new Data("Marry me", "/games/marry_me.jpg", "2021");
 
 
-var videoGames = [bluePeace, fallenStar, handleTheCrate, clockTower, marryMe];
+var videoGames = {
+    title: "Video games",
+    text:"hereby all my videos games",
+    data: [bluePeace, fallenStar, handleTheCrate, clockTower, marryMe]
+};
 
 
 

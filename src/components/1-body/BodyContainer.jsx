@@ -1,6 +1,5 @@
 import React from "react";
 
-
 let Body_Instance;
 
 class BodyContainer extends React.Component {
@@ -23,11 +22,11 @@ class BodyContainer extends React.Component {
 
    render() {
 
-    return <main id="main-container">page Displayer 
+    return <main id="main-container">
             {this.state.content}
             </main>;
   }
 }
 
-export {Body_Instance as MainContainerInstance};
+export {Body_Instance};
 export default BodyContainer;
