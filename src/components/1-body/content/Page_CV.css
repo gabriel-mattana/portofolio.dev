@@ -1,0 +1,16 @@
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    height: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+  }
