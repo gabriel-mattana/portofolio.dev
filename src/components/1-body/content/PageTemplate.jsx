@@ -1,7 +1,6 @@
 import React from "react";
 import MiniaturesDisplayer from "../displayers/MiniaturesDisplayer";
 
-
 export default function PageTemplate({content})
 {
     return(

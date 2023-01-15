@@ -25,13 +25,13 @@ var litius = new Data("The adventures of Litius Jurdal", "/books/litius.jpg", "2
 var arcania2 = new Data("Arcania medallions: book II", "/books/arcania2.jpg", "2017");
 var arcania1 = new Data("Arcania medallions: book I", "/books/arcania1.jpg", "2016");
 
-var japan = new Data("CrazyLongTrip: the Land of the Rising Sun", "/books/japan.jpg", "2019");
+var japan = new Data("CrazyLongTrip: the Land of the Rising Sun", "/books/japan.jpg", "2020");
 var compostella = new Data("CrazyLongTrip: on the way of Compostella", "/books/compostella.jpg", "2018");
 
 var books = {
     title: "Books",
     text:"hereby all my books",
-    data: [japan, astraWorld,compostella, litius, arcania1, arcania2]
+    data: [japan, astraWorld,compostella, litius, arcania2, arcania1]
 };
 
 

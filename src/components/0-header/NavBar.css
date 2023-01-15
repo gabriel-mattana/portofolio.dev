@@ -1,9 +1,13 @@
 header {
     display: flex;
+    position: fixed;
     background-color: grey;
     overflow: hidden;
     color: wheat;
     height: 70px;
+    width: 100%;
+    z-index: 1;
+    top: 0;
 }
 
 .navbar{

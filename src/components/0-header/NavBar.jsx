@@ -1,9 +1,9 @@
 import React from "react";
 import NavButton from "./NavButton";
 import PageTemplate from "../1-body/content/PageTemplate";
+import Page_VideoGames from "../1-body/content/Page_VideoGames";
+import Page_Books from "../1-body/content/Page_Books";
 import "./NavBar.css";
-
-import { videoGames, books } from "../1-body/data";
 
 function NavBar() {
   return (
@@ -13,8 +13,8 @@ function NavBar() {
       </div>
       <div className="navbar">
         <NavButton link={<PageTemplate />} label="Projects" />
-        <NavButton link={<PageTemplate content={videoGames}/>} label="Video games" />
-        <NavButton link={<PageTemplate content={books}/>} label="Books" />
+        <NavButton link={<Page_VideoGames/>} label="Video games" />
+        <NavButton link={<Page_Books/>} label="Books" />
         <NavButton link={<PageTemplate />} label="Contact" />
       </div>
     </header>
