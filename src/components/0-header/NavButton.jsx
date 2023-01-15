@@ -6,7 +6,9 @@ export default function NavButton(props)
   function UpdateContent() {
     
     console.log("Clicked on " + props.label);
+    
     Body_Instance.UpdateContent(props.link);
+    document.documentElement.scrollTop = 0;
   }
 
   console.log("NavItem " + props.label + " rendered");
