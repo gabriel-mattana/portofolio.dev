@@ -3,7 +3,7 @@ import NavButton from "./NavButton";
 import PageTemplate from "../1-body/PageTemplate";
 import "./NavBar.css";
 
-import { videoGames } from "../1-body/data";
+import { videoGames, books } from "../1-body/data";
 
 function NavBar() {
   return (
@@ -14,7 +14,7 @@ function NavBar() {
       <div className="navbar">
         <NavButton link={<PageTemplate />} label="Projects" />
         <NavButton link={<PageTemplate content={videoGames}/>} label="Video games" />
-        <NavButton link={<PageTemplate />} label="Programming" />
+        <NavButton link={<PageTemplate content={books}/>} label="Books" />
         <NavButton link={<PageTemplate />} label="Contact" />
       </div>
     </header>
