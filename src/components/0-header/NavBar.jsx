@@ -1,6 +1,6 @@
 import React from "react";
 import NavButton from "./NavButton";
-import PageTemplate from "../1-body/PageTemplate";
+import PageTemplate from "../1-body/content/PageTemplate";
 import "./NavBar.css";
 
 import { videoGames, books } from "../1-body/data";
