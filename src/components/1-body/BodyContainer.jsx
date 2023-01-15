@@ -22,7 +22,7 @@ class BodyContainer extends React.Component {
 
    render() {
 
-    return <main id="main-container">
+    return <main>
             {this.state.content}
             </main>;
   }

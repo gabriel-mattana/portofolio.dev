@@ -9,7 +9,7 @@ body
   margin: 0;
 }
 
-#main-container{
+main{
   min-height:100vh;
-  
+  padding-top: 100px;
 }
