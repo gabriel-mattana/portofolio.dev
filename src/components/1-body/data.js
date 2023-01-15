@@ -1,5 +1,47 @@
 import React from "react";
 
+class Data{
+    constructor(title, img, year)
+    {
+        this.title = title;
+        this.img = img;
+        this.year = year;
+    }
+}
+
+
+var bluePeace = new Data("Blue peace", "/games/blue_peace.jpg", "2022");
+var fallenStar = new Data("Fallen Star", "/games/fallen_star.jpg", "2022");
+var handleTheCrate = new Data("HandleTheCrate", "/games/handle_the_crate.jpg", "2022");
+var clockTower = new Data("Clock Tower", "/games/clock_tower.jpg", "2022");
+var marryMe = new Data("MarryMe", "/games/marry_me.jpg", "2021");
+
+
+var videoGames = [bluePeace, fallenStar, handleTheCrate, clockTower, marryMe];
+
+
+
+
+
+// var videoGames ={
+//     title: "Video Games",
+//     text: "Hereby all my games",
+//     data:[]
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const data_template = {
     key : Number,
     img : String,
@@ -7,36 +49,5 @@ const data_template = {
     year: String
 }
 
-var BluePeace = Object.assign({}, data_template);
-BluePeace.key = 1;
-BluePeace.img = "/images/BluePeace.png";
-BluePeace.title = "Blue Peace";
-BluePeace.year = "2022";
-
-var FallenStar = Object.assign({}, data_template);
-FallenStar.key = 2;
-FallenStar.img = "/images/FallenStar.png";
-FallenStar.title = "Fallen star";
-FallenStar.year = "2022";
-
-var handleTheCrate = Object.assign({}, data_template);
-handleTheCrate.key = 3;
-handleTheCrate.img = "/images/HandleTheCrate.png";
-handleTheCrate.title = "Handle the Crate";
-handleTheCrate.year = "2022";
-
-var clockTower = Object.assign({}, data_template);
-clockTower.key = 4;
-clockTower.img = "/images/ClockTower.png";
-clockTower.title = "Clock Tower";
-clockTower.year = "2022";
-
-var marryMe = Object.assign({}, data_template);
-marryMe.key = 5;
-marryMe.img = "/images/MarryMe.png";
-marryMe.title = "Marry me";
-marryMe.year = "2021";
-
-var videoGames = [BluePeace, FallenStar, handleTheCrate, clockTower, marryMe];
 
 export {videoGames}

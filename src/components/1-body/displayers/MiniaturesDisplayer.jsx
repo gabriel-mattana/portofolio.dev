@@ -3,8 +3,10 @@ import Miniature from "./Miniature";
 import "./MiniaturesDisplayer.css"
 
 export default function MiniaturesDisplayer({props}) {
+  var keyNb = 0;
+  
   var miniatures = props.map((item) => (
-    <Miniature props={item} key={item.key}></Miniature>
+    <Miniature props={item} key={keyNb++}></Miniature>
   ));
 
   return (
