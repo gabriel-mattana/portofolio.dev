@@ -1,36 +1,28 @@
 .miniature-displayer{
-    display:flex;
-    flex-wrap: wrap;
-    padding: 0 10%;
-    margin: 20px;
+    display:grid;
+    margin: 5%;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .miniature{
-    flex-basis: 32%;
     text-align: center;
     background-color: black;
-    margin: 10px 0 0 1%;
     color: wheat;
-    position: relative;
+    justify-self:center;
 }
 
  @media (max-width:800px) {
     
-    .miniature{
-        flex-basis: 48%;
+    .miniature-displayer{
+        grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (max-width:540px) {
     
-    .miniature-displayer
-    {
-        padding: 0 5px;
-    }
-
-    .miniature{
-        flex-basis: 100%;
+    .miniature-displayer{
+        grid-template-columns: 1fr;
     }
 } 
 
