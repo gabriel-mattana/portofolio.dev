@@ -1,14 +1,13 @@
 import React from "react";
-import {Body_Instance} from "../1-body/BodyContainer";
 
+const navbarOffset = 150;
 export default function NavButton(props) 
 {
   function UpdateContent() {
     
     console.log("Clicked on " + props.label);
-    
-    Body_Instance.UpdateContent(props.link);
-    document.documentElement.scrollTop = 0;
+    var height = document.getElementById(props.link).offsetTop
+    window.scrollTo({top: height - navbarOffset,behavior:"smooth"});
   }
 
   console.log("NavItem " + props.label + " rendered");

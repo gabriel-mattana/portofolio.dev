@@ -15,7 +15,7 @@ var marryMe = new Data("Marry me", "/games/marry_me.jpg", "2021");
 
 var videoGames = {
     title: "Video games",
-    text:"hereby all my videos games",
+    id:"videogames",
     data: [bluePeace, fallenStar, handleTheCrate, clockTower, marryMe]
 };
 
@@ -30,7 +30,7 @@ var compostella = new Data("CrazyLongTrip: on the way of Compostella", "/books/c
 
 var books = {
     title: "Books",
-    text:"hereby all my books",
+    id:"books",
     data: [japan, astraWorld,compostella, litius, arcania2, arcania1]
 };
 
