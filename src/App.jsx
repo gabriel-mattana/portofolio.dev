@@ -11,10 +11,10 @@ class App extends Component {
     return (
       <div id="app">
         <NavBar />
-        <div id="content_container">
+        <main>
           <VideoGames />
           <Books />
-        </div>
+        </main>
         <Footer />
       </div>
     );

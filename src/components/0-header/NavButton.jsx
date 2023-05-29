@@ -7,7 +7,7 @@ export default function NavButton(props)
     
     console.log("Clicked on " + props.label);
     var height = document.getElementById(props.link).offsetTop
-    window.scrollTo({top: height - navbarOffset,behavior:"smooth"});
+    window.scrollTo({top: height,behavior:"smooth"});
   }
 
   console.log("NavItem " + props.label + " rendered");
