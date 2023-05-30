@@ -81,14 +81,25 @@ header {
 
 .form-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top:5%;
+  padding: 5% 10%;
 }
 
 form{
   display: grid;
-  grid-column-start: 2;
-  row-gap: 10px;
+  row-gap: 5px;
+}
+
+form label{
+  justify-self: left;
+}
+
+form input{
+  height:25px
+
+}
+
+.btnsubmit{
+  justify-self: center;
 }
 
 

@@ -6,9 +6,16 @@ export default function ContactForm() {
       <h1>Contact</h1>
       <div className="form-container">
         <form className="flex-col">
-          <input type="text" placeholder="your email"></input>
-          <input type="text" placeholder="your text"></input>
-          <input type="submit" />
+          <label>Your name / company</label>
+          <input type="text" required="true"/>
+          <br/>
+          <label> E-mail</label>
+          <input type="email" required="true"></input>
+          <br/>
+          <label> Message</label>
+          <textarea rows="15"></textarea>
+          <br/>
+          <input type="submit" className="btnsubmit"/>
         </form>
       </div>
     </div>
