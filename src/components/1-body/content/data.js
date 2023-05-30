@@ -7,6 +7,7 @@ class Data{
     }
 }
 
+// VIDEO GAMES
 var bluePeace = new Data("Blue peace", "/games/blue_peace.jpg", "2022");
 var fallenStar = new Data("Fallen star", "/games/fallen_star.jpg", "2022");
 var handleTheCrate = new Data("Handle the crate", "/games/handle_the_crate.jpg", "2022");
@@ -19,7 +20,7 @@ var videoGames = {
     data: [bluePeace, fallenStar, handleTheCrate, clockTower, marryMe]
 };
 
-
+// BOOKS
 var astraWorld = new Data("Astra world", "/books/astra_world.jpg", "2019");
 var litius = new Data("The adventures of Litius Jurdal", "/books/litius.jpg", "2018");
 var arcania2 = new Data("Arcania medallions: book II", "/books/arcania2.jpg", "2017");

@@ -5,6 +5,8 @@ import Footer from "./components/2-footer/Footer";
 import "./App.css";
 import VideoGames from "./components/1-body/content/VideoGames";
 import Books from "./components/1-body/content/Books";
+import Introduction from "./components/1-body/content/Introduction";
+import ContactForm from "./components/1-body/content/ContactForm";
 
 class App extends Component {
   render() {
@@ -12,8 +14,10 @@ class App extends Component {
       <div id="app">
         <NavBar />
         <main>
+          <Introduction/>
           <VideoGames />
           <Books />
+          <ContactForm/>
         </main>
         <Footer />
       </div>

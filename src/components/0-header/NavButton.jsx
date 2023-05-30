@@ -1,6 +1,5 @@
 import React from "react";
 
-const navbarOffset = 150;
 export default function NavButton(props) 
 {
   function UpdateContent() {

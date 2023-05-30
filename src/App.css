@@ -1,19 +1,25 @@
-:root{
+:root {
   --HeaderHeight: 70px;
   --offsetFromHeader: calc(var(--HeaderHeight) * 2);
+  --navbtnFont: 18px;
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-#app{
+#app {
   min-height: 100vh;
   color: rgb(255, 255, 255);
   background-color: #212121;
   text-align: center;
+}
+
+/* UTILS */
+.flex {
+  display: flex;
 }
 
 /* HEADER */
@@ -30,49 +36,67 @@ header {
   top: 0;
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   overflow: hidden;
   background-color: #191919;
+  font-size: 20px;
 }
 
-.navbutton{
+.navbutton {
   text-decoration: none;
   background-color: transparent;
-  height: 100%;   
+  height: 100%;
   border: 0;
   color: wheat;
+  font-size: var(--navbtnFont);
   min-width: 120px;
 }
 
-.navbutton:hover{
+.navbutton:hover {
   background-color: rgb(175, 175, 175);
 }
-.navbutton:active
-{
+
+.navbutton:active {
   background-color: rgb(253, 253, 253);
 }
 
-.navbrand button{
+.navbrand button {
   background-color: black;
   min-width: 200px;
   color: white;
-  font-size: 100%;
 }
 
 /* BODY */
-.content-container{
+.content-container {
   padding-top: var(--offsetFromHeader);
 }
 
 
+.text {
+  justify-content: left;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top:5%;
+}
+
+form{
+  display: grid;
+  grid-column-start: 2;
+  row-gap: 10px;
+}
+
+
 /* FOOTER */
-footer{
-  position:relative;
-  background-color:#a9a9a9;
-  bottom:0;
+footer {
+  position: relative;
+  background-color: #a9a9a9;
+  bottom: 0;
   text-align: center;
   margin-top: 100px;
   height: 50px;
