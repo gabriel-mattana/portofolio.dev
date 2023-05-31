@@ -1,8 +1,8 @@
 class Data{
-    constructor(title, img, year)
+    constructor(title, url, year)
     {
         this.title = title;
-        this.img = img;
+        this.img = process.env.PUBLIC_URL + "/images/" + url;
         this.year = year;
     }
 }

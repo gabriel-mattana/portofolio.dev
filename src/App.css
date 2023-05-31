@@ -114,18 +114,12 @@ footer {
 
 /* DISPLAYER */
 .miniature-displayer{
-  display:grid;
   margin: 5%;
-  gap: 20px;
+  display:grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   align-items:center;
-}
-
-.miniature{
-  text-align: center;
-  background-color: black;
-  color: wheat;
-  justify-self:center;
+  justify-items: center;
 }
 
 @media (max-width:800px) {
@@ -142,6 +136,20 @@ footer {
   }
 } 
 
+.miniature{
+  display: grid;
+}
+
+.miniature .details{
+  height: 60px;
+  padding: 10px 5px;
+  display: grid;
+  background-color: black;
+  color: wheat;
+  font-size: 120%;
+
+}
+
 img{
   width: 100%;
 }
@@ -150,11 +158,5 @@ img{
   cursor:pointer;
   width: 90%;
   height: 90%;
-  
-}
-
-
-img:hover{
-  filter:brightness(125%);
-  
+  font-size: 95%;
 }

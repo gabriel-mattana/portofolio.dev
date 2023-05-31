@@ -4,7 +4,7 @@ export default function Miniature({props}) {
 
   return (
     <div className="miniature">
-      <img src={process.env.PUBLIC_URL + "/images/" + props.img} />
+      <img src={props.img} />
       <div className="details">
         <p className="Title">{props.title}</p>
         <p className="Year">{props.year}</p>
