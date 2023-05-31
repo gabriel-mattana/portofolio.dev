@@ -141,13 +141,12 @@ footer {
 }
 
 .miniature .details{
-  height: 60px;
+  min-height: 60px;
   padding: 10px 5px;
   display: grid;
   background-color: black;
   color: wheat;
-  font-size: 120%;
-
+  font-size: 120% ;
 }
 
 img{
