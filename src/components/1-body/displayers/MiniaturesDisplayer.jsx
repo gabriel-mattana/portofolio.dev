@@ -1,6 +1,5 @@
 import React from "react";
 import Miniature from "./Miniature";
-import "./MiniaturesDisplayer.css"
 
 export default function MiniaturesDisplayer({props}) {
   var keyNb = 0;

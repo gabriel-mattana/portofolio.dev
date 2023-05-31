@@ -81,7 +81,7 @@ header {
 
 .form-container {
   display: grid;
-  padding: 5% 10%;
+  padding: 5% 20%;
 }
 
 form{
@@ -94,8 +94,7 @@ form label{
 }
 
 form input{
-  height:25px
-
+  height:25px;
 }
 
 .btnsubmit{
@@ -111,4 +110,51 @@ footer {
   text-align: center;
   margin-top: 100px;
   height: 50px;
+}
+
+/* DISPLAYER */
+.miniature-displayer{
+  display:grid;
+  margin: 5%;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items:center;
+}
+
+.miniature{
+  text-align: center;
+  background-color: black;
+  color: wheat;
+  justify-self:center;
+}
+
+@media (max-width:800px) {
+  
+  .miniature-displayer{
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:540px) {
+  
+  .miniature-displayer{
+      grid-template-columns: 1fr;
+  }
+} 
+
+img{
+  width: 100%;
+}
+
+.miniature:hover{
+  cursor:pointer;
+  width: 90%;
+  height: 90%;
+  
+}
+
+
+img:hover{
+  filter:brightness(125%);
+  
 }
