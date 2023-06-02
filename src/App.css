@@ -149,6 +149,10 @@ img{
   animation: resize 1s 1 forwards;
 }
 
+.miniature:active{
+  filter: brightness(50%);
+}
+
 .miniature .details{
   min-height: 60px;
   padding: 10px 5px;
