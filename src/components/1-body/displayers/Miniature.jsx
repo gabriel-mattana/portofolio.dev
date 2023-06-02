@@ -4,12 +4,17 @@ export default function Miniature({ props }) {
   let miniature;
 
   function shrinkMiniature() {
-    miniature = document.getElementById(props.title);
-    miniature.style.animation = "shrink 0.75s forwards";
+    if(miniature == undefined){   
+      miniature = document.getElementById(props.title);   
+    } 
+    
+    miniature.classList.remove("grow-anim");
+    miniature.classList.add("shrink-anim");
   }
 
   function restoreMiniature() {
-    miniature.style.animation = "grow 0.5s forwards";
+    miniature.classList.remove("shrink-anim");
+    miniature.classList.add("grow-anim")
   }
 
   return (
@@ -20,7 +25,7 @@ export default function Miniature({ props }) {
     >
       <div id={props.title} className="miniature">
         <img src={props.img} />
-        <div className="details">
+        <div className="miniature-details">
           <p className="Title">{props.title}</p>
           <p className="Year">{props.year}</p>
         </div>
