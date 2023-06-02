@@ -140,6 +140,15 @@ footer {
   display: grid;
 }
 
+img{
+  width: 100%;
+}
+
+.miniature:hover{
+  cursor:pointer;
+  animation: resize 1s 1 forwards;
+}
+
 .miniature .details{
   min-height: 60px;
   padding: 10px 5px;
@@ -149,13 +158,8 @@ footer {
   font-size: 120% ;
 }
 
-img{
-  width: 100%;
+@keyframes resize{
+  from{height: 100%; width:100%;}
+  to{height: 90%; width:90%;}
 }
 
-.miniature:hover{
-  cursor:pointer;
-  width: 90%;
-  height: 90%;
-  font-size: 95%;
-}
