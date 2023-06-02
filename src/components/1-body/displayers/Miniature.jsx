@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function Miniature({ props }) {
+export default function Miniature({ data, popupCallback }) {
   let miniature;
 
   function shrinkMiniature() {
     if(miniature == undefined){   
-      miniature = document.getElementById(props.title);   
+      miniature = document.getElementById(data.title);   
     } 
-    
+
     miniature.classList.remove("grow-anim");
     miniature.classList.add("shrink-anim");
   }
@@ -17,17 +17,23 @@ export default function Miniature({ props }) {
     miniature.classList.add("grow-anim")
   }
 
+  function onClick()
+  {
+    console.log("clicked on " + data.title)
+    popupCallback(data);
+  }
+
   return (
     <div
       className="miniature-container"
       onMouseEnter={shrinkMiniature}
       onMouseLeave={restoreMiniature}
     >
-      <div id={props.title} className="miniature">
-        <img src={props.img} />
+      <div id={data.title} className="miniature" onClick={onClick}>
+        <img src={data.img} />
         <div className="miniature-details">
-          <p className="Title">{props.title}</p>
-          <p className="Year">{props.year}</p>
+          <p className="Title">{data.title}</p>
+          <p className="Year">{data.year}</p>
         </div>
       </div>
     </div>

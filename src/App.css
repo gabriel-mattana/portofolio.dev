@@ -190,3 +190,28 @@ img{
   to{height: 100%; width:100%; font-size: 100%;}
 }
 
+/* POPUP */
+#popup{
+  position:absolute;
+  opacity: 0.5;
+  background-color: gray;
+}
+
+.popin-anim{
+  animation: popin 2s forwards;
+}
+
+.popout-anim{
+  animation: popout 2s forwards;
+}
+
+
+@keyframes popin{
+  from{height: 0; width:0%; opacity: 0;}
+  to{height: 100%; width: 90%; opacity: 1;}
+}
+
+@keyframes popout{
+  from{height: 100%; width:90%; opacity: 1;}
+  to{height: 0; width:0; opacity: 0;}
+}
