@@ -6,7 +6,7 @@ export default function SectionTemplate({content})
     return(
         <div id={content.id} className="content-container">
             <h1>{content.title}</h1>
-            <MiniaturesDisplayer props={content.data}/>
+            <MiniaturesDisplayer data={content.data} sectionid={content.id}/>
         </div>
     );
 }

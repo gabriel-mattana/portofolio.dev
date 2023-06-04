@@ -163,14 +163,6 @@ img{
   filter: brightness(50%);
 }
 
-.shrink-anim{
-  animation: shrink 0.75s forwards;
-}
-
-.grow-anim{
-  animation: grow 0.5s forwards;
-}
-
 .miniature-details{
   min-height: 60px;
   max-height: 60px;
@@ -178,6 +170,14 @@ img{
   display: grid;
   background-color: black;
   color: wheat;
+}
+
+.shrink-anim{
+  animation: shrink 0.75s forwards;
+}
+
+.grow-anim{
+  animation: grow 0.5s forwards;
 }
 
 @keyframes shrink{
@@ -215,3 +215,22 @@ img{
   from{height: 100%; width:90%; opacity: 1;}
   to{height: 0; width:0; opacity: 0;}
 }
+
+.fadeout{
+  animation: fadeout 0.5s forwards;
+}
+
+.fadein{
+  animation: fadein 0.5s forwards;
+}
+
+@keyframes fadein{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes fadeout{
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
+
