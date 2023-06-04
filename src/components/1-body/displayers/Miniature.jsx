@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 
 export default function Miniature({ data, popupCallback }) {
   let miniature;
+  let isSelected;
 
   function shrinkMiniature() {
+    if(isSelected) return;
+
     if(miniature == undefined){   
       miniature = document.getElementById(data.title);   
     } 
@@ -13,6 +16,8 @@ export default function Miniature({ data, popupCallback }) {
   }
 
   function restoreMiniature() {
+    if(isSelected) return;
+
     miniature.classList.remove("shrink-anim");
     miniature.classList.add("grow-anim")
   }
@@ -20,6 +25,7 @@ export default function Miniature({ data, popupCallback }) {
   function onClick()
   {
     console.log("clicked on " + data.title)
+    isSelected = true;
     popupCallback(data);
   }
 

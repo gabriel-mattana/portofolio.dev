@@ -2,6 +2,10 @@
   --HeaderHeight: 70px;
   --offsetFromHeader: calc(var(--HeaderHeight) * 2);
   --navbtnFont: 18px;
+  --posX:0px;
+  --posY:0px;
+  --fadeDuration:0.4s;
+  --growShrinkDuration:0.3s;
 }
 
 * {
@@ -173,11 +177,11 @@ img{
 }
 
 .shrink-anim{
-  animation: shrink 0.75s forwards;
+  animation: shrink var(--growShrinkDuration) forwards;
 }
 
 .grow-anim{
-  animation: grow 0.5s forwards;
+  animation: grow var(--growShrinkDuration) forwards;
 }
 
 @keyframes shrink{
@@ -191,37 +195,12 @@ img{
 }
 
 /* POPUP */
-#popup{
-  position:absolute;
-  opacity: 0.5;
-  background-color: gray;
-}
-
-.popin-anim{
-  animation: popin 2s forwards;
-}
-
-.popout-anim{
-  animation: popout 2s forwards;
-}
-
-
-@keyframes popin{
-  from{height: 0; width:0%; opacity: 0;}
-  to{height: 100%; width: 90%; opacity: 1;}
-}
-
-@keyframes popout{
-  from{height: 100%; width:90%; opacity: 1;}
-  to{height: 0; width:0; opacity: 0;}
-}
-
 .fadeout{
-  animation: fadeout 0.5s forwards;
+  animation: fadeout var(--fadeDuration) forwards;
 }
 
 .fadein{
-  animation: fadein 0.5s forwards;
+  animation: fadein var(--fadeDuration) forwards;
 }
 
 @keyframes fadein{
@@ -232,5 +211,13 @@ img{
 @keyframes fadeout{
   from{opacity: 1;}
   to{opacity: 0;}
+}
+
+.toFirstCell{
+  animation: origin 0.5s forwards;
+}
+
+@keyframes origin{
+  to{transform: translate(var(--posX),var(--posY));}
 }
 
