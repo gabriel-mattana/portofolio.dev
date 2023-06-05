@@ -7,7 +7,7 @@ export default function ProductDisplayer({ data, sectionid }) {
   let displayerid = "displayer" + sectionid;
 
   let productDisplayer = (
-  <div id={displayerid} className="productdisplayer">
+  <div id={displayerid} className="productdisplayer fadein">
     {data.map((item) => (
     <Miniature
       data={item}
@@ -22,18 +22,21 @@ export default function ProductDisplayer({ data, sectionid }) {
     let displayer = document.getElementById(displayerid);
     let children = displayer.childNodes;
 
-    for (let i = 0; i < children.length; i++) {
-      var miniatureContainer = children[i];
-      miniatureContainer.classList.add("fadeout");
-    }
+    // for (let i = 0; i < children.length; i++) {
+    //   var miniatureContainer = children[i];
+    //   miniatureContainer.classList.add("fadeout");
+    // }
+
+    displayer.classList.remove("fadein")
+    displayer.classList.add("fadeout")
 
     let newContent = (
-      <ProductInfo productData={productData}/>
+      <ProductInfo productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
     );
 
     setTimeout(() => {
       updateContent(newContent);
-    }, 400);
+    }, 500);
   }
 
   return (

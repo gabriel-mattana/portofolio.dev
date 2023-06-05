@@ -4,7 +4,7 @@
   --navbtnFont: 18px;
   --posX:0px;
   --posY:0px;
-  --fadeDuration:0.4s;
+  --fadeDuration:0.5s;
   --growShrinkDuration:0.3s;
   --displayminheight: 500px;
 }
@@ -25,6 +25,14 @@
 /* UTILS */
 .flex {
   display: flex;
+}
+
+.grid{
+  display: grid;
+}
+
+.rg20{
+  row-gap: 20px;
 }
 
 /* HEADER */
@@ -218,20 +226,23 @@ img{
 
 @keyframes fadeout{
   fron{opacity: 1;}
-  to{opacity: 0; visibility: hidden;}
+  to{opacity: 0;}
 }
 
 .product-info-panel{
-  display: grid;
+  justify-items: center;
 }
 
 .product-description{
-  display: flex;
-  row-gap: 20px;
+  grid-template-columns: 30% 1fr;
+  column-gap: 20px;
   align-self: start;
   justify-self: center;
   text-align: left;
-  line-height: 2;
+}
+
+.product-text{
+  font-size: 18px;
 }
 
 .product-description h2{
@@ -252,4 +263,10 @@ img{
 
 .playgame:hover{
   background-color: rgb(207, 207, 207);
+}
+
+iframe{
+  resize: both;
+  width: 80%;
+  aspect-ratio: 16/9;
 }
