@@ -154,7 +154,6 @@ footer {
 .miniature{
   max-height: 100%;
   display: grid;
-  /* box-shadow: 0px 10px 1px 0px rgba(56, 56, 56, 0.884); */
   border: 1.5px solid rgb(0, 0, 0)
 }
 
@@ -163,6 +162,7 @@ img{
 }
 
 .miniature-selected{
+  cursor:pointer;
   border: none;
   box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.884);
   animation: shrink 0.3s forwards, highlight 1s infinite;
@@ -186,11 +186,8 @@ img{
   to{height: 100%; width:100%; font-size: 100%;}
 }
 
-.miniature:hover{
-  cursor:pointer;
-}
-
 .miniature:active{
+  cursor: default;
   filter: brightness(50%);
 }
 
@@ -213,20 +210,18 @@ img{
 }
 
 @keyframes fadein{
-  from{opacity: 0;}
   to{opacity: 1;}
 }
 
 @keyframes fadeout{
-  from{opacity: 1;}
-  to{opacity: 0;}
+  to{opacity: 0; visibility: hidden;}
 }
 
 .toFirstCell{
-  animation: origin 0.5s forwards;
+  animation: translate 0.5s forwards;
 }
 
-@keyframes origin{
+@keyframes translate{
   to{transform: translate(var(--posX),var(--posY));}
 }
 
