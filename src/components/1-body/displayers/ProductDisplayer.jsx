@@ -23,27 +23,8 @@ export default function ProductDisplayer({ data, sectionid }) {
 
     for (let i = 0; i < children.length; i++) {
       var miniatureContainer = children[i];
-      if (data[i].title != productData.title) {
-        miniatureContainer.classList.add("fadeout");
-      } else {
-        selection = miniatureContainer.children[0];
-        selection.classList.remove("shrink-anim", "miniature-selected");
-      }
+      miniatureContainer.classList.add("fadeout");
     }
-
-    let root = document.documentElement;
-    let y = displayer.offsetTop - selection.offsetTop;
-    // console.log(y)
-    let x = displayer.offsetLeft - selection.offsetLeft;
-    // console.log(x)
-    root.style.setProperty("--posX", x + "px");
-    root.style.setProperty("--posY", y + "px");
-    root.style.setProperty("--displayminheight", displayer.offsetHeight + "px");
-
-    let delay = 500;
-    setTimeout(() => {
-      selection.classList.add("toFirstCell");
-    }, delay);
 
     let newContent = (
       <ProductInfo productData={productData}/>
@@ -51,7 +32,7 @@ export default function ProductDisplayer({ data, sectionid }) {
 
     setTimeout(() => {
       updateContent(newContent);
-    }, delay + 400);
+    }, 400);
   }
 
   return (
