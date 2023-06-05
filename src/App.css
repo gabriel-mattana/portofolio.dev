@@ -78,6 +78,9 @@ header {
 /* BODY */
 .content-container {
   padding-top: var(--offsetFromHeader);
+  margin: 5%;
+  display: grid;
+  row-gap: 50px;
 }
 
 
@@ -120,7 +123,6 @@ footer {
 
 /* DISPLAYER */
 .productdisplayer{
-  margin: 5%;
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
@@ -219,18 +221,12 @@ img{
   to{opacity: 0; visibility: hidden;}
 }
 
-.toFirstCell{
-  animation: translate 0.5s forwards;
-}
-
-@keyframes translate{
-  to{transform: translate(var(--posX),var(--posY));}
+.product-info-panel{
+  display: grid;
 }
 
 .product-description{
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
-  display: grid;
+  display: flex;
   row-gap: 20px;
   align-self: start;
   justify-self: center;
@@ -240,11 +236,6 @@ img{
 
 .product-description h2{
   text-align: center;
-}
-
-.embededvideo{
-  grid-column: 1 / 4;
-  grid-row: 2;
 }
 
 .playgame{

@@ -6,20 +6,21 @@ export default function ProductDisplayer({ data, sectionid }) {
   var keyNb = 0;
   let displayerid = "displayer" + sectionid;
 
-  var miniatures = data.map((item) => (
+  let productDisplayer = (
+  <div id={displayerid} className="productdisplayer">
+    {data.map((item) => (
     <Miniature
       data={item}
       key={keyNb++}
       popupCallback={displayInfoOnProduct}
-    ></Miniature>
-  ));
+    />))}
+  </div>);
 
-  let [stateContent, updateContent] = useState(miniatures);
+  let [stateContent, updateContent] = useState(productDisplayer);
 
   function displayInfoOnProduct(productData) {
     let displayer = document.getElementById(displayerid);
     let children = displayer.childNodes;
-    let selection = 0;
 
     for (let i = 0; i < children.length; i++) {
       var miniatureContainer = children[i];
@@ -37,9 +38,7 @@ export default function ProductDisplayer({ data, sectionid }) {
 
   return (
     <React.Fragment>
-      <div id={displayerid} className="productdisplayer">
-        {stateContent}
-      </div>
+      {stateContent}
     </React.Fragment>
   );
 }

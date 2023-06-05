@@ -60,6 +60,7 @@ var fallenStar= {
     "You're the king and you must make decisions to protect your realm from ruin."+
     "Be careful, though. Your choice may affect the stability of the kingdom, and if it falls to zero, that's game over.",
     videosrc:"https://www.youtube.com/embed/Hu0iEJKOlLE",
+    gameurl:"https://krel113.itch.io/fallen-star",
 }
 
 var clockTower= {
