@@ -12,13 +12,13 @@ export default function Miniature({ data, popupCallback }) {
     } 
 
     miniature.classList.remove("grow-anim");
-    miniature.classList.add("shrink-anim");
+    miniature.classList.add("shrink-anim", "miniature-selected");
   }
 
   function restoreMiniature() {
     if(isSelected) return;
 
-    miniature.classList.remove("shrink-anim");
+    miniature.classList.remove("shrink-anim", "miniature-selected");
     miniature.classList.add("grow-anim")
   }
 
