@@ -1,15 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Miniature from "./Miniature";
 
 const FADEIN = "fadeout 0.3s forwards"
 
-export default function MiniaturesDisplayer({data, sectionid}) {
+export default function ProductDisplayer({data, sectionid}) {
   var keyNb = 0;
   let displayerid = "displayer" + sectionid;
  
   var miniatures = data.map((item) => (
     <Miniature data={item} key={keyNb++} popupCallback={displayInfoOnProduct}></Miniature>
   ));
+
+  let [stateContent, updateContent] = useState(miniatures)
 
   function displayInfoOnProduct(miniatureSelected)
   {
@@ -52,10 +54,7 @@ export default function MiniaturesDisplayer({data, sectionid}) {
   return (
     <React.Fragment>
       <div id={displayerid} className="miniature-displayer">
-      {/* <div id="popup">POPUP
-        <button onClick={hidePopup}>X</button>
-      </div> */}
-        {miniatures}
+        {stateContent}
       </div>
     </React.Fragment>
   );

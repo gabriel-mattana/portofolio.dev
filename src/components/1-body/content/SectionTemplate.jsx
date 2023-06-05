@@ -1,12 +1,12 @@
 import React from "react";
-import MiniaturesDisplayer from "../displayers/MiniaturesDisplayer";
+import ProductDisplayer from "../displayers/ProductDisplayer";
 
 export default function SectionTemplate({content})
 {
     return(
         <div id={content.id} className="content-container">
             <h1>{content.title}</h1>
-            <MiniaturesDisplayer data={content.data} sectionid={content.id}/>
+            <ProductDisplayer data={content.data} sectionid={content.id}/>
         </div>
     );
 }
