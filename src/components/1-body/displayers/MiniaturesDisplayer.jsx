@@ -26,7 +26,7 @@ export default function MiniaturesDisplayer({data, sectionid}) {
       else
       {
         selection = miniatureContainer.children[0];
-        selection.classList.remove("shrink-anim")
+        selection.classList.remove("shrink-anim", "miniature-selected")
       }
     }
 
@@ -41,7 +41,7 @@ export default function MiniaturesDisplayer({data, sectionid}) {
     console.log()
 
     setTimeout(() => {
-      selection.classList.add("toFirstCell")
+      selection.classList.add("toFirstCell");
     }, 500);
 
 
