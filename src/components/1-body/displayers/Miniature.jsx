@@ -11,15 +11,15 @@ export default function Miniature({ data, popupCallback }) {
       miniature = document.getElementById(data.title);   
     } 
 
-    miniature.classList.remove("grow-anim");
-    miniature.classList.add("shrink-anim", "miniature-selected");
+    miniature.classList.remove("miniature-restore-anim");
+    miniature.classList.add("miniature-selected");
   }
 
   function restoreMiniature() {
     if(isSelected) return;
 
-    miniature.classList.remove("shrink-anim", "miniature-selected");
-    miniature.classList.add("grow-anim")
+    miniature.classList.remove("miniature-selected");
+    miniature.classList.add("miniature-restore-anim")
   }
 
   function onClick()
