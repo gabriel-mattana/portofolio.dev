@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import Miniature from "./Miniature";
-
-const FADEIN = "fadeout 0.3s forwards";
+import ProductInfo from "./ProductInfo";
 
 export default function ProductDisplayer({ data, sectionid }) {
   var keyNb = 0;
@@ -39,8 +38,7 @@ export default function ProductDisplayer({ data, sectionid }) {
     // console.log(x)
     root.style.setProperty("--posX", x + "px");
     root.style.setProperty("--posY", y + "px");
-
-    console.log();
+    root.style.setProperty("--displayminheight", displayer.offsetHeight + "px");
 
     let delay = 500;
     setTimeout(() => {
@@ -48,13 +46,7 @@ export default function ProductDisplayer({ data, sectionid }) {
     }, delay);
 
     let newContent = (
-      <React.Fragment>
-        <Miniature data={productData}/>
-        <div className="product-description" style={{minHeight:displayer.offsetHeight}}>
-          <h2>{productData.title}</h2>
-        </div>
-      </React.Fragment>
-      
+      <ProductInfo productData={productData}/>
     );
 
     setTimeout(() => {
