@@ -44,7 +44,7 @@ var handleTheCrate = {
     "instead of only pushing crates, you can also pull them thanks to magnetic handles."+
     "But beware! Once stuck, the handles can't be removed.",
     videosrc: "https://www.youtube.com/embed/T9KZ6P6gASs",
-    gameurl: "https://teamcannelle.itch.io/handle-the-crate",
+    producturl: "https://teamcannelle.itch.io/handle-the-crate",
  }
 
 var fallenStar= {
@@ -60,7 +60,7 @@ var fallenStar= {
     "You're the king and you must make decisions to protect your realm from ruin."+
     "Be careful, though. Your choice may affect the stability of the kingdom, and if it falls to zero, that's game over.",
     videosrc:"https://www.youtube.com/embed/Hu0iEJKOlLE",
-    gameurl:"https://krel113.itch.io/fallen-star",
+    producturl:"https://krel113.itch.io/fallen-star",
 }
 
 var clockTower= {
@@ -89,7 +89,7 @@ var marryMe= {
     description:"Made in 48h for the GMTK Game Jam 2021, on the theme 'joined together'."+
     "The player have to dodge the bride and her henchmen through this topviewshooter, or they will get married.",
     videosrc:"https://www.youtube.com/embed/R2Jisf9-CPA",
-    gameurl:"https://krel113.itch.io/marry-me",
+    producturl:"https://krel113.itch.io/marry-me",
 }
 
 var videoGames = {
@@ -100,6 +100,17 @@ var videoGames = {
 
 // BOOKS
 var astraWorld = new Data("Astra world", "/books/astra_world.jpg", "2019");
+var astraWorld= {
+    title: "Astra World",
+    img: setImgUrl("/books/astra_world.jpg",),
+    year: "2019",
+    genre: "dark fantasy",
+    description:"Lorsque la mort frappe, les défunts gagnent l'Après-vie. "+
+    "Un monde inhospitalier dominé par un astre éternel, où les âmes semblent condamnées à une errance sans fin."+
+    "Quelle est le but de cette seconde existence ? Quels sombres secrets ce monde cache-t-il ?"+
+    "Les réponses existent et l'Astre en est le gardien.",
+    producturl:"https://www.kobo.com/fr/en/ebook/l-astre-monde"
+}
 var litius = new Data("The adventures of Litius Jurdal", "/books/litius.jpg", "2018");
 var arcania2 = new Data("Arcania medallions: book II", "/books/arcania2.jpg", "2017");
 var arcania1 = new Data("Arcania medallions: book I", "/books/arcania1.jpg", "2016");
