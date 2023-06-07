@@ -1,12 +1,12 @@
 import React from "react";
+import { ScrollTo } from "../../utils";
 
 export default function NavButton(props) 
 {
   function UpdateContent() {
     
     console.log("Clicked on " + props.label);
-    var height = document.getElementById(props.link).offsetTop
-    window.scrollTo({top: height,behavior:"smooth"});
+    ScrollTo(props.link)
   }
 
   console.log("NavItem " + props.label + " rendered");

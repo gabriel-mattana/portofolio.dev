@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { ScrollTo } from "../../../utils";
 
 export default function Miniature({ data, popupCallback }) {
   let miniature;
@@ -22,7 +23,7 @@ export default function Miniature({ data, popupCallback }) {
     miniature.classList.add("miniature-restore-anim")
   }
 
-  function onClick()
+  function onClick(props)
   {
     console.log("clicked on " + data.title)
     isSelected = true;

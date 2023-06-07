@@ -1,10 +1,9 @@
 import react from "react";
+import SectionTemplate from "./SectionTemplate";
 
 export default function ContactForm() {
-  return (
-    <div id="contact" className="section-container">
-      <div className="section-bg grid">
-          <h1>Contact</h1>
+  const content = (
+    <react.Fragment>
           <div className="form-container">
             <form className="flex-col">
               <label>Your name / company</label>
@@ -19,8 +18,8 @@ export default function ContactForm() {
               <input type="submit" className="btnsubmit" />
             </form>
           </div>
-        </div>
-      </div>
+      </react.Fragment>
     
   );
+  return <SectionTemplate id="contact" title="Contact" content={content} />;
 }

@@ -41,35 +41,37 @@ export default function ProductInfo({
     );
     btnLabel = "Play on itch.io";
   } else if (productType == "books") {
-    // panelToDisplay = <ProductInfo_Book productData={productData} returnToMenu={returnToMenu}/>
+    extraContent = <img className="bd-bs1 bdr-round" src={productData.img} />;
     extratextinfo = <p>Pseudonyme: {productData.pseudonyme}</p>;
     btnLabel = "Get ebook";
   }
 
   return (
-    <div id={productdataId} className="product-info-panel grid rg20 fadein">
-       <h2>{productData.title}</h2>
-      <div className="product-description grid rg20">
-        <div className="grid rg20 product-visuals">
-          <img src={productData.img} />
+    <div id={productdataId} className="product-info-panel grid bdr-round fadein">
+        <div className="product-visuals">
+          {extraContent}
         </div>
-        <div className="product-text">
+        <div className="product-description-text grid rg20">
+          <h2>{productData.title}</h2>
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {extratextinfo}
           <p>{productData.description}</p>
-        </div>
-      </div>
-      {extraContent}
-      <div className="btncontainer flex">
+          <div className="btncontainer flex">
             {productData.producturl == undefined ? undefined : (
               <button className="productbtn btngotoproduct">
                 {btnLabel}
                 <a href={productData.producturl} target="_blank" />
               </button>
             )}
-            <button className="productbtn btnreturntomenu" onClick={returnToMenu}>Return to menu</button>
+            <button
+              className="productbtn btnreturntomenu"
+              onClick={returnToMenu}
+            >
+              Return
+            </button>
           </div>
+        </div>
     </div>
   );
 }

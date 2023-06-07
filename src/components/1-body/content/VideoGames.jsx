@@ -5,13 +5,8 @@ import ProductDisplayer from "../displayers/ProductDisplayer";
 
 export default function VideoGames()
 {
-    const content = (
-        <ProductDisplayer
-          productType={videoGames.id}
-          data={videoGames.data}
-          sectionid={videoGames.id}
-        />
-    );
+    const content = <ProductDisplayer productType={videoGames.id} data={videoGames.data}/>
+    
     return(
         <SectionTemplate id={"videogames"} title={"Video games"} content={content}/>
     );
