@@ -1,10 +1,17 @@
 import React from "react";
 import { books } from "./data";
 import SectionTemplate from "./SectionTemplate";
+import ProductDisplayer from "../displayers/ProductDisplayer";
 
 export default function Books()
 {
+   const content = <ProductDisplayer
+          productType={books.id}
+          data={books.data}
+          sectionid={books.id}
+        />
+
     return(
-        <SectionTemplate id="books" content={books}/>
+        <SectionTemplate id="books" title="Books" content={content}/>
     );
 }

@@ -84,13 +84,19 @@ header {
 }
 
 /* BODY */
-.content-container {
+.section-container {
   padding-top: var(--offsetFromHeader);
   margin: 5%;
-  display: grid;
   row-gap: 50px;
 }
 
+.section-bg{
+  background-color: #2b2828;
+  padding: 20px;
+  border-radius: 15px;
+  display: grid;
+  row-gap: 40px;
+}
 
 .text {
   justify-content: left;
@@ -136,9 +142,6 @@ footer {
   grid-auto-rows: 1fr;
   gap: 20px;
   min-height: var(--displayminheight);
-  background-color: #2b2828;
-  padding: 20px;
-  border-radius: 15px;
 }
 
 @media (max-width:800px) {
@@ -171,10 +174,12 @@ footer {
   border: 1.5px solid rgb(0, 0, 0);
   border-radius: 15px;
 }
-
 img{
   width: 100%;
   border: black 1px solid;
+}
+
+.miniature img{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }

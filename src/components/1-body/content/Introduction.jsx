@@ -1,9 +1,7 @@
-import react from "react";
+import SectionTemplate from "./SectionTemplate";
 
 export default function Introduction() {
-  return (
-    <div id="introduction" className="content-container">
-      <h1>Introduction</h1>
+  const content = (
       <div className="text">
         <p>
           I am a full stack programmer at work, and a game developper and writer
@@ -12,6 +10,6 @@ export default function Introduction() {
         <p>I used to be a jurist in insurance, and before a policeman. </p>
         <p>Those experiences gave me </p>
       </div>
-    </div>
   );
+  return <SectionTemplate id="introduction" title="Introduction" content={content} />;
 }
