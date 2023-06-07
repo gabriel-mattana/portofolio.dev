@@ -239,9 +239,18 @@ img{
   column-gap: 20px;
 }
 
+.product-visuals{
+  height: 80%;
+  justify-items: center;
+}
+
 .product-text{
   text-align: left;
   font-size: 18px;
+}
+
+.product-text p{
+  margin-top: 15px;
 }
 
 .product-description h2{
@@ -249,7 +258,8 @@ img{
 }
 
 .btngotoproduct{
-  height: 100px;
+  display: flex;
+  height: 80px;
   aspect-ratio: 1;
   border-radius: 50%;
   align-items: center;

@@ -13,10 +13,10 @@ function setImgUrl(url){
 }
 
 // VIDEO GAMES
-// var bluePeace = new Data("Blue peace", "/games/blue_peace.jpg", "2022",
+// let bluePeace = new Data("Blue peace", "/games/blue_peace.jpg", "2022",
 // "BluePeace is a visual naovle" +
 //  "visual novel");
- var bluePeace = {
+ let bluePeace = {
     title: "Blue Peace",
     img: setImgUrl("/games/blue_peace.jpg"),
     year: "2022",
@@ -30,7 +30,7 @@ function setImgUrl(url){
     videosrc:"https://www.youtube.com/embed/1d7G5BOXv-U",
  }
 
-var handleTheCrate = {
+let handleTheCrate = {
     title: "Handle the crate",
     img: setImgUrl("/games/handle_the_crate.jpg"),
     year: "2022",
@@ -47,7 +47,7 @@ var handleTheCrate = {
     producturl: "https://teamcannelle.itch.io/handle-the-crate",
  }
 
-var fallenStar= {
+let fallenStar= {
     title: "Fallen Star",
     img: setImgUrl("/games/fallen_star.jpg"),
     year: "2022",
@@ -63,7 +63,7 @@ var fallenStar= {
     producturl:"https://krel113.itch.io/fallen-star",
 }
 
-var clockTower= {
+let clockTower= {
     title: "Clock tower",
     img: setImgUrl("/games/clock_tower.jpg"),
     year: "2022",
@@ -77,7 +77,7 @@ var clockTower= {
     videosrc:"https://www.youtube.com/embed/RcnigeDOSjs",
 }
 
-var marryMe= {
+let marryMe= {
     title: "Marry me",
     img: setImgUrl("/games/marry_me.jpg"),
     year: "2021",
@@ -92,33 +92,90 @@ var marryMe= {
     producturl:"https://krel113.itch.io/marry-me",
 }
 
-var videoGames = {
+let videoGames = {
     title: "Video games",
     id:"videogames",
     data: [bluePeace, handleTheCrate, fallenStar, clockTower, marryMe]
 };
 
 // BOOKS
-var astraWorld = new Data("Astra world", "/books/astra_world.jpg", "2019");
-var astraWorld= {
+let astraWorld= {
     title: "Astra World",
     img: setImgUrl("/books/astra_world.jpg",),
     year: "2019",
     genre: "dark fantasy",
+    pseudonyme: "Gehaimme",
     description:"Lorsque la mort frappe, les défunts gagnent l'Après-vie. "+
     "Un monde inhospitalier dominé par un astre éternel, où les âmes semblent condamnées à une errance sans fin."+
     "Quelle est le but de cette seconde existence ? Quels sombres secrets ce monde cache-t-il ?"+
     "Les réponses existent et l'Astre en est le gardien.",
     producturl:"https://www.kobo.com/fr/en/ebook/l-astre-monde"
 }
-var litius = new Data("The adventures of Litius Jurdal", "/books/litius.jpg", "2018");
-var arcania2 = new Data("Arcania medallions: book II", "/books/arcania2.jpg", "2017");
-var arcania1 = new Data("Arcania medallions: book I", "/books/arcania1.jpg", "2016");
 
-var japan = new Data("The Land of the Rising Sun", "/books/japan.jpg", "2020");
-var compostella = new Data("On the way of Compostella", "/books/compostella.jpg", "2018");
+let litius= {
+    title: "The enquiries of Litius Jurdal",
+    img: setImgUrl("/books/litius.jpg"),
+    year: "2018",
+    genre: "steam-punk, thriller",
+    pseudonyme: "Gehaimme",
+    description:"LEntrez dans le XIXème siècle d'un univers victorien où magie et révolution industrielle se côtoient à merveille."+
+    "Litius Jurdal, mage et Enquêteur royal, se voit chargé par les plus hautes autorités de résoudre les affaires criminelles les plus importantes de son temps."+    
+    "Un personnage haut en couleur, dont le caractère excentrique et lunatique sauront vous faire vibrer au rythme de ses enquêtes.",
+    producturl:"https://www.kobo.com/fr/en/ebook/l-astre-monde"
+}
 
-var books = {
+let arcania2= {
+    title: "Arcania medallions: book II",
+    img: setImgUrl("/books/arcania2.jpg"),
+    year: "2017",
+    genre: "fantasy",
+    pseudonyme: "Gehaimme",
+    description:"Exilée sur Veldona, l'île de métal, l'expédition alfarienne s'organise pour percer les mystères de la plus avancée des créations aréis,"+
+    "tandis qu'à l'autre bout du monde, Krel et Iria se lancent à la poursuite de la confrérie des Lames Noires pour sauver leurs vies."+
+    "Tous ignorent que, loin du tumulte de la scène internationale, un mystérieux personnage vient d'émerger du désert. Un homme à qui rien ne semble résister...",
+    producturl:"https://www.kobo.com/fr/en/ebook/les-medaillons-d-arcania-1"
+}
+
+let arcania1= {
+    title: "Arcania medallions: book I",
+    img: setImgUrl("/books/arcania1.jpg"),
+    year: "2016",
+    genre: "journey diary",
+    pseudonyme: "Gehaimme",
+    description:"Arcania est un monde brisé où les continents dérivent dans un ciel infini."+
+    "Ses anciens maîtres, les Aréis, ont disparu depuis longtemps, laissant derrière eux de fabuleuses technologiques."+
+    "Un héritage sans égal convoité par tous, car 'celui qui possède la puissance des Aréis, domine le monde'."+
+    "Un proverbe que le roi Forhus II compte bien vérifier. Atteint d'une maladie incurable et proche de la fin,"+
+    "il souhaite plus que tout au monde laisser sa trace dans l'Histoire. Une ambition démesurée, appuyée par la découverte d'un étrange médaillon,"+
+    "qui plongera le monde dans une effroyable tourmente. De nombreux destins en seront affectés, dont deux en particulier :"+
+    "celui d'un voleur intrépide et celui d'un soldat dévoué."+
+    "Si l'un sera amené à faire face à son passé, l'autre devra choisir entre servir ou trahir.",
+    producturl:"https://www.kobo.com/fr/en/ebook/les-medaillons-d-arcania"
+}
+
+let japan= {
+    title: "The Land of the Rising Sun",
+    img: setImgUrl("/books/japan.jpg"),
+    year: "2020",
+    genre: "journey diary",
+    pseudonyme: "Crazylongtrip",
+    description:"Un voyage à l'autre bout du monde... La découverte d'une autre culture. Une expérience inoubliable au pays des ramens et des volcans.",
+    producturl:"https://www.kobo.com/fr/en/ebook/crazylongtrip-au-pays-du-soleil-levant"
+}
+
+let compostella= {
+    title: "On the way of Compostella",
+    img: setImgUrl("/books/compostella.jpg"),
+    year: "2018",
+    genre: "journey diary",
+    pseudonyme: "Crazylongtrip",
+    description:"Les pages que vous vous apprêtez à feuilleter vous transporterons dans l'incroyable aventure que j'ai pu vivre sur le Chemin de Compostelle."+
+    "Un périple de longue haleine motivé par la recherche d'un futur épanouissant, bien loin des standards établis par notre société actuelle."+
+    "Le Chemin a-t-il apporté les réponses que j'attendais ? Vous le saurez en vous plongeant au coeur de ce récit palpitant, profond, parfois philosophique, mais surtout plein de surprises et de rencontres inoubliables.",
+    producturl:"https://www.kobo.com/fr/en/ebook/crazylongtrip-sur-le-chemin-de-compostelle "
+}
+
+let books = {
     title: "Books",
     id:"books",
     data: [japan, astraWorld,compostella, litius, arcania2, arcania1]

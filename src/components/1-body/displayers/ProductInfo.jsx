@@ -40,25 +40,19 @@ export default function ProductInfo({
       />
     );
     btnLabel = "Play on itch.io";
-
   } else if (productType == "books") {
     // panelToDisplay = <ProductInfo_Book productData={productData} returnToMenu={returnToMenu}/>
-
+    extratextinfo = <p>Pseudonyme: {productData.pseudonyme}</p>;
     btnLabel = "Get ebook";
   }
 
   return (
     <div id={productdataId} className="product-info-panel grid rg20 fadein">
       <div className="product-description grid rg20">
-        <div>
+        <div className="grid rg20 product-visuals">
           <img src={productData.img} />
-          {productData.producturl == undefined ? undefined : (
-              <a className="btngotoproduct flex" href={productData.producturl}target="_blank">
-              {btnLabel}
-              </a>)
-          }
         </div>
-        <div className="product-text grid rg20">
+        <div className="product-text">
           <h2>{productData.title}</h2>
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
@@ -67,7 +61,18 @@ export default function ProductInfo({
         </div>
       </div>
       {extraContent}
-      <button onClick={returnToMenu}>Return to menu</button>
+      <div className="flex">
+        {productData.producturl == undefined ? undefined : (
+          <a
+            className="btngotoproduct"
+            href={productData.producturl}
+            target="_blank"
+          >
+            {btnLabel}
+          </a>
+        )}
+        <button onClick={returnToMenu}>Return to menu</button>
+      </div>
     </div>
   );
 }
