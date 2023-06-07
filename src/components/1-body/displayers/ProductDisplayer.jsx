@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Miniature from "./Miniature";
 import ProductInfo from "./ProductInfo";
 
-export default function ProductDisplayer({ data, sectionid }) {
+export default function ProductDisplayer({ productType, data, sectionid }) {
   var keyNb = 0;
   let displayerid = "displayer" + sectionid;
 
@@ -20,18 +20,12 @@ export default function ProductDisplayer({ data, sectionid }) {
 
   function displayInfoOnProduct(productData) {
     let displayer = document.getElementById(displayerid);
-    let children = displayer.childNodes;
-
-    // for (let i = 0; i < children.length; i++) {
-    //   var miniatureContainer = children[i];
-    //   miniatureContainer.classList.add("fadeout");
-    // }
-
     displayer.classList.remove("fadein")
     displayer.classList.add("fadeout")
 
+    console.log(data)
     let newContent = (
-      <ProductInfo productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
+      <ProductInfo productType={productType} productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
     );
 
     setTimeout(() => {

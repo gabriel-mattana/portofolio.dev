@@ -1,50 +1,33 @@
 import React from "react";
+import ProductInfo_Videogames from "./ProductInfo_Videogames";
+import ProductInfo_Book from "./ProductInfo_Book";
 
-export default function ProductInfo({ productData, returnToDisplayProducts }) {
-let productdataId = "productInfo" + productData.title
-  var btnPlayGame = undefined;
-  if (productData.gameurl) {
-    btnPlayGame = (
-      <a className="playgame" href={productData.gameurl} target="_blank">
-        Play the game on itch.io
-      </a>
-    );
-  }
+export default function ProductInfo({ productType, productData, returnToDisplayProducts }) {
+  let productdataId = "productInfo" + productData.title;
 
-  function returnToProductDisplayer(){
-    var productInfo = document.getElementById(productdataId)
+  function returnToMenu() {
+    var productInfo = document.getElementById(productdataId);
 
-    productInfo.classList.remove("fadein")
+    productInfo.classList.remove("fadein");
     productInfo.classList.add("fadeout");
 
     setTimeout(() => {
-        returnToDisplayProducts();
-      }, 500);
+      returnToDisplayProducts();
+    }, 500);
+  }
+
+  let panelToDisplay = 0;
+  if(productType == "videogames")
+  {
+    panelToDisplay = <ProductInfo_Videogames productData={productData} returnToMenu={returnToMenu}/>
+  }
+  else if(productType == "books") {
+    panelToDisplay = <ProductInfo_Book productData={productData} returnToMenu={returnToMenu}/>
   }
 
   return (
     <div id={productdataId} className="product-info-panel grid rg20 fadein">
-      <div className="product-description grid rg20">
-        <div>
-          <img src={productData.img} />
-        </div>
-        <div className="product-text grid rg20">
-          <h2>{productData.title}</h2>
-          <button onClick={returnToProductDisplayer}>X</button>
-          <p>Engine: {productData.engine}</p>
-          <p>Team: {productData.team}</p>
-          <p>Role: {productData.role}</p>
-          <p>{productData.description}</p>
-        </div>
-      </div>
-      <iframe
-        src={productData.videosrc}
-        title={productData.title}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-        allowFullScreen
-      />
-      {btnPlayGame}
-    </div>
-  );
+      {panelToDisplay}
+    </div>);
+    
 }
