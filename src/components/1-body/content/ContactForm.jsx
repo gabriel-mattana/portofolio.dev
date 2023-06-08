@@ -1,25 +1,107 @@
-import react from "react";
+import { useForm } from "@formspree/react";
 import SectionTemplate from "./SectionTemplate";
+import { useState } from "react";
+
+const MUST_BE_FULFILLED = "This field must be fulfilled";
 
 export default function ContactForm() {
+  const api = "https://formspree.io/f/xoqzorwz";
+  const [state, handleHttpPostRequest] = useForm("xoqzorwz");
+  
+  const [errorsState, updateErrors] = useState("")
+
+  function DisplayHttpResponse() {
+
+    let result = {}
+    if (state.errors.length > 0) {
+      console.log(state.errors);
+
+      state.errors.forEach((error) => {
+        switch (error.code) {
+          case "FORM_NOT_FOUND":
+            result = "Error, message has not been sent. Please retry.";
+            break;
+
+          default:
+            result = "An error occured. Please retry";
+        }
+        // updateErrors(newErrors)
+        return <p className="error">{result}</p>
+      });
+    }
+    else if(state.succeeded)
+    {
+      return <p className="errorCorrected">Message sent</p>
+    }
+  }
+
+  function handleSubmit(event)
+  {
+    event.preventDefault()
+    let nameField = document.getElementById("form_name");
+    let emailField = document.getElementById("form_email");
+    let messageField = document.getElementById("form_message");
+
+    function updateCss(element, condition)
+    {
+      let css = element.classList;
+      if(condition)
+      {
+        css.add("invalidInput")
+      }
+      else
+      {
+        css.remove("invalidInput")
+      }
+    }
+
+    var newErrors = {}
+    newErrors.name = nameField.value =="" ? MUST_BE_FULFILLED : undefined
+    newErrors.email = emailField.value =="" ? MUST_BE_FULFILLED : undefined
+    newErrors.message = messageField.value =="" ? MUST_BE_FULFILLED : undefined
+    updateCss(nameField, newErrors.name)
+    updateCss(emailField, newErrors.email)
+    updateCss(messageField, newErrors.message)
+
+    updateErrors(newErrors)
+
+    if(!newErrors.name  || !newErrors.email  || !newErrors.message ){
+     handleHttpPostRequest(event)
+    }
+  }
+
   const content = (
-    <react.Fragment>
-          <div className="form-container">
-            <form className="flex-col">
-              <label>Your name / company</label>
-              <input type="text" required={true} />
-              <br />
-              <label> E-mail</label>
-              <input type="email" required={true}></input>
-              <br />
-              <label> Message</label>
-              <textarea rows="15"></textarea>
-              <br />
-              <input type="submit" className="btnsubmit" />
-            </form>
-          </div>
-      </react.Fragment>
-    
+    <form className="flex-col" onSubmit={handleSubmit}>
+      <label htmlFor="name">Your name / company</label>
+      <input
+        id="form_name"
+        type="name"
+        name="form_name"
+      />
+      <p className="error">{errorsState.name}</p>
+      <br />
+      <label htmlFor="email"> E-mail</label>
+      <input
+        id="form_email"
+        type="email"
+        name="form_email"
+      />
+      <p className="error">{errorsState.email}</p>
+      <br />
+      <label htmlFor="message"> Message</label>
+      <textarea
+        id="form_message"
+        rows="15"
+        name="form_message"
+      />
+      <p className="error">{errorsState.message}</p>
+      <br />
+      <div>
+        <input type="reset" className="btnsubmit"/>
+        <input type="submit" className="btnsubmit"/>
+      </div>
+      {DisplayHttpResponse()}
+    </form>
   );
   return <SectionTemplate id="contact" title="Contact" content={content} />;
 }

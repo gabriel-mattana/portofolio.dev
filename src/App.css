@@ -279,6 +279,8 @@ iframe{
 form{
   display: grid;
   row-gap: 5px;
+  width: 80%;
+  font-size: var(--const20px);
 }
 
 form label{
@@ -291,6 +293,24 @@ form input{
 
 .btnsubmit{
   justify-self: center;
+}
+
+.error{
+  color:red
+}
+
+input, textarea{
+  border-radius: 5px;
+  border: solid black 1px;
+  padding: 5px;
+}
+
+.invalidInput{
+  border: solid red 2px;
+}
+
+.errorCorrected{
+  color: green;
 }
 
 /* FOOTER */
