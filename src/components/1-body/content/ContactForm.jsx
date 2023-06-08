@@ -6,17 +6,16 @@ const MUST_BE_FULFILLED = "This field must be fulfilled";
 
 export default function ContactForm() {
   const api = "https://formspree.io/f/xoqzorwz";
-  const [state, handleHttpPostRequest] = useForm("xoqzorwz");
+  let [httpResponseState, updateHttpPostRequest] = useForm("xoqzorwz");
   
   const [errorsState, updateErrors] = useState("")
 
   function DisplayHttpResponse() {
-
     let result = {}
-    if (state.errors.length > 0) {
-      console.log(state.errors);
+    if (httpResponseState.errors.length > 0) {
+      console.log(httpResponseState.errors);
 
-      state.errors.forEach((error) => {
+      httpResponseState.errors.forEach((error) => {
         switch (error.code) {
           case "FORM_NOT_FOUND":
             result = "Error, message has not been sent. Please retry.";
@@ -25,11 +24,10 @@ export default function ContactForm() {
           default:
             result = "An error occured. Please retry";
         }
-        // updateErrors(newErrors)
         return <p className="error">{result}</p>
       });
     }
-    else if(state.succeeded)
+    else if(httpResponseState.succeeded)
     {
       return <p className="errorCorrected">Message sent</p>
     }
@@ -65,9 +63,15 @@ export default function ContactForm() {
 
     updateErrors(newErrors)
 
-    if(!newErrors.name  || !newErrors.email  || !newErrors.message ){
-     handleHttpPostRequest(event)
+    if(!newErrors.name && !newErrors.email && !newErrors.message ){
+     updateHttpPostRequest(event)
     }
+  }
+
+  function resetBtnSubmit()
+  {
+    var btn = document.getElementById("btnSubmit")
+    btn.disabled = false;
   }
 
   const content = (
@@ -97,8 +101,8 @@ export default function ContactForm() {
       <p className="error">{errorsState.message}</p>
       <br />
       <div>
-        <input type="reset" className="btnsubmit"/>
-        <input type="submit" className="btnsubmit"/>
+        <input type="reset" className="btnsubmit" onClick={resetBtnSubmit}/>
+        <input id="btnSubmit" type="submit" className="btnsubmit" disabled={httpResponseState.succeeded}/>
       </div>
       {DisplayHttpResponse()}
     </form>
