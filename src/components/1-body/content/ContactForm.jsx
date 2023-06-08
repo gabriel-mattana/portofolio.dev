@@ -1,6 +1,7 @@
 import { useForm } from "@formspree/react";
 import SectionTemplate from "./SectionTemplate";
 import { useState } from "react";
+import InputField from "./ContactForm_InputField";
 
 const MUST_BE_FULFILLED = "This field must be fulfilled";
 
@@ -24,12 +25,12 @@ export default function ContactForm() {
           default:
             result = "An error occured. Please retry";
         }
-        return <p className="error">{result}</p>
+        return <p  id="httpResponse" className="error">{result}</p>
       });
     }
     else if(httpResponseState.succeeded)
     {
-      return <p className="errorCorrected">Message sent</p>
+      return <p id="httpResponse" className="errorCorrected">Message sent</p>
     }
   }
 
@@ -72,33 +73,27 @@ export default function ContactForm() {
   {
     var btn = document.getElementById("btnSubmit")
     btn.disabled = false;
+
+    var httpresponse = document.getElementById("httpResponse")
+    console.log(httpresponse.textContent)
+    httpresponse.remove()
   }
 
   const content = (
     <form className="flex-col" onSubmit={handleSubmit}>
-      <label htmlFor="name">Your name / company</label>
-      <input
-        id="form_name"
-        type="name"
-        name="form_name"
-      />
-      <p className="error">{errorsState.name}</p>
+      <InputField id="form_name" type="name" label={"Name / Company"} error={errorsState.name}/>
       <br />
-      <label htmlFor="email"> E-mail</label>
-      <input
-        id="form_email"
-        type="email"
-        name="form_email"
-      />
-      <p className="error">{errorsState.email}</p>
+      <InputField id="form_email" type="email" label={"E-mail"} error={errorsState.email}/>
       <br />
-      <label htmlFor="message"> Message</label>
+      <div className="flex spacedAway">
+          <label htmlFor="message"> Message</label>
+          <p className="error">{errorsState.message}</p>
+      </div>
       <textarea
         id="form_message"
         rows="15"
         name="form_message"
       />
-      <p className="error">{errorsState.message}</p>
       <br />
       <div>
         <input type="reset" className="btnsubmit" onClick={resetBtnSubmit}/>

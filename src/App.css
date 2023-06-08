@@ -47,6 +47,10 @@
   border-radius: var(--const20px);
 }
 
+.spacedAway{
+  justify-content: space-between;
+}
+
 /* HEADER */
 
 header {
