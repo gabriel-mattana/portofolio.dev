@@ -20,8 +20,9 @@ export default function ProductInfo({
   let extratextinfo = undefined;
   let extraContent = undefined;
   let btnLabel = "";
-  if (productType == "videogames") {
-    // panelToDisplay = <ProductInfo_Videogames productData={productData} returnToMenu={returnToMenu}/>
+
+  if (productType == "videogames") 
+  {
     extratextinfo = (
       <React.Fragment>
         <p>Type: {productData.type}</p>
@@ -39,8 +40,10 @@ export default function ProductInfo({
         allowFullScreen
       />
     );
-    btnLabel = "Play on itch.io";
-  } else if (productType == "books") {
+    btnLabel = "Play";
+  } 
+  else if (productType == "books") 
+  {
     extraContent = <img className="bd-bs1 bdr-round" src={productData.img} />;
     extratextinfo = (
       <React.Fragment>
@@ -52,30 +55,30 @@ export default function ProductInfo({
   }
 
   return (
-    <div id={productdataId} className="product-info-panel grid bdr-round fadein">
-        <div className="product-visuals">
-          {extraContent}
-        </div>
-        <div className="product-description-text grid rg20">
-          <h2>{productData.title}</h2>
+    <div
+      id={productdataId}
+      className="product-info-panel grid bdr-round fadein"
+    >
+      <div className="product-visuals">{extraContent}</div>
+      <div name="product-description" className="flex-col rg20 spacedAway">
+        <h2>{productData.title}</h2>
+        <div className="product-description-text grid rg10">
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {extratextinfo}
           <p>{productData.description}</p>
-          <div className="btncontainer flex">
-            {productData.producturl == undefined ? undefined : (
-                <a href={productData.producturl} target="_blank">
-                  <button className="productbtn btngotoproduct" >{btnLabel}</button> 
-                </a>
-            )}
-            <button
-              className="productbtn btnreturntomenu"
-              onClick={returnToMenu}
-            >
-              Return
-            </button>
-          </div>
         </div>
+        <div className="btncontainer flex">
+          {productData.producturl == undefined ? undefined : (
+            <a href={productData.producturl} target="_blank">
+              <button className="productbtn btngotoproduct">{btnLabel}</button>
+            </a>
+          )}
+          <button className="productbtn btnreturntomenu" onClick={returnToMenu}>
+            Return
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

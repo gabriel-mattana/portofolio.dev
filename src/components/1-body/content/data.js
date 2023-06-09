@@ -148,12 +148,9 @@ let arcania1= {
     pseudonyme: "Gehaimme",
     description:"Arcania est un monde brisé où les continents dérivent dans un ciel infini."+
     "Ses anciens maîtres, les Aréis, ont disparu depuis longtemps, laissant derrière eux de fabuleuses technologiques."+
-    "Un héritage sans égal convoité par tous, car 'celui qui possède la puissance des Aréis, domine le monde'."+
-    "Un proverbe que le roi Forhus II compte bien vérifier. Atteint d'une maladie incurable et proche de la fin,"+
-    "il souhaite plus que tout au monde laisser sa trace dans l'Histoire. Une ambition démesurée, appuyée par la découverte d'un étrange médaillon,"+
-    "qui plongera le monde dans une effroyable tourmente. De nombreux destins en seront affectés, dont deux en particulier :"+
-    "celui d'un voleur intrépide et celui d'un soldat dévoué."+
-    "Si l'un sera amené à faire face à son passé, l'autre devra choisir entre servir ou trahir.",
+    "Les grandes puissances intriguent et s'affrontent pour s'en emparer, au risque de detruire le monde dans leurs sillages."+
+    "Ainsi, lorsque Krel Nurdhal, talentueux membre de la guilde de voleur, entre en possession d'un de ces objets,"+
+    "sa vie s'en voit change pour toujours.",
     producturl:"https://www.kobo.com/fr/en/ebook/les-medaillons-d-arcania"
 }
 
