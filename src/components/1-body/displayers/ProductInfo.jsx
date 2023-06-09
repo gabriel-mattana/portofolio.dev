@@ -42,7 +42,12 @@ export default function ProductInfo({
     btnLabel = "Play on itch.io";
   } else if (productType == "books") {
     extraContent = <img className="bd-bs1 bdr-round" src={productData.img} />;
-    extratextinfo = <p>Pseudonyme: {productData.pseudonyme}</p>;
+    extratextinfo = (
+      <React.Fragment>
+        <p>Language: {productData.language}</p>
+        <p>Pseudonyme: {productData.pseudonyme}</p>
+      </React.Fragment>
+    );
     btnLabel = "Get ebook";
   }
 

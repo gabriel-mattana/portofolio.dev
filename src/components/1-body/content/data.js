@@ -104,6 +104,7 @@ let astraWorld= {
     img: setImgUrl("/books/astra_world.jpg",),
     year: "2019",
     genre: "dark fantasy",
+    language: "french",
     pseudonyme: "Gehaimme",
     description:"Lorsque la mort frappe, les défunts gagnent l'Après-vie. "+
     "Un monde inhospitalier dominé par un astre éternel, où les âmes semblent condamnées à une errance sans fin."+
@@ -117,6 +118,7 @@ let litius= {
     img: setImgUrl("/books/litius.jpg"),
     year: "2018",
     genre: "steam-punk, thriller",
+    language: "french",
     pseudonyme: "Gehaimme",
     description:"LEntrez dans le XIXème siècle d'un univers victorien où magie et révolution industrielle se côtoient à merveille."+
     "Litius Jurdal, mage et Enquêteur royal, se voit chargé par les plus hautes autorités de résoudre les affaires criminelles les plus importantes de son temps."+    
@@ -129,6 +131,7 @@ let arcania2= {
     img: setImgUrl("/books/arcania2.jpg"),
     year: "2017",
     genre: "fantasy",
+    language: "french",
     pseudonyme: "Gehaimme",
     description:"Exilée sur Veldona, l'île de métal, l'expédition alfarienne s'organise pour percer les mystères de la plus avancée des créations aréis,"+
     "tandis qu'à l'autre bout du monde, Krel et Iria se lancent à la poursuite de la confrérie des Lames Noires pour sauver leurs vies."+
@@ -141,6 +144,7 @@ let arcania1= {
     img: setImgUrl("/books/arcania1.jpg"),
     year: "2016",
     genre: "journey diary",
+    language: "french",
     pseudonyme: "Gehaimme",
     description:"Arcania est un monde brisé où les continents dérivent dans un ciel infini."+
     "Ses anciens maîtres, les Aréis, ont disparu depuis longtemps, laissant derrière eux de fabuleuses technologiques."+
@@ -158,6 +162,7 @@ let japan= {
     img: setImgUrl("/books/japan.jpg"),
     year: "2020",
     genre: "journey diary",
+    language: "french",
     pseudonyme: "Crazylongtrip",
     description:"Un voyage à l'autre bout du monde... La découverte d'une autre culture. Une expérience inoubliable au pays des ramens et des volcans.",
     producturl:"https://www.kobo.com/fr/en/ebook/crazylongtrip-au-pays-du-soleil-levant"
@@ -168,6 +173,7 @@ let compostella= {
     img: setImgUrl("/books/compostella.jpg"),
     year: "2018",
     genre: "journey diary",
+    language: "french",
     pseudonyme: "Crazylongtrip",
     description:"Les pages que vous vous apprêtez à feuilleter vous transporterons dans l'incroyable aventure que j'ai pu vivre sur le Chemin de Compostelle."+
     "Un périple de longue haleine motivé par la recherche d'un futur épanouissant, bien loin des standards établis par notre société actuelle."+
