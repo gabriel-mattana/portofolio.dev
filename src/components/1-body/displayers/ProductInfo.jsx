@@ -59,10 +59,9 @@ export default function ProductInfo({
           <p>{productData.description}</p>
           <div className="btncontainer flex">
             {productData.producturl == undefined ? undefined : (
-              <button className="productbtn btngotoproduct">
-                {btnLabel}
-                <a href={productData.producturl} target="_blank" />
-              </button>
+                <a href={productData.producturl} target="_blank">
+                  <button className="productbtn btngotoproduct" >{btnLabel}</button> 
+                </a>
             )}
             <button
               className="productbtn btnreturntomenu"

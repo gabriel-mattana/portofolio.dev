@@ -25,7 +25,6 @@ export default function ProductDisplayer({ productType, data }) {
     displayer.classList.remove("fadein")
     displayer.classList.add("fadeout")
 
-    console.log(data)
     let newContent = (
       <ProductInfo productType={productType} productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
     );

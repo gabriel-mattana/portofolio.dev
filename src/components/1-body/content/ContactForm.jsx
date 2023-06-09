@@ -6,7 +6,6 @@ import InputField from "./ContactForm_InputField";
 const MUST_BE_FULFILLED = "This field must be fulfilled";
 
 export default function ContactForm() {
-  const api = "https://formspree.io/f/xoqzorwz";
   let [httpResponseState, updateHttpPostRequest] = useForm("xoqzorwz");
   
   const [errorsState, updateErrors] = useState("")
@@ -75,7 +74,6 @@ export default function ContactForm() {
     btn.disabled = false;
 
     var httpresponse = document.getElementById("httpResponse")
-    console.log(httpresponse.textContent)
     httpresponse.remove()
   }
 
