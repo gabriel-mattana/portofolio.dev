@@ -10,6 +10,7 @@
   --displayminheight: 500px;
   --borderRadius:15px;
   --const20px:20px;
+  --const10px:10px;
   --shadowBox: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -29,6 +30,7 @@
 /* UTILS */
 .flex {
   display: flex;
+  width: 100%;
 }
 
 .flex-col{
@@ -46,6 +48,14 @@
 
 .rg20{
   row-gap: var(--const20px);
+}
+
+.cg20{
+  column-gap: var(--const20px);
+}
+
+.cg10{
+  column-gap: var(--const10px);
 }
 
 .bd-bs1{
@@ -119,6 +129,33 @@ header {
   padding: 2.5% 2.5% 3.5% 2.5%;
   justify-items: center;
   row-gap: 25px;
+}
+/* Intro */
+.intro{
+  justify-content: space-between;
+}
+
+.intro-txt{
+padding-left: 40%;
+text-align: left;
+
+}
+
+.meicon{
+  border-radius: 100%;
+  max-width: 200px;
+}
+
+.icon{
+  max-width: 30px;
+}
+.engine_icon{
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.unity_icon{
+  filter: invert(100);
 }
 
 /* DISPLAYER */
