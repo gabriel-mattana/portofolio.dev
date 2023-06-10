@@ -1,12 +1,12 @@
 import React from "react";
-import { ScrollTo } from "../../utils";
+import { ScrollToSection } from "../../utils";
 
 export default function NavButton(props) 
 {
   function UpdateContent() {
     
     console.log("Clicked on " + props.label);
-    ScrollTo(props.link)
+    ScrollToSection(props.link)
   }
 
   console.log("NavItem " + props.label + " rendered");

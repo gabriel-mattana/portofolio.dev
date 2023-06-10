@@ -2,7 +2,7 @@
 let beerCook = {
     title: "Beer cook",
     imgurl: "/games/beer_cook0.jpg",
-    small_imgsurl:["/games/beer_cook1.jpg","/games/beer_cook2.jpg"],
+    small_imgsurl:["/games/beer_cook1.jpg","/games/beer_cook2.jpg",,"/games/beer_cook3.jpg"],
     year: "2023",
     engine: "Unity",
     genre: "arcade",

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FindLocalImg, ScrollTo } from "../../../utils";
+import { FindLocalImg, ScrollToSection } from "../../../utils";
 
 export default function Miniature({ data, popupCallback }) {
   let miniature;

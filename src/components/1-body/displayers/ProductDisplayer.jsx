@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Miniature from "./Miniature";
 import ProductInfo from "./ProductInfo";
-import { ScrollTo } from "../../../utils";
+import { PlaceProductInView } from "../../../utils";
 
 export default function ProductDisplayer({ productType, data }) {
   var keyNb = 0;
@@ -20,10 +20,9 @@ export default function ProductDisplayer({ productType, data }) {
   let [stateContent, updateContent] = useState(productDisplayer);
 
   function displayInfoOnProduct(productData) {
-    ScrollTo(productType)
+    PlaceProductInView(displayerid)
     let displayer = document.getElementById(displayerid);
-    displayer.classList.remove("fadein")
-    displayer.classList.add("fadeout")
+    displayer.classList.replace("fadein", "fadeout")
 
     let newContent = (
       <ProductInfo productType={productType} productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
