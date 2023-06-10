@@ -20,9 +20,13 @@ export default function ProductInfo({
 
   let extratextinfo = undefined;
   let visualContent = undefined;
+  let gridClass =  undefined
   let btnLabel = "";
 
   if (productType == "videogames") {
+
+    gridClass = "grid60-40";
+
     extratextinfo = (
       <React.Fragment>
         <p>Type: {productData.type}</p>
@@ -50,6 +54,8 @@ export default function ProductInfo({
     btnLabel = "Play";
   }
   else if (productType == "books") {
+    gridClass = "grid50-50"
+
     visualContent = (
       <div className="product-visuals">
         <img className="bd-bs1 bdr-round" src={FindLocalImg(productData.imgurl)} />
@@ -68,7 +74,7 @@ export default function ProductInfo({
   return (
     <div
       id={productdataId}
-      className="product-info-panel grid bdr-round fadein"
+      className={gridClass + " product-info-panel bdr-round fadein"}
     >
       {visualContent}
       <div name="product-description" className="flex-col rg20 spacedAway">

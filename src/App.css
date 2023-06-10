@@ -211,13 +211,22 @@ img{
 }
 
 .product-info-panel{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   column-gap: var(--const20px);
   justify-items: center;
   background-color: rgb(46, 45, 45);
   padding: var(--const20px);
   box-shadow: 0 0 10px 0px black
+}
+
+.grid50-50
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid60-40{
+  display: grid;
+  grid-template-columns: 60% 40%;
 }
 
 .product-visuals{
