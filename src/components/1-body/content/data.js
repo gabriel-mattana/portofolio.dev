@@ -71,8 +71,8 @@ let fallenStar= {
 
 let clockTower= {
     title: "Clock tower",
-    imgurl: "/games/clock_tower.jpg",
-    small_imgsurl:["/games/beer_cook1.jpg","/games/beer_cook.jpg2", "/games/beer_cook.jpg3"],
+    imgurl: "/games/clock_tower0.jpg",
+    small_imgsurl:["/games/clock_tower1.jpg","/games/clock_tower2.jpg", "/games/clock_tower3.jpg"],
     year: "2022",
     engine: "Adobe animate",
     genre: "action",
@@ -86,8 +86,8 @@ let clockTower= {
 
 let marryMe= {
     title: "Marry me",
-    imgurl: "/games/marry_me.jpg",
-    small_imgsurl:["/games/beer_cook1.jpg","/games/beer_cook.jpg2", "/games/beer_cook.jpg3"],
+    imgurl: "/games/marry_me0.jpg",
+    small_imgsurl:["/games/marry_me1.jpg","/games/marry_me2.jpg", "/games/marry_me3.jpg"],
     year: "2021",
     engine: "Unity",
     genre: "action",
