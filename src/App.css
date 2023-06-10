@@ -212,7 +212,7 @@ img{
 
 .product-info-panel{
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: var(--const20px);
   justify-items: center;
   background-color: rgb(46, 45, 45);

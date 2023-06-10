@@ -15,7 +15,7 @@ let beerCook = {
     "mixing spices, and cooking the curry, all while managing their beer level."+
     "Too little beer, and the chef's creativity wanes, resulting in a poorly executed dish. Too much beer,"+
     "and the chef's coordination and decision-making skills are impaired, leading to mistakes and a lower score. ",
-    videosrc:"",
+    videosrc:"https://www.youtube.com/embed/_uEQKQXTQBU",
     producturl: "https://miragames.itch.io/beercook",
 }
 

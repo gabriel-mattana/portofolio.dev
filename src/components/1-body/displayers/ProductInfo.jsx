@@ -52,7 +52,7 @@ export default function ProductInfo({
   else if (productType == "books") {
     visualContent = (
       <div className="product-visuals">
-        <img className="bd-bs1 bdr-round" src={FindLocalImg(productData.imgurl)} />;
+        <img className="bd-bs1 bdr-round" src={FindLocalImg(productData.imgurl)} />
       </div>
     );
 
