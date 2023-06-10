@@ -146,7 +146,7 @@ text-align: left;
   max-width: 200px;
 }
 
-.icon{
+.lang_icon{
   max-width: 30px;
 }
 .engine_icon{
@@ -154,8 +154,8 @@ text-align: left;
   max-height: 100px;
 }
 
-.unity_icon{
-  filter: invert(100);
+.prog_icon{ 
+  width: 80px;
 }
 
 /* DISPLAYER */

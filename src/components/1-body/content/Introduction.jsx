@@ -7,10 +7,10 @@ export default function Introduction() {
       <div>
         <img className="meicon bd-bs1" src={FindLocalImg("icons/me_icon.jpg")} alt="my picture" />
         <div name="flex cg10">
-          <img className="icon" src={FindLocalImg("icons/french_icon.jpg")} alt="french_icon" />
-          <img className="icon" src={FindLocalImg("icons/english_icon.jpg")} alt="english_icon" />
-          <img className="icon" src={FindLocalImg("icons/italian_icon.jpg")} alt="italian_icon" />
-          <img className="icon" src={FindLocalImg("icons/japanese_icon.jpg")} alt="japanese_icon" />
+          <img className="lang_icon" src={FindLocalImg("icons/french_icon.jpg")} alt="french_icon" />
+          <img className="lang_icon" src={FindLocalImg("icons/english_icon.jpg")} alt="english_icon" />
+          <img className="lang_icon" src={FindLocalImg("icons/italian_icon.jpg")} alt="italian_icon" />
+          <img className="lang_icon" src={FindLocalImg("icons/japanese_icon.jpg")} alt="japanese_icon" />
         </div>
       </div>
       <div className="grid rg20">
@@ -37,27 +37,29 @@ export default function Introduction() {
           <div className="flex">Programming languages:
             <div>
               <label>C#</label>
-              <img className="engine_icon" src={FindLocalImg("icons/csharp_icon.png")} alt="csharp_icon" /> 
+              <img className="prog_icon" src={FindLocalImg("icons/csharp_icon.png")} alt="csharp_icon" /> 
             </div>
             <div>
               <label>C++</label>
-              <img className="engine_icon" src={FindLocalImg("icons/c++_icon.png")} alt="c++_icon" /> 
+              <img className="prog_icon" src={FindLocalImg("icons/c++_icon.png")} alt="c++_icon" /> 
             </div>
             <div>
               <label>Javascript</label>
-              <img className="engine_icon" src={FindLocalImg("icons/js_icon.png")} alt="js_icon" /> 
+              <img className="prog_icon" src={FindLocalImg("icons/js_icon.png")} alt="js_icon" /> 
             </div>
+          </div>
+          <div className="flex">Frameworks:
             <div>
               <label>.Net</label>
-              <img className="engine_icon" src={FindLocalImg("icons/dotnet_icon.png")} alt="dotnet_icon" /> 
+              <img className="prog_icon" src={FindLocalImg("icons/dotnet_icon.png")} alt="dotnet_icon" /> 
             </div>
             <div>
               <label>Node.js</label>
-              <img className="engine_icon" src={FindLocalImg("icons/node_icon.svg")} alt="node_icon" /> 
+              <img className="prog_icon" src={FindLocalImg("icons/node_icon.png")} alt="node_icon" /> 
             </div>
             <div>
               <label>React</label>
-              <img className="engine_icon" src={FindLocalImg("icons/react_icon.svg")} alt="react_icon" /> 
+              <img className="prog_icon" src={FindLocalImg("icons/react_icon.png")} alt="react_icon" /> 
             </div>
           </div>
         </div>
@@ -65,5 +67,5 @@ export default function Introduction() {
 
     </div>
   );
-  return <SectionTemplate id="introduction" title="Introduction" content={content} />;
+  return <SectionTemplate id="introduction" title="Full stack programmer / game developer" content={content} />;
 }
