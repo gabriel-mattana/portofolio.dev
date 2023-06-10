@@ -1,4 +1,5 @@
 import React from "react";
+import { FindLocalImg } from "../../../utils";
 
 export default function ProductInfo({
   productType,
@@ -18,11 +19,10 @@ export default function ProductInfo({
   }
 
   let extratextinfo = undefined;
-  let extraContent = undefined;
+  let visualContent = undefined;
   let btnLabel = "";
 
-  if (productType == "videogames") 
-  {
+  if (productType == "videogames") {
     extratextinfo = (
       <React.Fragment>
         <p>Type: {productData.type}</p>
@@ -31,20 +31,31 @@ export default function ProductInfo({
         <p>Role: {productData.role}</p>
       </React.Fragment>
     );
-    extraContent = (
-      <iframe
-        src={productData.videosrc}
-        title={productData.title}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-        allowFullScreen
-      />
+
+
+    visualContent = (
+      <div className="grid rg20 product-visuals">
+        <iframe
+          src={productData.videosrc}
+          title={productData.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowFullScreen
+        />
+        <div className="smallimgs_container">
+          {productData.small_imgsurl.map((imgurl, i) => <img className="bd-bs1" key={"small_img" + i} src={FindLocalImg(imgurl)} alt={productData.title + i} />)}
+        </div>
+      </div>
     );
     btnLabel = "Play";
-  } 
-  else if (productType == "books") 
-  {
-    extraContent = <img className="bd-bs1 bdr-round" src={productData.img} />;
+  }
+  else if (productType == "books") {
+    visualContent = (
+      <div className="product-visuals">
+        <img className="bd-bs1 bdr-round" src={FindLocalImg(productData.imgurl)} />;
+      </div>
+    );
+
     extratextinfo = (
       <React.Fragment>
         <p>Language: {productData.language}</p>
@@ -59,7 +70,7 @@ export default function ProductInfo({
       id={productdataId}
       className="product-info-panel grid bdr-round fadein"
     >
-      <div className="product-visuals">{extraContent}</div>
+      {visualContent}
       <div name="product-description" className="flex-col rg20 spacedAway">
         <h2>{productData.title}</h2>
         <div className="product-description-text grid rg10">

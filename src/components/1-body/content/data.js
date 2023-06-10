@@ -1,11 +1,8 @@
-function setImgUrl(url){
-    return process.env.PUBLIC_URL + "/images/" + url;
-}
-
 // VIDEO GAMES
 let beerCook = {
     title: "Beer cook",
-    img: setImgUrl("/games/beer_cook.jpg"),
+    imgurl: "/games/beer_cook0.jpg",
+    small_imgsurl:["/games/beer_cook1.jpg","/games/beer_cook2.jpg"],
     year: "2023",
     engine: "Unity",
     genre: "arcade",
@@ -24,7 +21,8 @@ let beerCook = {
 
  let bluePeace = {
     title: "Blue Peace",
-    img: setImgUrl("/games/blue_peace.jpg"),
+    imgurl: "/games/blue_peace0.jpg",
+    small_imgsurl:["/games/blue_peace1.jpg","/games/blue_peace2.jpg", "/games/blue_peace3.jpg"],
     year: "2022",
     engine: "Godot",
     genre: "narrative game",
@@ -38,7 +36,8 @@ let beerCook = {
 
 let handleTheCrate = {
     title: "Handle the crate",
-    img: setImgUrl("/games/handle_the_crate.jpg"),
+    imgurl: "/games/handle_crate0.jpg",
+    small_imgsurl:["/games/handle_crate1.jpg","/games/handle_crate2.jpg", "/games/handle_crate3.jpg"],
     year: "2022",
     engine: "Godot",
     genre: "puzzle game",
@@ -55,7 +54,8 @@ let handleTheCrate = {
 
 let fallenStar= {
     title: "Fallen Star",
-    img: setImgUrl("/games/fallen_star.jpg"),
+    imgurl: "/games/fallen_star0.jpg",
+    small_imgsurl:["/games/fallen_star1.jpg","/games/fallen_star2.jpg", "/games/fallen_star3.jpg"],
     year: "2022",
     engine: "Unity",
     genre: "narrative game",
@@ -71,7 +71,8 @@ let fallenStar= {
 
 let clockTower= {
     title: "Clock tower",
-    img: setImgUrl("/games/clock_tower.jpg"),
+    imgurl: "/games/clock_tower.jpg",
+    small_imgsurl:["/games/beer_cook1.jpg","/games/beer_cook.jpg2", "/games/beer_cook.jpg3"],
     year: "2022",
     engine: "Adobe animate",
     genre: "action",
@@ -85,7 +86,8 @@ let clockTower= {
 
 let marryMe= {
     title: "Marry me",
-    img: setImgUrl("/games/marry_me.jpg"),
+    imgurl: "/games/marry_me.jpg",
+    small_imgsurl:["/games/beer_cook1.jpg","/games/beer_cook.jpg2", "/games/beer_cook.jpg3"],
     year: "2021",
     engine: "Unity",
     genre: "action",
@@ -107,7 +109,7 @@ let videoGames = {
 // BOOKS
 let astraWorld= {
     title: "Astra World",
-    img: setImgUrl("/books/astra_world.jpg",),
+    imgurl: "/books/astra_world.jpg",
     year: "2019",
     genre: "dark fantasy",
     language: "french",
@@ -121,7 +123,7 @@ let astraWorld= {
 
 let litius= {
     title: "The enquiries of Litius Jurdal",
-    img: setImgUrl("/books/litius.jpg"),
+    imgurl: "/books/litius.jpg",
     year: "2018",
     genre: "steam-punk, thriller",
     language: "french",
@@ -134,7 +136,7 @@ let litius= {
 
 let arcania2= {
     title: "Arcania medallions: book II",
-    img: setImgUrl("/books/arcania2.jpg"),
+    imgurl: "/books/arcania2.jpg",
     year: "2017",
     genre: "fantasy",
     language: "french",
@@ -147,7 +149,7 @@ let arcania2= {
 
 let arcania1= {
     title: "Arcania medallions: book I",
-    img: setImgUrl("/books/arcania1.jpg"),
+    imgurl: "/books/arcania1.jpg",
     year: "2016",
     genre: "journey diary",
     language: "french",
@@ -162,7 +164,7 @@ let arcania1= {
 
 let japan= {
     title: "The Land of the Rising Sun",
-    img: setImgUrl("/books/japan.jpg"),
+    imgurl: "/books/japan.jpg",
     year: "2020",
     genre: "journey diary",
     language: "french",
@@ -173,7 +175,7 @@ let japan= {
 
 let compostella= {
     title: "On the way of Compostella",
-    img: setImgUrl("/books/compostella.jpg"),
+    imgurl: "/books/compostella.jpg",
     year: "2018",
     genre: "journey diary",
     language: "french",

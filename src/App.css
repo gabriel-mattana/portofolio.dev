@@ -124,8 +124,8 @@ header {
 /* DISPLAYER */
 .productdisplayer{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
   gap: var(--const20px);
   min-height: var(--displayminheight);
 }
@@ -222,11 +222,22 @@ img{
 
 .product-visuals{
   align-self: center;
+  height: 100%;
   width: 100%;
 }
 
 .product-visuals img{
   width: 65%;
+}
+
+.smallimgs_container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+.smallimgs_container img{
+  width: 100%;
 }
 
 .product-description{

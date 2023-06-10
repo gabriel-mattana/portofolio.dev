@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ScrollTo } from "../../../utils";
+import { FindLocalImg, ScrollTo } from "../../../utils";
 
 export default function Miniature({ data, popupCallback }) {
   let miniature;
@@ -37,7 +37,7 @@ export default function Miniature({ data, popupCallback }) {
       onMouseLeave={restoreMiniature}
     >
       <div id={data.title} className="miniature" onClick={onClick}>
-        <img src={data.img} />
+        <img src={FindLocalImg(data.imgurl)} />
         <div className="miniature-details">
           <p className="Title">{data.title}</p>
           <p className="Year">{data.year}</p>
