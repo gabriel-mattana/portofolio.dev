@@ -226,7 +226,7 @@ img{
 
 .grid60-40{
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 55% 45%;
 }
 
 .product-visuals{
@@ -259,11 +259,10 @@ img{
 .product-description-text{
   text-align: left;
   font-size: 18px;
-  margin-top: 15px;
   line-height: 1.5;
 }
 
-.product-description h2{
+.product-description-text h2{
   text-align: center;
 }
 

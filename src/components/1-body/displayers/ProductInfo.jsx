@@ -74,12 +74,11 @@ export default function ProductInfo({
   return (
     <div
       id={productdataId}
-      className={gridClass + " product-info-panel bdr-round fadein"}
-    >
+      className={gridClass + " product-info-panel bdr-round fadein"}>
       {visualContent}
       <div name="product-description" className="flex-col rg20 spacedAway">
-        <h2>{productData.title}</h2>
         <div className="product-description-text grid rg10">
+          <h2>{productData.title}</h2>
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {extratextinfo}

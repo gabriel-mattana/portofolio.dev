@@ -9,10 +9,8 @@ let beerCook = {
     type: "cooking game",
     team: "3 programers",
     role: "UI programer, game designer",
-    description:"Beer Cook is a game where players take on the role of a chef in a bustling restaurant kitchen trying to create the perfect curry dish."+
-    "The catch is that the chef's creativity is fueled by beer, and players must manage their beer level to maintain their creative flow."+
-    "The game could be a time-based puzzle game where players must complete various stages of curry preparation, such as chopping vegetables,"+
-    "mixing spices, and cooking the curry, all while managing their beer level."+
+    description:"Play as a chef in a bustling restaurant kitchen trying to create the perfect curry dish."+
+    "His creativity is fueled by beer, thus you need to manage his beer level to maintain their creative flow."+
     "Too little beer, and the chef's creativity wanes, resulting in a poorly executed dish. Too much beer,"+
     "and the chef's coordination and decision-making skills are impaired, leading to mistakes and a lower score. ",
     videosrc:"https://www.youtube.com/embed/_uEQKQXTQBU",
