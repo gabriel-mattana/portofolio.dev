@@ -1,21 +1,27 @@
-class Data{
-    constructor(title, url, year, description)
-    {
-        this.title = title;
-        this.img = process.env.PUBLIC_URL + "/images/" + url;
-        this.year = year;
-        this.description = description;
-    }
-}
-
 function setImgUrl(url){
     return process.env.PUBLIC_URL + "/images/" + url;
 }
 
 // VIDEO GAMES
-// let bluePeace = new Data("Blue peace", "/games/blue_peace.jpg", "2022",
-// "BluePeace is a visual naovle" +
-//  "visual novel");
+let beerCook = {
+    title: "Beer cook",
+    img: setImgUrl("/games/beer_cook.jpg"),
+    year: "2023",
+    engine: "Unity",
+    genre: "arcade",
+    type: "cooking game",
+    team: "3 programers",
+    role: "UI programer, game designer",
+    description:"Beer Cook is a game where players take on the role of a chef in a bustling restaurant kitchen trying to create the perfect curry dish."+
+    "The catch is that the chef's creativity is fueled by beer, and players must manage their beer level to maintain their creative flow."+
+    "The game could be a time-based puzzle game where players must complete various stages of curry preparation, such as chopping vegetables,"+
+    "mixing spices, and cooking the curry, all while managing their beer level."+
+    "Too little beer, and the chef's creativity wanes, resulting in a poorly executed dish. Too much beer,"+
+    "and the chef's coordination and decision-making skills are impaired, leading to mistakes and a lower score. ",
+    videosrc:"",
+    producturl: "https://miragames.itch.io/beercook",
+}
+
  let bluePeace = {
     title: "Blue Peace",
     img: setImgUrl("/games/blue_peace.jpg"),
@@ -95,7 +101,7 @@ let marryMe= {
 let videoGames = {
     title: "Video games",
     id:"videogames",
-    data: [bluePeace, handleTheCrate, fallenStar, clockTower, marryMe]
+    data: [beerCook, bluePeace, handleTheCrate, fallenStar, clockTower, marryMe]
 };
 
 // BOOKS
