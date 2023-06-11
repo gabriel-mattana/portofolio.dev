@@ -20,11 +20,10 @@ export default function ProductInfo({
 
   let extratextinfo = undefined;
   let visualContent = undefined;
-  let gridClass =  undefined
+  let gridClass = undefined;
   let btnLabel = "";
 
   if (productType == "videogames") {
-
     gridClass = "grid60-40";
 
     extratextinfo = (
@@ -36,9 +35,8 @@ export default function ProductInfo({
       </React.Fragment>
     );
 
-
     visualContent = (
-      <div className="grid rg20 product-visuals">
+      <div className="grid rg10 product-visuals content-cv">
         <iframe
           src={productData.videosrc}
           title={productData.title}
@@ -47,18 +45,27 @@ export default function ProductInfo({
           allowFullScreen
         />
         <div className="smallimgs_container">
-          {productData.small_imgsurl.map((imgurl, i) => <img className="bd-bs1" key={"small_img" + i} src={FindLocalImg(imgurl)} alt={productData.title + i} />)}
+          {productData.small_imgsurl.map((imgurl, i) => (
+            <img
+              className="bd-bs1"
+              key={"small_img" + i}
+              src={FindLocalImg(imgurl)}
+              alt={productData.title + i}
+            />
+          ))}
         </div>
       </div>
     );
     btnLabel = "Play";
-  }
-  else if (productType == "books") {
-    gridClass = "grid50-50"
+  } else if (productType == "books") {
+    gridClass = "grid50-50";
 
     visualContent = (
       <div className="product-visuals">
-        <img className="bd-bs1 bdr-round" src={FindLocalImg(productData.imgurl)} />
+        <img
+          className="bd-bs1 bdr-round"
+          src={FindLocalImg(productData.imgurl)}
+        />
       </div>
     );
 
@@ -71,14 +78,30 @@ export default function ProductInfo({
     btnLabel = "Get ebook";
   }
 
+  const title = <h2>{productData.title}</h2>;
+  let titlePlaceHolder = { forSmallScreen: undefined, forNormalScreen: undefined };
+
+  window.addEventListener("resize", resizeDialogDynamically)
+
+  function resizeDialogDynamically(){
+    console.log("resize")
+    if (!window.matchMedia("(max-width:1000px)").matches) {
+      titlePlaceHolder.forNormalScreen = title;
+    } else {
+      titlePlaceHolder.forSmallScreen = title;
+    }
+  }
+
+  resizeDialogDynamically();
+
   return (
     <div
-      id={productdataId}
-      className={gridClass + " product-info-panel bdr-round fadein"}>
+      id={productdataId} className={gridClass + " product-info-panel bdr-round fadein content-cv"}>
+      {titlePlaceHolder.forSmallScreen}
       {visualContent}
       <div name="product-description" className="flex-col rg20 spacedAway">
         <div className="product-description-text grid rg10">
-          <h2>{productData.title}</h2>
+          {titlePlaceHolder.forNormalScreen}
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {extratextinfo}
