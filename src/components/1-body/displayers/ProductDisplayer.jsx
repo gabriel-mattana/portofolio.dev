@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Miniature from "./Miniature";
 import ProductInfo from "./ProductInfo";
 import { PlaceProductInView } from "../../../utils";
@@ -20,7 +20,7 @@ export default function ProductDisplayer({ productType, data }) {
   let [stateContent, updateContent] = useState(productDisplayer);
 
   function displayInfoOnProduct(productData) {
-    PlaceProductInView(displayerid)
+    PlaceProductInView(productType)
     let displayer = document.getElementById(displayerid);
     displayer.classList.replace("fadein", "fadeout")
 

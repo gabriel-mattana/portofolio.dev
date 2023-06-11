@@ -25,6 +25,7 @@
   color: rgb(255, 255, 255);
   background-color: #212121;
   text-align: center;
+  font-size: 100%;
 }
 
 /* UTILS */
@@ -82,6 +83,9 @@
 }
 
 /* HEADER */
+h1{
+  font-size: 2.5em;
+}
 
 header {
   display: flex;
@@ -102,7 +106,6 @@ header {
   width: 100%;
   overflow: hidden;
   background-color: #191919;
-  font-size: var(--const20px);
 }
 
 .navbutton {
@@ -111,8 +114,8 @@ header {
   height: 100%;
   border: 0;
   color: wheat;
-  font-size: var(--navbtnFont);
   min-width: 120px;
+  font-size: 1.25em;
 }
 
 .navbutton:hover {
@@ -132,7 +135,7 @@ header {
 /* BODY */
 .section-container {
   padding-top: var(--offsetFromHeader);
-  margin: 5%;
+  margin: 0 5%;
 }
 
 .section-bg {
@@ -144,19 +147,20 @@ header {
 
 /* Intro */
 .intro {
-  justify-content: space-between;
-  padding: var(--const20px) 10%;
+  padding: var(--const20px) 15%;
 }
 
 .intro-txt {
+  row-gap: 40px;
+  align-content: center;
   text-align: left;
   padding-left: 10%;
-
+  font-size: 1.4em;
 }
 
 .meicon {
   border-radius: 100%;
-  max-width: 200px;
+  min-width: 200px;
 }
 
 /* DISPLAYER */
@@ -165,7 +169,6 @@ header {
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
   gap: var(--const20px);
-  min-height: var(--displayminheight);
 }
 
 .miniature-container {

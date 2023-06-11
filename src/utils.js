@@ -4,8 +4,8 @@ export function ScrollToSection(id){
 }
 
 export function PlaceProductInView(id){
-    var parent = document.getElementById(id).parentElement
-    parent.scrollIntoView({behavior:"smooth"})
+    var height = document.getElementById(id).offsetTop
+    window.scrollTo({top: height + 35 ,behavior:"smooth"});
 }
 
 export function FindLocalImg(imgurl){

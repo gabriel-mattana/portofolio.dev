@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FindLocalImg, ScrollToSection } from "../../../utils";
+import { FindLocalImg } from "../../../utils";
 
 export default function Miniature({ data, popupCallback }) {
   let miniature;
@@ -8,10 +8,7 @@ export default function Miniature({ data, popupCallback }) {
   function shrinkMiniature() {
     if(isSelected) return;
 
-    if(miniature == undefined){   
-      miniature = document.getElementById(data.title);   
-    } 
-
+    miniature = document.getElementById(data.title);   
     miniature.classList.remove("miniature-restore-anim");
     miniature.classList.add("miniature-selected");
   }
