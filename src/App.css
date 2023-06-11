@@ -167,6 +167,7 @@ header {
 .productdisplayer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows:1fr;
   width: 100%;
   gap: var(--const20px);
 }
@@ -424,11 +425,20 @@ footer {
   height: 50px;
 }
 
+@media (max-width:1200px) {
+
+  .productdisplayer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows:1fr;
+  }
+}
+
 
 @media (max-width:800px) {
 
   .productdisplayer {
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows:1fr;
   }
 }
 
@@ -436,5 +446,6 @@ footer {
 
   .productdisplayer {
     grid-template-columns: 1fr;
+    grid-auto-rows:1fr;
   }
 }
