@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FindLocalImg } from "../../../utils";
 
 export default function ProductInfo({
@@ -76,32 +76,39 @@ export default function ProductInfo({
       </React.Fragment>
     );
     btnLabel = "Get ebook";
-  }
+  } 
 
   const title = <h2>{productData.title}</h2>;
-  let titlePlaceHolder = { forSmallScreen: undefined, forNormalScreen: undefined };
-
   window.addEventListener("resize", resizeDialogDynamically)
 
+  let smallScreen = false;
+  const [previousRenderState, updateRenderState] = useState(smallScreen)
+
   function resizeDialogDynamically(){
-    console.log("resize")
-    if (!window.matchMedia("(max-width:1000px)").matches) {
-      titlePlaceHolder.forNormalScreen = title;
-    } else {
-      titlePlaceHolder.forSmallScreen = title;
-    }
+      if (!window.matchMedia("(max-width:1000px)").matches) {
+        smallScreen = false;
+      } else {
+        smallScreen = true
+      }
+
+      if(previousRenderState != smallScreen)
+      {
+        console.log("change screen size")
+        updateRenderState(smallScreen)
+      }
   }
 
-  resizeDialogDynamically();
+ resizeDialogDynamically();
+
 
   return (
     <div
       id={productdataId} className={gridClass + " product-info-panel bdr-round fadein content-cv"}>
-      {titlePlaceHolder.forSmallScreen}
+      {smallScreen == true ? title: undefined}
       {visualContent}
       <div name="product-description" className="flex-col rg20 spacedAway">
         <div className="product-description-text grid rg10">
-          {titlePlaceHolder.forNormalScreen}
+          {smallScreen == false ? title : undefined}
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {extratextinfo}
