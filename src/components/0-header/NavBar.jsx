@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import NavButton from "./NavButton";
 import { FindLocalImg } from "../../utils";
 
@@ -14,24 +14,37 @@ function NavBar() {
     </div>
   );
 
-
-  function displayDropDown(){
+  var isDisplaying = useRef(false)
+  function displayDropDown() {
+    console.log(isDisplaying.current)
     var dropdown = document.getElementById("dropdown");
-    console.log(dropdown)
-    dropdown.classList.replace("hidden", "visible");
+    if(!isDisplaying.current)
+    {
+      dropdown.classList.replace("hidden", "visible");
+      isDisplaying.current = true;
+    }
+    else
+    {
+      dropdown.classList.replace("visible", "hidden");
+      isDisplaying.current = false;
+    }
+    
   }
 
   const hamburger = (
     <div className="flex hamburgerbar">
-      <div className="hamburger">
-      <button className="btn-dropdown" onClick={displayDropDown}>
-        <img src={FindLocalImg("icons/hamburger_icon.png")} alt="hamburger_icon" />
-      </button>
-      <div id="dropdown" className="hamburger-dropdown hidden">
-        <NavButton link={"videogames"} label="Video games" />
-        <NavButton link={"books"} label="Books" />
-        <NavButton link={"contact"} label="Contact" />
-      </div>
+      <div className="grid hamburger">
+        <button className="btn-dropdown" onClick={displayDropDown}>
+          <img
+            src={FindLocalImg("icons/hamburger_icon.png")}
+            alt="hamburger_icon"
+          />
+        </button>
+        <div id="dropdown" className="grid hamburger-dropdown hidden">
+          <NavButton link={"videogames"} label="Video games" />
+          <NavButton link={"books"} label="Books" />
+          <NavButton link={"contact"} label="Contact" />
+        </div>
       </div>
     </div>
   );
