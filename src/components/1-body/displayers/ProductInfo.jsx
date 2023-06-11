@@ -78,6 +78,7 @@ export default function ProductInfo({
     btnLabel = "Get ebook";
   } 
 
+    //TITLE CHANGE POSITION
   const title = <h2>{productData.title}</h2>;
   window.addEventListener("resize", resizeDialogDynamically)
 

@@ -96,6 +96,14 @@ h2 {
   text-align: center;
 }
 
+.hidden{
+  display: none;
+}
+
+.visible{
+  visibility: visible;
+}
+
 /* HEADER */
 #navbar {
   display: flex;
@@ -108,14 +116,11 @@ h2 {
   width: 100%;
   z-index: 1;
   top: 0;
+  background-color: #191919;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  overflow: hidden;
-  background-color: #191919;
+.navbuttons {
+ justify-content: space-evenly; 
 }
 
 .navbutton {
@@ -141,6 +146,21 @@ h2 {
   min-width: 200px;
   color: white;
 }
+
+.hamburgerbar{
+  justify-content: flex-end;
+}
+
+.hamburger{
+  
+}
+
+.btn-dropdown{
+  min-width: var(--HeaderHeight);
+  border: none;
+  background-color: grey ;
+}
+
 
 /* BODY */
 .section-container {
