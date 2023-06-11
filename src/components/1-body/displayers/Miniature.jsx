@@ -1,14 +1,17 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { FindLocalImg } from "../../../utils";
 
 export default function Miniature({ data, popupCallback }) {
   let miniature;
   let isSelected;
 
+  useEffect(() => {
+    miniature = document.getElementById(data.title);  
+  })
+
   function shrinkMiniature() {
     if(isSelected) return;
 
-    miniature = document.getElementById(data.title);   
     miniature.classList.remove("miniature-restore-anim");
     miniature.classList.add("miniature-selected");
   }
