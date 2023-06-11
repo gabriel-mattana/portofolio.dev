@@ -12,6 +12,8 @@
   --const20px: 20px;
   --const10px: 10px;
   --shadowBox: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  --btnbgHover: rgb(175, 175, 175);;
+  --btnbgClick:rgb(253, 253, 253);
 }
 
 * {
@@ -133,12 +135,12 @@ h2 {
   font-size: 1.25em;
 }
 
-.navbutton:hover {
-  background-color: rgb(175, 175, 175);
+.navbutton:hover, .btn-dropdown:hover{
+  background-color: var(--btnbgHover)
 }
 
-.navbutton:active {
-  background-color: rgb(253, 253, 253);
+.navbutton:active, .btn-dropdown:active {
+  background-color: var(--btnbgClick)
 }
 
 .navbrand button {
@@ -160,7 +162,6 @@ h2 {
   border: none;
   background-color: grey ;
 }
-
 
 /* BODY */
 .section-container {
