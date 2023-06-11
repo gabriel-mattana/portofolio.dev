@@ -3,8 +3,8 @@ import SectionTemplate from "./SectionTemplate";
 
 export default function Introduction() {
   const content = (
-    <div className="grid intro">
-      <div className="grid">
+    <div className="grid intro intro-font">
+      <div className="grid items-ch">
         <img
           className="meicon bd-bs1"
           src={FindLocalImg("icons/me_icon.jpg")}
