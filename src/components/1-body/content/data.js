@@ -172,7 +172,7 @@ let japan= {
 }
 
 let compostella= {
-    title: "On the way of Compostella",
+    title: "The way of Compostella",
     imgurl: "/books/compostella.jpg",
     year: "2018",
     genre: "journey diary",

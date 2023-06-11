@@ -38,9 +38,9 @@ export default function Miniature({ data, popupCallback }) {
     >
       <div id={data.title} className="miniature" onClick={onClick}>
         <img src={FindLocalImg(data.imgurl)} />
-        <div className="miniature-details">
-          <p className="Title">{data.title}</p>
-          <p className="Year">{data.year}</p>
+        <div className="miniature-details textsize">
+          <p>{data.title}</p>
+          <p>{data.year}</p>
         </div>
       </div>
     </div>

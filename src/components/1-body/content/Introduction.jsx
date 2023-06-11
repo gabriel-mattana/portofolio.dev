@@ -12,7 +12,7 @@ export default function Introduction() {
         />
       </div>
       <div className="grid rg20">
-        <div className="grid rg20 intro-txt">
+        <div className="grid rg20 intro-txt textsize">
           <p>
             Full stack programmer at work, game developer and designer at home,
             I used to be a writer, a policeman and a jurist.
