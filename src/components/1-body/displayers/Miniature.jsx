@@ -10,14 +10,14 @@ export default function Miniature({ data, popupCallback }) {
   })
 
   function shrinkMiniature() {
-    if(isSelected) return;
+    if(isSelected || !miniature) return;
 
     miniature.classList.remove("miniature-restore-anim");
     miniature.classList.add("miniature-selected");
   }
 
   function restoreMiniature() {
-    if(isSelected) return;
+    if(isSelected || !miniature) return;
 
     miniature.classList.remove("miniature-selected");
     miniature.classList.add("miniature-restore-anim")

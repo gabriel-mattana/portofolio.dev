@@ -3,8 +3,8 @@ import NavButton from "./NavButton";
 
 function NavBar() {
   return (
-    <header>
-      <div className="navbrand">
+    <nav id="navbar">
+      <div  className="navbrand">
         <NavButton link={"introduction"} label="Gabriel Mattana" />
       </div>
       <div className="navbar">
@@ -12,7 +12,7 @@ function NavBar() {
         <NavButton link={"books"} label="Books" />
         <NavButton link={"contact"} label="Contact" />
       </div>
-    </header>
+    </nav>
   );
 }
 

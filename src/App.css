@@ -1,6 +1,6 @@
 :root {
   --sectionbg: #ffffff12;
-  --HeaderHeight: 70px;
+  --HeaderHeight: 10vh;
   --offsetFromHeader: calc(var(--HeaderHeight) * 1.25);
   --navbtnFont: 18px;
   --posX: 0px;
@@ -83,11 +83,7 @@
 }
 
 /* HEADER */
-h1{
-  font-size: 2.5em;
-}
-
-header {
+#navbar {
   display: flex;
   position: fixed;
   background-color: grey;
@@ -147,15 +143,15 @@ header {
 
 /* Intro */
 .intro {
-  padding: var(--const20px) 15%;
+  padding: var(--const20px) 10%;
+  grid-template-columns: 30% 70%;
+  align-items: center;
 }
 
-.intro-txt {
+.intro-txt-container {
   row-gap: 40px;
   align-content: center;
   text-align: left;
-  padding-left: 10%;
-  font-size: 1.4em;
 }
 
 .meicon {
@@ -423,33 +419,40 @@ footer {
   height: 50px;
 }
 
+
 @media (min-width:1201px) {
+
+  h1 {
+    font-size: 2.2em;
+  }
 
   .productdisplayer {
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows:1fr;
+    grid-auto-rows: 1fr;
   }
 
-  .textsize{
-    font-size:0.91em;
+  .textsize {
+    font-size: 0.91em;
   }
 }
+
 
 @media (max-width:1200px) {
 
   .productdisplayer {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows:1fr;
+    grid-auto-rows: 1fr;
   }
 
-  .textsize{
+  .textsize {
     font-size: 1em;
   }
 }
 
+
 @media (max-width:1000px) {
 
-  .textsize{
+  .textsize {
     font-size: 0.8em;
   }
 }
@@ -459,17 +462,17 @@ footer {
 
   .productdisplayer {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows:1fr;
+    grid-auto-rows: 1fr;
   }
 
-  .textsize{
+  .textsize {
     font-size: 0.9em;
   }
 }
 
 @media (max-width:600px) {
 
-  .textsize{
+  .textsize {
     font-size: 0.8em;
   }
 }
@@ -478,10 +481,26 @@ footer {
 
   .productdisplayer {
     grid-template-columns: 1fr;
-    grid-auto-rows:1fr;
+    grid-auto-rows: 1fr;
   }
 
-  .textsize{
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro{
+    grid-template-columns: 1fr;
+    row-gap: 5vh;
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+
+  .meicon{
+    max-width: 200px;
+    justify-self: center;
+  }
+
+  .textsize {
     font-size: 0.99em;
   }
 }

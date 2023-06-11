@@ -3,8 +3,8 @@ import SectionTemplate from "./SectionTemplate";
 
 export default function Introduction() {
   const content = (
-    <div className="flex cg20 intro">
-      <div>
+    <div className="grid intro">
+      <div className="grid">
         <img
           className="meicon bd-bs1"
           src={FindLocalImg("icons/me_icon.jpg")}
@@ -12,7 +12,7 @@ export default function Introduction() {
         />
       </div>
       <div className="grid rg20">
-        <div className="grid rg20 intro-txt textsize">
+        <div className="grid rg20 intro-txt-container intro-font">
           <p>
             Full stack programmer at work, game developer and designer at home,
             I used to be a writer, a policeman and a jurist.
