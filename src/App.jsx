@@ -7,12 +7,16 @@ import VideoGames from "./components/1-body/content/VideoGames";
 import Books from "./components/1-body/content/Books";
 import Introduction from "./components/1-body/content/Introduction";
 import ContactForm from "./components/1-body/content/ContactForm";
+import ReturnToTopBtn from "./components/1-body/content/ReturnToTopBtn";
+import LanguageBtn from "./components/1-body/content/LanguageBtn";
 
 class App extends Component {
   render() {
     return (
       <div id="app">
         <NavBar />
+        <ReturnToTopBtn/>
+        <LanguageBtn/>
         <main>
           <Introduction/>
           <VideoGames />
