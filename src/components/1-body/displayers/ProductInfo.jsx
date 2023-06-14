@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
-import { FindLocalImg, LangContext } from "../../../utils";
+import { FindLocalImg, LangContext, ScrollToProduct, ScrollToSection } from "../../../utils";
 
 export default function ProductInfo({productType, productData, returnToDisplayProducts,}) {
   let productdataId = "productInfo" + productData.title;
 
   function returnToMenu() {
+
     var productInfo = document.getElementById(productdataId);
     productInfo.classList.remove("fadein");
     productInfo.classList.add("fadeout");
@@ -12,6 +13,12 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
     setTimeout(() => {
       returnToDisplayProducts();
     }, 500);
+
+    if (window.matchMedia("(max-width:420px)").matches) {
+      setTimeout(() => {
+        ScrollToProduct(productData.title);
+      }, 510);
+    }    
   }
 
   let extratextinfo = undefined;

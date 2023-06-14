@@ -47,7 +47,7 @@ function NavBar({changeLangCallBack}) {
   );
 
   function changeNavButtons() {
-    if (window.matchMedia("(max-width:600px)").matches) {
+    if (window.matchMedia("(max-width:650px)").matches) {
       smallScreen = true;
     }
     else{
