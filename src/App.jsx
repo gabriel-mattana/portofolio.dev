@@ -11,6 +11,8 @@ import ReturnToTopBtn from "./components/1-body/content/ReturnToTopBtn";
 import { LangContext } from "./utils";
 
 function App() {
+  // console.log("App rendered")
+
   let defaultLang = navigator.language.toLocaleLowerCase().split("-")[0];
   const [langState, updateLangState] = useState(defaultLang);
   console.log("default language detected: " + defaultLang);

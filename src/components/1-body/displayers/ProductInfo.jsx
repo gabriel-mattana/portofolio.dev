@@ -1,11 +1,7 @@
-import React, { useState } from "react";
-import { FindLocalImg } from "../../../utils";
+import React, { useContext, useState } from "react";
+import { FindLocalImg, LangContext } from "../../../utils";
 
-export default function ProductInfo({
-  productType,
-  productData,
-  returnToDisplayProducts,
-}) {
+export default function ProductInfo({productType, productData, returnToDisplayProducts,}) {
   let productdataId = "productInfo" + productData.title;
 
   function returnToMenu() {
@@ -101,6 +97,10 @@ export default function ProductInfo({
 
  resizeDialogDynamically();
 
+ //LANG
+ const lang = useContext(LangContext)
+ let description = lang == "fr" ? productData.description.fr : productData.description.en 
+
 
   return (
     <div
@@ -113,7 +113,7 @@ export default function ProductInfo({
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {extratextinfo}
-          <p>{productData.description}</p>
+          <p>{description}</p>
         </div>
         <div className="btncontainer flex">
           {productData.producturl == undefined ? undefined : (

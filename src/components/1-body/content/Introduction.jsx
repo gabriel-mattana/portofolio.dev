@@ -1,7 +1,13 @@
-import { FindLocalImg } from "../../../utils";
+import { useContext } from "react";
+import { intro } from "../../../data";
+import { FindLocalImg, LangContext } from "../../../utils";
 import SectionTemplate from "./SectionTemplate";
 
 export default function Introduction() {
+  const lang = useContext(LangContext);
+
+  const introToUse = lang == "fr" ? intro.fr : intro.en;
+
   const content = (
     <div className="grid intro intro-font">
       <div className="grid items-ch">
@@ -14,15 +20,13 @@ export default function Introduction() {
       <div className="grid rg20">
         <div className="grid rg20 intro-txt-container intro-font">
           <p>
-            Full stack programmer at work, game developer and designer at home,
-            I used to be a writer, a policeman and a jurist.
+            {introToUse[0]}
           </p>
           <p>
-            Through those experiences and several journeys abroad I finaly found my path:
-            being creative, solving problems, and architecturing systems.
+          {introToUse[1]}
           </p>
           <p>
-           <i>"Unknown is scary, but it pushes us beyond our limits"</i> 
+           <i>{introToUse[2]}</i> 
           </p>
         </div>
       </div>
