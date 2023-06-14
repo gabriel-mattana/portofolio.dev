@@ -6,12 +6,10 @@ import { LangContext } from "../../../utils";
 
 export default function VideoGames()
 {
-    const content = <ProductDisplayer productType={videoGames.id} data={videoGames.data}/>
-
     const lang = useContext(LangContext)
-    const title = lang == "fr" ? labels.fr : labels.en
+    const content = <ProductDisplayer productType={videoGames.id} data={videoGames.data}/>
     
     return(
-        <SectionTemplate id={"videogames"} title={title.games} content={content}/>
+        <SectionTemplate id={"videogames"} title={labels[lang].games} content={content}/>
     );
 }

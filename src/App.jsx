@@ -10,18 +10,37 @@ import ContactForm from "./components/1-body/content/ContactForm";
 import ReturnToTopBtn from "./components/1-body/content/ReturnToTopBtn";
 import { LangContext } from "./utils";
 
+const langPrefix = {french: "fr", english: "en"}
+
 function App() {
   // console.log("App rendered")
-
-  let defaultLang = navigator.language.toLocaleLowerCase().split("-")[0];
+  const defaultLang = navigator.language.toLocaleLowerCase().split("-")[0];
   const [langState, updateLangState] = useState(defaultLang);
   console.log("default language detected: " + defaultLang);
   console.log("chosen language: " + langState);
 
+  function switchLanguage() {
+    let newLang = ""
+    switch (langState) {
+        case "en":
+            newLang= langPrefix.french
+            break;
+        
+        case "fr":
+            newLang = langPrefix.english
+            break;
+    
+        default:
+            newLang = langPrefix.english
+            break;
+    }
+    updateLangState(newLang)
+  }
+
   return (
     <div id="app">
       <LangContext.Provider value={langState}>
-        <NavBar changeLangCallBack={updateLangState} />
+        <NavBar changeLangCallBack={switchLanguage} />
         <ReturnToTopBtn />
         <main>
           <Introduction />

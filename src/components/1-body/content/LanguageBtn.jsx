@@ -1,37 +1,20 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import IconBtn from "./IconBtn";
 import { LangContext } from "../../../utils";
 
-const langs = {french: "fr", english: "en"}
-
 export default function LanguageBtn({changeLangCallBack}) {
   console.log("LanguageBtn rendered");
-  const langState = useContext(LangContext)
 
-  function switchLanguage() {
-    let newLang = ""
-    switch (langState) {
-        case "en":
-            newLang= langs.french
-            break;
-        
-        case "fr":
-            newLang = langs.english
-            break;
-    
-        default:
-            newLang = langs.english
-            break;
-    }
-    changeLangCallBack(newLang)
-  }
+  const langContext = useContext(LangContext)
+  const iconToDisplay = langContext == "en"? "fr" : "en"
+  console.log("chosen language: " + langContext);
 
   return (
     <IconBtn
-      callback={switchLanguage}
-      imgurl={"icons/" + langState + "_flag.png"}
+      callback={changeLangCallBack}
+      imgurl={"icons/" + iconToDisplay + "_flag.png"}
       extraCss={"btnlang"}
-      alt={langState + " flag"}
+      alt={iconToDisplay + " flag"}
     />
   );
 }

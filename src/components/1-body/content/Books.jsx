@@ -6,12 +6,10 @@ import { LangContext } from "../../../utils";
 
 export default function Books()
 {
-   const content = <ProductDisplayer productType={books.id} data={books.data} />
-
-   const lang = useContext(LangContext)
-   const title = lang == "fr" ? labels.fr : labels.en
+    const lang = useContext(LangContext)
+    const content = <ProductDisplayer productType={books.id} data={books.data} />
 
     return(
-        <SectionTemplate id="books" title={title.books} content={content}/>
+        <SectionTemplate id="books" title={labels[lang].books} content={content}/>
     );
 }
