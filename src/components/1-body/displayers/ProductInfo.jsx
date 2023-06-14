@@ -94,7 +94,7 @@ export default function ProductInfo({
 
       if(previousRenderState != smallScreen)
       {
-        console.log("change screen size")
+        // console.log("change screen size")
         updateRenderState(smallScreen)
       }
   }

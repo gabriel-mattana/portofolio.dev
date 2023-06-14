@@ -16,7 +16,6 @@ class App extends Component {
       <div id="app">
         <NavBar />
         <ReturnToTopBtn/>
-        <LanguageBtn/>
         <main>
           <Introduction/>
           <VideoGames />

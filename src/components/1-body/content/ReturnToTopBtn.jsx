@@ -1,5 +1,5 @@
 import { ScrollToSection } from "../../../utils";
-import AbsoluteBtn from "./AbsoluteBtn";
+import IconBtn from "./IconBtn";
 
 export default function ReturnToTopBtn()
 {
@@ -9,6 +9,6 @@ export default function ReturnToTopBtn()
     }
 
     return(
-        <AbsoluteBtn callback={scrollToTop} imgurl={"icons/arrow_upward.svg"} extraCss={"downright"}/>
+        <IconBtn callback={scrollToTop} imgurl={"icons/arrow_upward.svg"} extraCss={"downright"}/>
     );
 }

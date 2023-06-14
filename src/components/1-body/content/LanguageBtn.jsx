@@ -1,28 +1,38 @@
-import AbsoluteBtn from "./AbsoluteBtn";
+import { useState } from "react";
+import IconBtn from "./IconBtn";
 
+const langs = {french: "fr", english: "en"}
 
-export default function LanguageBtn()
-{
-    console.log("LanguageBtn rendered")
+export default function LanguageBtn() {
+  console.log("LanguageBtn rendered");
 
-    let iconToDisplayUrl = "";
-    let defaultLang = navigator.language.toLocaleLowerCase();
-    console.log("default language detected: " + defaultLang)
+  let defaultLang = navigator.language.toLocaleLowerCase().split("-")[0];
+  console.log("default language detected: " + defaultLang);
+  const [langState, updateLangState] = useState(defaultLang)
+  console.log("chosen language: " + langState);
 
-    if(defaultLang == "fr-fr"){
-        iconToDisplayUrl = "icons/french_icon.png";
+  function switchLanguage(event) {
+    switch (langState) {
+        case "en":
+            updateLangState(langs.french)
+            break;
+        
+        case "fr":
+            updateLangState(langs.english)
+            break;
+    
+        default:
+            updateLangState(langs.english)
+            break;
     }
-    else
-    {
-        iconToDisplayUrl = "icons/english_icon.png";
-    }
+  }
 
-
-    function switchLanguage(event)
-    {
-        console.log(event)
-    }
-
-    return (
-    <AbsoluteBtn callback={switchLanguage} imgurl={iconToDisplayUrl} extraCss={"btnlang downleft"}/>);
+  return (
+    <IconBtn
+      callback={switchLanguage}
+      imgurl={"icons/" + langState + "_flag.png"}
+      extraCss={"btnlang"}
+      alt={langState + " flag"}
+    />
+  );
 }

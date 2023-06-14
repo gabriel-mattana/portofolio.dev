@@ -136,11 +136,11 @@ h2 {
 .navbutton {
   text-decoration: none;
   background-color: transparent;
-  height: 100%;
+  height: var(--HeaderHeight);
   border: 0;
   color: wheat;
   min-width: 120px;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .navbutton:hover, .btn-dropdown:hover{
@@ -156,6 +156,18 @@ h2 {
   min-width: 200px;
   color: white;
 }
+
+.btnlang{
+  background-color: transparent;
+  max-height: var(--HeaderHeight);
+  max-width: var(--HeaderHeight);
+  border: 0;
+}
+
+.btnlang img{
+  padding: 10%;
+} 
+
 
 .hamburgerbar{
   justify-content: flex-end;
@@ -189,12 +201,6 @@ h2 {
 .downright{
   bottom: 0;
   right: 0;
-}
-
-.btnlang{
-  /* max-width: 100px; */
-  background-color: transparent;
-  border: none;
 }
 
 /* BODY */
