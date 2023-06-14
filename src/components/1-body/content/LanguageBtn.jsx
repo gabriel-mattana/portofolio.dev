@@ -1,30 +1,29 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import IconBtn from "./IconBtn";
+import { LangContext } from "../../../utils";
 
 const langs = {french: "fr", english: "en"}
 
-export default function LanguageBtn() {
+export default function LanguageBtn({changeLangCallBack}) {
   console.log("LanguageBtn rendered");
+  const langState = useContext(LangContext)
 
-  let defaultLang = navigator.language.toLocaleLowerCase().split("-")[0];
-  console.log("default language detected: " + defaultLang);
-  const [langState, updateLangState] = useState(defaultLang)
-  console.log("chosen language: " + langState);
-
-  function switchLanguage(event) {
+  function switchLanguage() {
+    let newLang = ""
     switch (langState) {
         case "en":
-            updateLangState(langs.french)
+            newLang= langs.french
             break;
         
         case "fr":
-            updateLangState(langs.english)
+            newLang = langs.english
             break;
     
         default:
-            updateLangState(langs.english)
+            newLang = langs.english
             break;
     }
+    changeLangCallBack(newLang)
   }
 
   return (

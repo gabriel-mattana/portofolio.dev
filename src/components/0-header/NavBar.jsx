@@ -3,7 +3,7 @@ import NavButton from "./NavButton";
 import { FindLocalImg } from "../../utils";
 import LanguageBtn from "../1-body/content/LanguageBtn";
 
-function NavBar() {
+function NavBar({changeLangCallBack}) {
   window.addEventListener("resize", changeNavButtons);
   let smallScreen = false;
   const [screenSizeState, updateScreenSizeState] = useState(smallScreen);
@@ -17,7 +17,7 @@ function NavBar() {
       <NavButton link={"contact"} label="Contact" />
       </div>
       <div className="grid">
-      <LanguageBtn/>
+      <LanguageBtn changeLangCallBack={changeLangCallBack}/>
       </div>
     </div>
   );
