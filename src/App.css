@@ -173,17 +173,28 @@ h2 {
 }
 
 .absbtn{
-  width: 100px;
+  max-width: 100px;
+  border: none;
+}
+
+.absbtn:hover{
+  filter: brightness(150%);
 }
 
 .downleft{
-  bottom: 1%;
+  bottom: 0;
   left: 1%;
 }
 
 .downright{
-  bottom: 1%;
-  right: 1%;
+  bottom: 0;
+  right: 0;
+}
+
+.btnlang{
+  /* max-width: 100px; */
+  background-color: transparent;
+  border: none;
 }
 
 /* BODY */
