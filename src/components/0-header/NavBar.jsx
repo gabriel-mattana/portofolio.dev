@@ -1,23 +1,29 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import NavButton from "./NavButton";
-import { FindLocalImg } from "../../utils";
+import { FindLocalImg, LangContext } from "../../utils";
 import LanguageBtn from "../1-body/content/LanguageBtn";
+import { labels } from "../../data";
 
-function NavBar() {
+function NavBar({changeLangCallBack}) {
   window.addEventListener("resize", changeNavButtons);
+
+  const lang = useContext(LangContext)
+  const label = lang == "fr" ? labels.fr : labels.en
+
+
   let smallScreen = false;
   const [screenSizeState, updateScreenSizeState] = useState(smallScreen);
-  console.log("screen size state: " + screenSizeState)
+
 
   const navButtons = (
     <div className="flex spacedAway" >
       <div className="flex navbuttons">
-      <NavButton link={"videogames"} label="Video games" />
-      <NavButton link={"books"} label="Books" />
+      <NavButton link={"videogames"} label={label.games} />
+      <NavButton link={"books"} label={label.books} />
       <NavButton link={"contact"} label="Contact" />
       </div>
       <div className="grid">
-      <LanguageBtn/>
+      <LanguageBtn changeLangCallBack={changeLangCallBack}/>
       </div>
     </div>
   );
