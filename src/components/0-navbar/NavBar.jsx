@@ -5,13 +5,14 @@ import LanguageBtn from "./LanguageBtn";
 import { labels } from "../../data";
 
 function NavBar({changeLangCallBack}) {
-  window.addEventListener("resize", changeNavButtons);
+  window.addEventListener("resize", monitorScreenSizeChange);
 
   const lang = useContext(LangContext)
   const label = lang == "fr" ? labels.fr : labels.en
+  const dropDownDisplayed = useRef(false)
 
-  let smallScreen = false;
-  const [screenSizeState, updateScreenSizeState] = useState(smallScreen);
+  let isSmallScreen = false;
+  const [screenSizeState, updateScreenSizeState] = useState(isSmallScreen);
 
   const navButtons = (
     <div className="flex spacedAway" >
@@ -45,27 +46,27 @@ function NavBar({changeLangCallBack}) {
       </div>
   );
 
-  function changeNavButtons() {
+  function monitorScreenSizeChange() {
     if (window.matchMedia("(max-width:600px)").matches) {
-      smallScreen = true;
+      isSmallScreen = true;
     }
     else{
-      smallScreen = false;
+      isSmallScreen = false;
     }
 
-    if (screenSizeState !=   smallScreen) {
-      updateScreenSizeState(smallScreen);
+    if (screenSizeState !=  isSmallScreen) {
+      updateScreenSizeState(isSmallScreen);
+
+      if(dropDownDisplayed.current)
+      {
+        toggleDropDown()
+      }
     }
   }
-
-  changeNavButtons();
-
-  var dropDownDisplayed = useRef(false)
 
   function toggleDropDown() {
     var dropdown = document.getElementById("dropdown");
     var veil = document.getElementById("veil");
-    console.log(veil)
 
     if(!dropDownDisplayed.current)
     {
@@ -81,13 +82,15 @@ function NavBar({changeLangCallBack}) {
     }
   }
 
+  monitorScreenSizeChange();
+
   return (
     <React.Fragment>
     <nav id="navbar">
       <div className="navbrand">
         <NavButton link={"introduction"} label="Gabriel Mattana" />
       </div>
-      {smallScreen == true ? hamburger : navButtons}
+      {isSmallScreen == true ? hamburger : navButtons}
     </nav>
     <div id="veil" className="hidden" onClick={toggleDropDown}/>
     </React.Fragment>
