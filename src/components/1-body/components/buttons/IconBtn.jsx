@@ -1,4 +1,4 @@
-import { FindLocalImg } from "../../../utils";
+import { FindLocalImg } from "../../../../utils";
 
 export default function IconBtn({callback, imgurl, extraCss, alt})
 {

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { FindLocalImg, LangContext, ScrollToProduct, ScrollToSection } from "../../../utils";
+import { FindLocalImg, LangContext, ScrollToProduct, ScrollToSection } from "../../../../utils";
 
 export default function ProductInfo({productType, productData, returnToDisplayProducts,}) {
   let productdataId = "productInfo" + productData.title;
@@ -11,14 +11,19 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
     productInfo.classList.add("fadeout");
 
     setTimeout(() => {
-      returnToDisplayProducts();
-    }, 500);
 
-    if (window.matchMedia("(max-width:420px)").matches) {
-      setTimeout(() => {
-        ScrollToProduct(productData.title);
-      }, 510);
-    }    
+      if (window.matchMedia("(max-width:420px)").matches) {
+        returnToDisplayProducts();
+        setTimeout(() => {
+          ScrollToProduct(productData.title);
+        }, 100);
+      } 
+      else
+      {
+        returnToDisplayProducts();
+      }
+      
+    }, 500);   
   }
 
   let extratextinfo = undefined;

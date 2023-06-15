@@ -14,6 +14,7 @@
   --shadowBox: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
   --btnbgHover: rgb(175, 175, 175);;
   --btnbgClick:rgb(253, 253, 253);
+  --navbarColor: #191919;
 }
 
 * {
@@ -126,7 +127,7 @@ h2 {
   width: 100%;
   z-index: 1;
   top: 0;
-  background-color: #191919;
+  background-color: var(--navbarColor);
 }
 
 .navbuttons {
@@ -185,22 +186,22 @@ h2 {
 }
 
 .absbtn{
-  max-width: 100px;
-  border: none;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  z-index: 1;
+  max-width: 6vw;
+  min-width: 80px;
+  border: black solid 1px;
+  background-color: rgba(128, 128, 128, 0.558);
 }
 
 .absbtn:hover{
   filter: brightness(150%);
 }
 
-.downleft{
-  bottom: 0;
-  left: 1%;
-}
-
-.downright{
-  bottom: 0;
-  right: 0;
+.absbtn:active{
+  filter: brightness(200%);
 }
 
 /* BODY */

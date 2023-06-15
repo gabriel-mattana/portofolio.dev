@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import IconBtn from "./IconBtn";
-import { LangContext } from "../../../utils";
+import IconBtn from "../1-body/components/buttons/IconBtn";
+import { LangContext } from "../../utils";
 
 export default function LanguageBtn({changeLangCallBack}) {
   console.log("LanguageBtn rendered");

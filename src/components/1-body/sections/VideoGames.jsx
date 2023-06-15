@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { labels, videoGames } from "../../../data";
 import SectionTemplate from "./SectionTemplate";
-import ProductDisplayer from "../displayers/ProductDisplayer";
+import ProductDisplayer from "../components/displayers/ProductDisplayer";
 import { LangContext } from "../../../utils";
 
 export default function VideoGames()

@@ -1,4 +1,4 @@
-import { ScrollToSection } from "../../../utils";
+import { ScrollToSection } from "../../../../utils";
 import IconBtn from "./IconBtn";
 
 export default function ReturnToTopBtn()
@@ -9,6 +9,6 @@ export default function ReturnToTopBtn()
     }
 
     return(
-        <IconBtn callback={scrollToTop} imgurl={"icons/arrow_upward.svg"} extraCss={"downright"}/>
+        <IconBtn callback={scrollToTop} imgurl={"icons/arrow_upward.svg"} extraCss={"absbtn"}/>
     );
 }

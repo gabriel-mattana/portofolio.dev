@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { FindLocalImg } from "../../../utils";
+import { FindLocalImg } from "../../../../utils";
 
 export default function Miniature({ data, popupCallback }) {
   let miniature;

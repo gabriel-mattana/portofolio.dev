@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from "react";
 import NavButton from "./NavButton";
 import { FindLocalImg, LangContext } from "../../utils";
-import LanguageBtn from "../1-body/content/LanguageBtn";
+import LanguageBtn from "./LanguageBtn";
 import { labels } from "../../data";
 
 function NavBar({changeLangCallBack}) {

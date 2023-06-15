@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Miniature from "./Miniature";
 import ProductInfo from "./ProductInfo";
-import { PlaceProductInView, ScrollToSection } from "../../../utils";
+import { PlaceProductInView, ScrollToSection } from "../../../../utils";
 
 export default function ProductDisplayer({ productType, data }) {
   var keyNb = 0;
