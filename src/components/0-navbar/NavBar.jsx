@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
 import NavButton from "./NavButton";
-import { FindLocalImg, LangContext } from "../../utils";
+import { FindLocalImg, LangContext, activate, disable } from "../../utils";
 import LanguageBtn from "./LanguageBtn";
 import { labels } from "../../data";
 
@@ -27,21 +27,22 @@ function NavBar({changeLangCallBack}) {
   );
 
   const hamburger = (
-    <div className="flex hamburgerbar">
-      <div className="flex-col">
-        <button className="btn-dropdown" onClick={toggleDropDown}>
-          <img
-            src={FindLocalImg("icons/hamburger_menu.svg")}
-            alt="hamburger_menu"
-          />
-        </button>
-        <div id="dropdown" className="grid hidden">
-          <NavButton link={"videogames"} label="Video games" />
-          <NavButton link={"books"} label="Books" />
-          <NavButton link={"contact"} label="Contact" />
+      <div className="flex hamburgerbar">
+        <div className="flex-col">
+          <button className="btn-dropdown" onClick={toggleDropDown}>
+            <img
+              src={FindLocalImg("icons/hamburger_menu.svg")}
+              alt="hamburger_menu"
+            />
+          </button>
+          <div id="dropdown" className="grid hidden">
+            <NavButton link={"videogames"} label="Video games" />
+            <NavButton link={"books"} label="Books" />
+            <NavButton link={"contact"} label="Contact" />
+            <LanguageBtn changeLangCallBack={changeLangCallBack}/>
+          </div>
         </div>
       </div>
-    </div>
   );
 
   function changeNavButtons() {
@@ -63,30 +64,33 @@ function NavBar({changeLangCallBack}) {
 
   function toggleDropDown() {
     var dropdown = document.getElementById("dropdown");
-    var main = document.getElementById("main");
-    console.log(main)
+    var veil = document.getElementById("veil");
+    console.log(veil)
 
     if(!dropDownDisplayed.current)
     {
-      dropdown.classList.replace("hidden", "visible");
       dropDownDisplayed.current = true;
-      main.classList.add("opaque");
+      activate(dropdown);
+      activate(veil)
     }
     else
     {
-      dropdown.classList.replace("visible", "hidden");
       dropDownDisplayed.current = false;
-      main.classList.remove("opaque");
+      disable(dropdown)
+      disable(veil)
     }
   }
 
   return (
+    <React.Fragment>
     <nav id="navbar">
       <div className="navbrand">
         <NavButton link={"introduction"} label="Gabriel Mattana" />
       </div>
       {smallScreen == true ? hamburger : navButtons}
     </nav>
+    <div id="veil" className="hidden" onClick={toggleDropDown}/>
+    </React.Fragment>
   );
 }
 

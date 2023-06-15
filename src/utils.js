@@ -17,4 +17,14 @@ export function FindLocalImg(imgurl){
     return process.env.PUBLIC_URL + "/images/" + imgurl;
 }
 
+export function activate(element)
+{
+    element.classList.replace("hidden", "visible");
+}
+
+export function disable(element)
+{
+    element.classList.replace("visible", "hidden");
+}
+
 export const LangContext = createContext()

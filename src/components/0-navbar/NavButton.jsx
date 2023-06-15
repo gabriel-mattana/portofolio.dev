@@ -1,17 +1,17 @@
 import React from "react";
 import { ScrollToSection } from "../../utils";
 
-export default function NavButton(props) 
+export default function NavButton({link, label}) 
 {
   // console.log("NavItem " + props.label + " rendered");
 
   function GoToSection() {
-    ScrollToSection(props.link)
+    ScrollToSection(link)
   }
 
   return (
-    <button className="navbutton" onClick={GoToSection}>
-      {props.label}
+    <button className="navbutton"  onClick={GoToSection}>
+      {label}
     </button>
   );
 }
