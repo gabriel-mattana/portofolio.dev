@@ -1,5 +1,4 @@
 :root {
-  --sectionbg: #ffffff12;
   --HeaderHeight: 10vh;
   --offsetFromHeader: calc(var(--HeaderHeight) * 1.25);
   --navbtnFont: 18px;
@@ -11,10 +10,12 @@
   --borderRadius: 15px;
   --const20px: 20px;
   --const10px: 10px;
-  --shadowBox: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  --appbgColor: #212121;
+  --sectionbg: #ffffff12;
   --btnbgHover: rgb(175, 175, 175);;
   --btnbgClick:rgb(253, 253, 253);
   --navbarColor: #191919;
+  --shadowBox: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -26,7 +27,7 @@
 #app {
   min-height: 100vh;
   color: rgb(255, 255, 255);
-  background-color: #212121;
+  background-color: var(--appbgColor);
   text-align: center;
   font-size: 100%;
 }
@@ -142,10 +143,11 @@ h2 {
   color: wheat;
   min-width: 120px;
   font-size: 1.25rem;
+  padding: 5px;
 }
 
 .navbutton:hover, .btn-dropdown:hover{
-  background-color: var(--btnbgHover)
+  background-color: var(--btnbgHover);
 }
 
 .navbutton:active, .btn-dropdown:active {
@@ -154,8 +156,8 @@ h2 {
 
 .navbrand button {
   background-color: black;
-  min-width: 200px;
   color: white;
+  min-width: 250px;
 }
 
 .btnlang{
@@ -163,45 +165,38 @@ h2 {
   max-height: var(--HeaderHeight);
   max-width: var(--HeaderHeight);
   border: 0;
+  width: 130%;
+  padding-right: 30%;
 }
 
-.btnlang img{
-  padding: 20%;
-} 
+.btnlang img:hover{
+  filter: brightness(150%);
+  border-radius: 100%;
+}
 
+.btnlang img:active{
+  border: white solid 1px;;
+}
 
 .hamburgerbar{
   justify-content: flex-end;
 }
 
-.hamburger{
-  grid-template-columns: 1fr;
-  grid-template-rows: 4fr;
-}
-
 .btn-dropdown{
-  min-width: var(--HeaderHeight);
-  border: none;
-  background-color: grey ;
+  border: none; 
+  height: 100%;
+  background-color: rgb(88, 88, 88);
+  min-width: 130px;
 }
 
-.absbtn{
-  position: fixed;
-  bottom: 1%;
-  right: 1%;
-  z-index: 1;
-  max-width: 6vw;
-  min-width: 80px;
-  border: black solid 1px;
-  background-color: rgba(128, 128, 128, 0.558);
+.btn-dropdown img{
+  height: var(--HeaderHeight);
+  filter: sepia(1);
 }
 
-.absbtn:hover{
-  filter: brightness(150%);
-}
-
-.absbtn:active{
-  filter: brightness(200%);
+#dropdown{
+  background-color: rgb(88, 88, 88);
+  box-shadow: var(--shadowBox);
 }
 
 /* BODY */
@@ -215,6 +210,26 @@ h2 {
   padding: 2.5% 2.5% 3.5% 2.5%;
   justify-items: center;
   row-gap: 25px;
+}
+
+.absbtn{
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  z-index: 1;
+  max-width: 5vw;
+  min-width: 80px;
+  border: black solid 1px;
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+.absbtn:hover{
+  filter: brightness(150%);
+  background-color: rgba(128, 128, 128);
+}
+
+.absbtn:active{
+  filter: brightness(200%);
 }
 
 /* Intro */
@@ -582,6 +597,10 @@ footer {
 /* 1000px-------------------------------------------- 1000px*/
 @media (max-width:1000px) {
 
+  .navbrand button{
+    min-width: 200px;
+  }
+
   .section-container {
     margin-left: 2%;
     margin-right: 2%;
@@ -639,6 +658,10 @@ footer {
 
 /* 800px-------------------------------------------- 800px*/
 @media (max-width:800px) {
+
+  .navbrand button{
+    min-width: 150px;
+  }
 
   h1 {
     font-size: 2rem;
@@ -702,6 +725,10 @@ footer {
 /* 600px-------------------------------------------- 600px*/
 @media (max-width:600px) {
 
+  .navbrand button{
+    min-width: 200px;
+  }
+
   h1 {
     font-size: 1.8rem;
   }
@@ -733,12 +760,18 @@ footer {
   .productbtn {
     font-size: 1.1rem;
   }
-
-
 }
 
 /* 420px-------------------------------------------- 420px*/
-@media (max-width:420px) {
+@media (max-width:360px) {
+
+  .navbutton{
+    font-size: 1rem;
+  }
+
+  .navbrand button{
+    min-width: 150px;
+  }
 
   h1 {
     font-size: 1.8rem;
@@ -750,6 +783,6 @@ footer {
   }
 
   .textsize {
-    font-size: 0.99em;
+    font-size: 1rem;
   }
 }

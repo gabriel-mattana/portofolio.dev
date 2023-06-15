@@ -25,7 +25,7 @@ export default function Miniature({ data, popupCallback }) {
 
   function onClick(props)
   {
-    console.log("clicked on " + data.title)
+    // console.log("clicked on " + data.title)
     isSelected = true;
     popupCallback(data);
   }

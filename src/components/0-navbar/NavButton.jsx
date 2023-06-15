@@ -3,16 +3,14 @@ import { ScrollToSection } from "../../utils";
 
 export default function NavButton(props) 
 {
-  console.log("NavItem " + props.label + " rendered");
+  // console.log("NavItem " + props.label + " rendered");
 
-  function UpdateContent() {
-    
-    // console.log("Clicked on " + props.label);
+  function GoToSection() {
     ScrollToSection(props.link)
   }
 
   return (
-    <button className="navbutton" onClick={UpdateContent}>
+    <button className="navbutton" onClick={GoToSection}>
       {props.label}
     </button>
   );

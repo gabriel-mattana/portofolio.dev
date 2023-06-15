@@ -10,10 +10,8 @@ function NavBar({changeLangCallBack}) {
   const lang = useContext(LangContext)
   const label = lang == "fr" ? labels.fr : labels.en
 
-
   let smallScreen = false;
   const [screenSizeState, updateScreenSizeState] = useState(smallScreen);
-
 
   const navButtons = (
     <div className="flex spacedAway" >
@@ -30,14 +28,14 @@ function NavBar({changeLangCallBack}) {
 
   const hamburger = (
     <div className="flex hamburgerbar">
-      <div className="grid hamburger">
+      <div className="flex-col">
         <button className="btn-dropdown" onClick={toggleDropDown}>
           <img
-            src={FindLocalImg("icons/hamburger_icon.png")}
-            alt="hamburger_icon"
+            src={FindLocalImg("icons/hamburger_menu.svg")}
+            alt="hamburger_menu"
           />
         </button>
-        <div id="dropdown" className="grid hamburger-dropdown hidden">
+        <div id="dropdown" className="grid hidden">
           <NavButton link={"videogames"} label="Video games" />
           <NavButton link={"books"} label="Books" />
           <NavButton link={"contact"} label="Contact" />
@@ -47,7 +45,7 @@ function NavBar({changeLangCallBack}) {
   );
 
   function changeNavButtons() {
-    if (window.matchMedia("(max-width:650px)").matches) {
+    if (window.matchMedia("(max-width:600px)").matches) {
       smallScreen = true;
     }
     else{
@@ -61,18 +59,19 @@ function NavBar({changeLangCallBack}) {
 
   changeNavButtons();
 
-  var isDisplaying = useRef(false)
+  var dropDownDisplayed = useRef(false)
+
   function toggleDropDown() {
     var dropdown = document.getElementById("dropdown");
-    if(!isDisplaying.current)
+    if(!dropDownDisplayed.current)
     {
       dropdown.classList.replace("hidden", "visible");
-      isDisplaying.current = true;
+      dropDownDisplayed.current = true;
     }
     else
     {
       dropdown.classList.replace("visible", "hidden");
-      isDisplaying.current = false;
+      dropDownDisplayed.current = false;
     }
   }
 
