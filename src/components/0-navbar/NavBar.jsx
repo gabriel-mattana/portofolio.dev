@@ -63,15 +63,20 @@ function NavBar({changeLangCallBack}) {
 
   function toggleDropDown() {
     var dropdown = document.getElementById("dropdown");
+    var main = document.getElementById("main");
+    console.log(main)
+
     if(!dropDownDisplayed.current)
     {
       dropdown.classList.replace("hidden", "visible");
       dropDownDisplayed.current = true;
+      main.classList.add("opaque");
     }
     else
     {
       dropdown.classList.replace("visible", "hidden");
       dropDownDisplayed.current = false;
+      main.classList.remove("opaque");
     }
   }
 

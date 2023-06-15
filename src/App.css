@@ -117,6 +117,10 @@ h2 {
   border-radius: 100%;
 }
 
+.opaque{
+  opacity: 40%;
+}
+
 /* HEADER */
 #navbar {
   display: flex;
@@ -197,6 +201,7 @@ h2 {
 #dropdown{
   background-color: rgb(88, 88, 88);
   box-shadow: var(--shadowBox);
+  border-bottom-left-radius: var(--const20px);
 }
 
 /* BODY */

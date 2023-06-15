@@ -41,7 +41,7 @@ function App() {
       <LangContext.Provider value={langState}>
         <NavBar changeLangCallBack={switchLanguage} />
         <ReturnToTopBtn />
-        <main>
+        <main id="main">
           <Introduction />
           <VideoGames />
           <Books />
