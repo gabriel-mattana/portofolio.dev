@@ -1,13 +1,13 @@
 import React, { Component, useContext, useState } from "react";
 import NavBar from "./components/0-navbar/NavBar";
 import Footer from "./components/2-footer/Footer";
-import "./App.css";
 import VideoGames from "./components/1-body/sections/VideoGames";
 import Books from "./components/1-body/sections/Books";
 import Introduction from "./components/1-body/sections/Introduction";
 import ContactForm from "./components/1-body/sections/ContactForm";
 import ReturnToTopBtn from "./components/1-body/components/buttons/ReturnToTopBtn";
 import { LangContext } from "./utils";
+import "./App.css";
 
 const langPrefix = {french: "fr", english: "en"}
 

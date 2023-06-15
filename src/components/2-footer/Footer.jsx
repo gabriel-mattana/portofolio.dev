@@ -1,8 +1,11 @@
 import React from "react";
 
-function Footer()
-{
-    return <footer>@Copyright 2023</footer>
+function Footer() {
+  return (
+    <footer className="grid">
+      <h3>@Copyright 2023</h3>
+    </footer>
+  );
 }
 
 export default React.memo(Footer);

@@ -46,6 +46,7 @@
 
 .grid {
   display: grid;
+  align-content: center;
 }
 
 .rg10 {
@@ -526,12 +527,10 @@ textarea {
 
 /* FOOTER */
 footer {
-  position: relative;
-  background-color: #a9a9a9;
+  background-color: var(--navbarColor);
   bottom: 0;
-  text-align: center;
-  margin-top: 100px;
-  height: 50px;
+  margin-top: var(--offsetFromHeader);
+  height: var(--HeaderHeight);
 }
 
 /* higher than 1200px----------------------------------------- higher than 1200px*/

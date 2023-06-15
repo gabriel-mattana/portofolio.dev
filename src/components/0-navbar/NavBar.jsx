@@ -11,8 +11,8 @@ function NavBar({changeLangCallBack}) {
   const label = lang == "fr" ? labels.fr : labels.en
   const dropDownDisplayed = useRef(false)
 
-  let isSmallScreen = false;
-  const [screenSizeState, updateScreenSizeState] = useState(isSmallScreen);
+  const [screenSizeState, updateScreenSizeState] = useState(false);
+  console.log(screenSizeState)
 
   const navButtons = (
     <div className="flex spacedAway" >
@@ -47,11 +47,10 @@ function NavBar({changeLangCallBack}) {
   );
 
   function monitorScreenSizeChange() {
+    let isSmallScreen = false;
+
     if (window.matchMedia("(max-width:600px)").matches) {
       isSmallScreen = true;
-    }
-    else{
-      isSmallScreen = false;
     }
 
     if (screenSizeState !=  isSmallScreen) {
@@ -90,7 +89,7 @@ function NavBar({changeLangCallBack}) {
       <div className="navbrand">
         <NavButton link={"introduction"} label="Gabriel Mattana" />
       </div>
-      {isSmallScreen == true ? hamburger : navButtons}
+      {screenSizeState == true ? hamburger : navButtons}
     </nav>
     <div id="veil" className="hidden" onClick={toggleDropDown}/>
     </React.Fragment>
