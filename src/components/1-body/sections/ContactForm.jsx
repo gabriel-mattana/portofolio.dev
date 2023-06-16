@@ -74,7 +74,9 @@ export default function ContactForm() {
     btn.disabled = false;
 
     var httpresponse = document.getElementById("httpResponse")
-    httpresponse.remove()
+    if(httpresponse){
+      httpresponse.remove();
+    }   
   }
 
   const content = (
@@ -93,9 +95,9 @@ export default function ContactForm() {
         name="form_message"
       />
       <br />
-      <div>
-        <input type="reset" className="btnsubmit" onClick={resetBtnSubmit}/>
-        <input id="btnSubmit" type="submit" className="btnsubmit" disabled={httpResponseState.succeeded}/>
+      <div className="flex btncontainer">
+        <input type="reset" className="productbtn returnbtn" onClick={resetBtnSubmit}/>
+        <input id="btnSubmit" type="submit" className="productbtn okbtn" disabled={httpResponseState.succeeded}/>
       </div>
       {DisplayHttpResponse()}
     </form>

@@ -60,7 +60,7 @@ export default function ProductInfo({content, productData, mediaScreenMax, retur
       <div name="product-description" className="flex-col rg20 spacedAway product-description">
         {isSmallScreen == false ? title : undefined}
         {isSmallScreen == true ? <br/> : undefined}
-        <div className="product-description-text grid rg5">
+        <div className="grid rg5 product-description-text">
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {content.extratextinfo}
@@ -71,10 +71,10 @@ export default function ProductInfo({content, productData, mediaScreenMax, retur
         <div className="btncontainer flex">
           {productData.producturl == undefined ? undefined : (
             <a href={productData.producturl} target="_blank">
-              <button className="productbtn btngotoproduct">{content.btnLabel}</button>
+              <button className="productbtn okbtn">{content.btnLabel}</button>
             </a>
           )}
-          <button className="productbtn btnreturntomenu" onClick={returnToMenu}>
+          <button className="productbtn returnbtn" onClick={returnToMenu}>
             Return
           </button>
         </div>

@@ -12,7 +12,6 @@ function NavBar({changeLangCallBack}) {
   const dropDownDisplayed = useRef(false)
 
   const [screenSizeState, updateScreenSizeState] = useState(false);
-  console.log(screenSizeState)
 
   const navButtons = (
     <div className="flex spacedAway" >

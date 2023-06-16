@@ -79,14 +79,10 @@
   justify-content: space-between;
 }
 
-
 .grid50-50 {
-  display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
 }
-
-
 
 .items-ch {
   justify-items: center;
@@ -424,7 +420,7 @@ img {
 }
 
 .product-description {
-  max-width: 100%;
+  width: 100%;
   column-gap: var(--const20px);
   justify-items: center;
   align-items: center;
@@ -438,7 +434,6 @@ img {
 
 .btncontainer {
   justify-content: space-evenly;
-  width: 100%;
   max-height: 50px;
 }
 
@@ -451,15 +446,14 @@ img {
   font-size: 18px;
   padding: 10px;
   min-width: 100px;
+  height: 100%;
 }
 
-.btngotoproduct {
-  color: black;
+.okbtn {
   background-color: rgb(58, 160, 63);
 }
 
-.btnreturntomenu {
-  color: black;
+.returnbtn {
   background-color: rgb(184, 85, 61);
 }
 
@@ -486,7 +480,6 @@ iframe {
 }
 
 form {
-  display: grid;
   row-gap: 5px;
   width: 80%;
   font-size: var(--const20px);
@@ -500,14 +493,6 @@ form input {
   height: 25px;
 }
 
-.btnsubmit {
-  justify-self: center;
-}
-
-.error {
-  color: red
-}
-
 input,
 textarea {
   border-radius: 5px;
@@ -517,6 +502,10 @@ textarea {
 
 .invalidInput {
   border: solid red 2px;
+}
+
+.error {
+  color: red
 }
 
 .errorCorrected {
@@ -534,14 +523,16 @@ footer {
 /*VAR MEDIA*/
 
 .bookmedia{
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 45% 1fr;
+}
+
+.visualmedia{
+  align-content: center;
 }
 
 
 /* higher than 1200px----------------------------------------- higher than 1200px*/
 @media (min-width:1201px) {
-
-
 
   h1 {
     font-size: 2.8rem;
@@ -738,11 +729,9 @@ footer {
     grid-template-columns: 1fr
   }
   
-
   .product-info-panel {
     padding: 2%;
   }
-
 
   .product-description-text {
     font-size: 1.2rem;
