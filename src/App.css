@@ -124,6 +124,11 @@ h2 {
   opacity: 40%;
 }
 
+.center-children{
+  justify-items: center;
+  align-items: center;
+}
+
 /* HEADER */
 #navbar {
   display: flex;

@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { FindLocalImg, LangContext, ScrollToProduct, ScrollToSection } from "../../../../utils";
 
-export default function ProductInfo({productType, productData, returnToDisplayProducts,}) {
-  let productdataId = "productInfo" + productData.title;
+export default function BookInfo({productType, productData, returnToDisplayProducts,}) {
+  let productdataId = "BookInfo" + productData.title;
 
   function returnToMenu() {
 
@@ -66,10 +66,10 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
     );
     btnLabel = "Play";
   } else if (productType == "books") {
-    gridClass = "grid50-50 center-children";
+    gridClass = "grid50-50";
 
     visualContent = (
-      <div name="cover">
+      <div className="product-visuals">
         <img
           className="bd-bs1 bdr-round"
           src={FindLocalImg(productData.imgurl)}
@@ -90,10 +90,11 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
   const title = <h2>{productData.title}</h2>;
   window.addEventListener("resize", resizeDialogDynamically)
 
-  let smallScreen = false;
-  const [previousRenderState, updateRenderState] = useState(smallScreen)
+  const [previousRenderState, updateRenderState] = useState(false)
 
   function resizeDialogDynamically(){
+    let smallScreen = false;
+
       if (!window.matchMedia("(max-width:1000px)").matches) {
         smallScreen = false;
       } else {
@@ -117,10 +118,11 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
   return (
     <div
       id={productdataId} className={gridClass + " product-info-panel bdr-round fadein content-cv"}>
-      {smallScreen == true ? title: undefined}
+      {previousRenderState == true ? title: undefined}
       {visualContent}
       <div name="product-description" className="flex-col rg20 spacedAway product-description">
-        {smallScreen == false ? title : undefined}
+        {previousRenderState == false ? title : undefined}
+        {previousRenderState == true ? <br/> : undefined}
         <div className="product-description-text grid rg10">
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
