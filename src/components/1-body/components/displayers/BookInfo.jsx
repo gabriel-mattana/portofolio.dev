@@ -1,147 +1,36 @@
-import React, { useContext, useState } from "react";
-import { FindLocalImg, LangContext, ScrollToProduct, ScrollToSection } from "../../../../utils";
+import React from "react";
+import { FindLocalImg } from "../../../../utils";
+import ProductInfo from "./ProductInfo";
 
-export default function BookInfo({productType, productData, returnToDisplayProducts,}) {
-  let productdataId = "BookInfo" + productData.title;
+export default function BookInfo({ productData, returnToDisplayProducts }) {
+  let content = {
+    gridClass: " grid bookmedia center-children ",
 
-  function returnToMenu() {
-
-    var productInfo = document.getElementById(productdataId);
-    productInfo.classList.remove("fadein");
-    productInfo.classList.add("fadeout");
-
-    setTimeout(() => {
-
-      if (window.matchMedia("(max-width:420px)").matches) {
-        returnToDisplayProducts();
-        setTimeout(() => {
-          ScrollToProduct(productData.title);
-        }, 100);
-      } 
-      else
-      {
-        returnToDisplayProducts();
-      }
-      
-    }, 500);   
-  }
-
-  let extratextinfo = undefined;
-  let visualContent = undefined;
-  let gridClass = undefined;
-  let btnLabel = "";
-
-  if (productType == "videogames") {
-    gridClass = "grid60-40";
-
-    extratextinfo = (
-      <React.Fragment>
-        <p>Type: {productData.type}</p>
-        <p>Engine: {productData.engine}</p>
-        <p>Team: {productData.team}</p>
-        <p>Role: {productData.role}</p>
-      </React.Fragment>
-    );
-
-    visualContent = (
-      <div className="grid rg10 product-visuals content-cv">
-        <iframe
-          src={productData.videosrc}
-          title={productData.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-          allowFullScreen
-        />
-        <div className="smallimgs_container">
-          {productData.small_imgsurl.map((imgurl, i) => (
-            <img
-              className="bd-bs1"
-              key={"small_img" + i}
-              src={FindLocalImg(imgurl)}
-              alt={productData.title + i}
-            />
-          ))}
-        </div>
-      </div>
-    );
-    btnLabel = "Play";
-  } else if (productType == "books") {
-    gridClass = "grid50-50";
-
-    visualContent = (
-      <div className="product-visuals">
+    visualContent: (
+      <div name="cover">
         <img
-          className="bd-bs1 bdr-round"
+          className="bd-bs1 rounded"
           src={FindLocalImg(productData.imgurl)}
         />
       </div>
-    );
+    ),
 
-    extratextinfo = (
+    extratextinfo: (
       <React.Fragment>
         <p>Language: {productData.language}</p>
         <p>Pseudonyme: {productData.pseudonyme}</p>
       </React.Fragment>
-    );
-    btnLabel = "Get ebook";
-  } 
+    ),
 
-    //TITLE CHANGE POSITION
-  const title = <h2>{productData.title}</h2>;
-  window.addEventListener("resize", resizeDialogDynamically)
-
-  const [previousRenderState, updateRenderState] = useState(false)
-
-  function resizeDialogDynamically(){
-    let smallScreen = false;
-
-      if (!window.matchMedia("(max-width:1000px)").matches) {
-        smallScreen = false;
-      } else {
-        smallScreen = true
-      }
-
-      if(previousRenderState != smallScreen)
-      {
-        // console.log("change screen size")
-        updateRenderState(smallScreen)
-      }
-  }
-
- resizeDialogDynamically();
-
- //LANG
- const lang = useContext(LangContext)
- let description = lang == "fr" ? productData.description.fr : productData.description.en 
-
+    btnLabel: "Get ebook",
+  };
 
   return (
-    <div
-      id={productdataId} className={gridClass + " product-info-panel bdr-round fadein content-cv"}>
-      {previousRenderState == true ? title: undefined}
-      {visualContent}
-      <div name="product-description" className="flex-col rg20 spacedAway product-description">
-        {previousRenderState == false ? title : undefined}
-        {previousRenderState == true ? <br/> : undefined}
-        <div className="product-description-text grid rg10">
-          <p>Year: {productData.year}</p>
-          <p>Genre: {productData.genre}</p>
-          {extratextinfo}
-          <br/>
-          <p>{description}</p>
-        </div>
-        <br/>
-        <div className="btncontainer flex">
-          {productData.producturl == undefined ? undefined : (
-            <a href={productData.producturl} target="_blank">
-              <button className="productbtn btngotoproduct">{btnLabel}</button>
-            </a>
-          )}
-          <button className="productbtn btnreturntomenu" onClick={returnToMenu}>
-            Return
-          </button>
-        </div>
-      </div>
-    </div>
+    <ProductInfo
+      content={content}
+      productData={productData}
+      mediaScreenMax={800}
+      returnToDisplayProducts={returnToDisplayProducts}
+    />
   );
 }

@@ -1,49 +1,23 @@
-import React, { useContext, useState } from "react";
-import { FindLocalImg, LangContext, ScrollToProduct } from "../../../../utils";
+import React from "react";
+import { FindLocalImg, ScrollToProduct } from "../../../../utils";
+import ProductInfo from "./ProductInfo";
 
-export default function GameInfo({productType, productData, returnToDisplayProducts,}) {
-  let productdataId = "GameInfo" + productData.title;
+export default function GameInfo({ productData, returnToDisplayProducts,}) {
 
-  function returnToMenu() {
+  let content = {
+    gridClass : " grid gamemedia ",
 
-    var productInfo = document.getElementById(productdataId);
-    productInfo.classList.replace("fadein", "fadeout");
-
-    setTimeout(() => {
-
-      if (window.matchMedia("(max-width:420px)").matches) {
-        returnToDisplayProducts();
-        setTimeout(() => {
-          ScrollToProduct(productData.title);
-        }, 100);
-      } 
-      else
-      {
-        returnToDisplayProducts();
-      }
-      
-    }, 500);   
-  }
-
-  let extratextinfo = undefined;
-  let visualContent = undefined;
-  let gridClass = undefined;
-  let btnLabel = "";
-
-  if (productType == "videogames") {
-    gridClass = "grid60-40";
-
-    extratextinfo = (
+    extratextinfo : (
       <React.Fragment>
         <p>Type: {productData.type}</p>
         <p>Engine: {productData.engine}</p>
         <p>Team: {productData.team}</p>
         <p>Role: {productData.role}</p>
       </React.Fragment>
-    );
+    ),
 
-    visualContent = (
-      <div className="grid rg10 product-visuals content-cv">
+    visualContent : (
+      <div className="grid rg10 visualmedia">
         <iframe
           src={productData.videosrc}
           title={productData.title}
@@ -62,85 +36,18 @@ export default function GameInfo({productType, productData, returnToDisplayProdu
           ))}
         </div>
       </div>
-    );
-    btnLabel = "Play";
-  } else if (productType == "books") {
-    gridClass = "grid50-50";
-
-    visualContent = (
-      <div className="product-visuals">
-        <img
-          className="bd-bs1 bdr-round"
-          src={FindLocalImg(productData.imgurl)}
-        />
-      </div>
-    );
-
-    extratextinfo = (
-      <React.Fragment>
-        <p>Language: {productData.language}</p>
-        <p>Pseudonyme: {productData.pseudonyme}</p>
-      </React.Fragment>
-    );
-    btnLabel = "Get ebook";
+    ),
+    btnLabel : "Play"
   } 
 
-    //TITLE CHANGE POSITION
-  const title = <h2>{productData.title}</h2>;
-  window.addEventListener("resize", resizeDialogDynamically)
-
-  const [previousRenderState, updateRenderState] = useState(false)
-
-  function resizeDialogDynamically(){
-    let smallScreen = false;
-
-      if (!window.matchMedia("(max-width:1000px)").matches) {
-        smallScreen = false;
-      } else {
-        smallScreen = true
-      }
-
-      if(previousRenderState != smallScreen)
-      {
-        // console.log("change screen size")
-        updateRenderState(smallScreen)
-      }
-  }
-
- resizeDialogDynamically();
-
- //LANG
- const lang = useContext(LangContext)
- let description = lang == "fr" ? productData.description.fr : productData.description.en 
-
+  console.log(content)
 
   return (
-    <div
-      id={productdataId} className={gridClass + " product-info-panel bdr-round fadein content-cv"}>
-      {previousRenderState == true ? title: undefined}
-      {visualContent}
-      <div name="product-description" className="flex-col rg20 spacedAway product-description">
-        {previousRenderState == false ? title : undefined}
-        {previousRenderState == true ? <br/> : undefined}
-        <div className="product-description-text grid rg10">
-          <p>Year: {productData.year}</p>
-          <p>Genre: {productData.genre}</p>
-          {extratextinfo}
-          <br/>
-          <p>{description}</p>
-        </div>
-        <br/>
-        <div className="btncontainer flex">
-          {productData.producturl == undefined ? undefined : (
-            <a href={productData.producturl} target="_blank">
-              <button className="productbtn btngotoproduct">{btnLabel}</button>
-            </a>
-          )}
-          <button className="productbtn btnreturntomenu" onClick={returnToMenu}>
-            Return
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+      <ProductInfo
+        content={content}
+        productData={productData}
+        mediaScreenMax={1000}
+        returnToDisplayProducts={returnToDisplayProducts}
+      />
+    );
 }

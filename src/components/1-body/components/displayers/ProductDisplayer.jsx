@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Miniature from "./Miniature";
 import ProductInfo from "./ProductInfo";
 import { PlaceProductInView, ScrollToSection } from "../../../../utils";
+import BookInfo from "./BookInfo";
+import GameInfo from "./GameInfo";
 
 export default function ProductDisplayer({ productType, data }) {
   var keyNb = 0;
@@ -24,9 +26,16 @@ export default function ProductDisplayer({ productType, data }) {
     let displayer = document.getElementById(displayerid);
     displayer.classList.replace("fadein", "fadeout")
 
-    let newContent = (
-      <ProductInfo productType={productType} productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
-    );
+    let newContent = undefined;
+    if(productType == "videogames")
+    {
+      newContent = <GameInfo productType={productType} productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
+    }
+    else if(productType == "books")
+    {
+      newContent = <BookInfo productType={productType} productData={productData} returnToDisplayProducts={() => updateContent(productDisplayer)}/>
+    }
+
 
     setTimeout(() => {
       updateContent(newContent);
