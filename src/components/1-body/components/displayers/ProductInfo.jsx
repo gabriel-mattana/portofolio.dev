@@ -5,9 +5,6 @@ export default function ProductInfo({content, productData, mediaScreenMax, retur
   let productdataId = "productInfo" + productData.title;
   const title = <h2>{productData.title}</h2>;
 
-  console.log(productData)
-  console.log(content)
-
   function returnToMenu() {
     let productInfo = document.getElementById(productdataId);
     productInfo.classList.remove("fadein");

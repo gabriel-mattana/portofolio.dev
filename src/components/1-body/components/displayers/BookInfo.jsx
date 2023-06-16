@@ -4,7 +4,7 @@ import ProductInfo from "./ProductInfo";
 
 export default function BookInfo({ productData, returnToDisplayProducts }) {
   let content = {
-    gridClass: " grid bookmedia center-children ",
+    gridClass: "grid bookmedia center-children",
 
     visualContent: (
       <div name="cover">

@@ -5,7 +5,7 @@ import ProductInfo from "./ProductInfo";
 export default function GameInfo({ productData, returnToDisplayProducts,}) {
 
   let content = {
-    gridClass : " grid gamemedia ",
+    gridClass : "grid gamemedia",
 
     extratextinfo : (
       <React.Fragment>
