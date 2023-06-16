@@ -119,14 +119,16 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
       id={productdataId} className={gridClass + " product-info-panel bdr-round fadein content-cv"}>
       {smallScreen == true ? title: undefined}
       {visualContent}
-      <div name="product-description" className="flex-col rg20 spacedAway">
+      <div name="product-description" className="flex-col rg20 spacedAway product-description">
+        {smallScreen == false ? title : undefined}
         <div className="product-description-text grid rg10">
-          {smallScreen == false ? title : undefined}
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>
           {extratextinfo}
+          <br/>
           <p>{description}</p>
         </div>
+        <br/>
         <div className="btncontainer flex">
           {productData.producturl == undefined ? undefined : (
             <a href={productData.producturl} target="_blank">

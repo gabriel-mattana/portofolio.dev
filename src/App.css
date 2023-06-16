@@ -427,6 +427,7 @@ img {
 
 .product-description {
   max-width: 100%;
+  padding-right: var(--const20px);
   column-gap: var(--const20px);
   justify-items: center;
   align-items: center;
