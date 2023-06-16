@@ -66,7 +66,7 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
     );
     btnLabel = "Play";
   } else if (productType == "books") {
-    gridClass = "grid50-50 center-children";
+    gridClass = "grid bookmedia center-children";
 
     visualContent = (
       <div name="cover">
@@ -90,20 +90,20 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
   const title = <h2>{productData.title}</h2>;
   window.addEventListener("resize", resizeDialogDynamically)
 
-  let smallScreen = false;
-  const [previousRenderState, updateRenderState] = useState(smallScreen)
+
+  const [isSmallScreen, updateRenderState] = useState(false)
 
   function resizeDialogDynamically(){
-      if (!window.matchMedia("(max-width:1000px)").matches) {
-        smallScreen = false;
-      } else {
-        smallScreen = true
+    let changeLayout = false;
+
+      if (window.matchMedia("(max-width:800px)").matches) {
+        changeLayout = true;
       }
 
-      if(previousRenderState != smallScreen)
+      if(isSmallScreen != changeLayout)
       {
         // console.log("change screen size")
-        updateRenderState(smallScreen)
+        updateRenderState(changeLayout)
       }
   }
 
@@ -116,11 +116,12 @@ export default function ProductInfo({productType, productData, returnToDisplayPr
 
   return (
     <div
-      id={productdataId} className={gridClass + " product-info-panel bdr-round fadein content-cv"}>
-      {smallScreen == true ? title: undefined}
+      id={productdataId} className={gridClass + " product-info-panel bdr-round fadein"}>
+      {isSmallScreen == true ? title: undefined}
       {visualContent}
       <div name="product-description" className="flex-col rg20 spacedAway product-description">
-        {smallScreen == false ? title : undefined}
+        {isSmallScreen == false ? title : undefined}
+        {isSmallScreen == true ? <br/> : undefined}
         <div className="product-description-text grid rg10">
           <p>Year: {productData.year}</p>
           <p>Genre: {productData.genre}</p>

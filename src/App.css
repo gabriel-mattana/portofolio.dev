@@ -541,8 +541,17 @@ footer {
   height: var(--HeaderHeight);
 }
 
+/*VAR MEDIA*/
+
+.bookmedia{
+  grid-template-columns: 45% 55%;
+}
+
+
 /* higher than 1200px----------------------------------------- higher than 1200px*/
 @media (min-width:1201px) {
+
+
 
   h1 {
     font-size: 2.8rem;
@@ -660,11 +669,7 @@ footer {
   }
 
   /*Product*/
-  .product-info-panel {
-    grid-template-columns: 1fr;
-    row-gap: var(--const10px);
-  }
-
+  
   .product-visuals {
     grid-template-columns: 70% 30%;
     column-gap: 10px;
@@ -727,6 +732,10 @@ footer {
 
   /*Product*/
 
+  .bookmedia{
+    grid-template-columns: 1fr
+  }
+  
 
   .product-info-panel {
     padding: 2%;
