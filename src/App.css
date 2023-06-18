@@ -420,10 +420,7 @@ img {
 }
 
 .product-description {
-  width: 100%;
-  column-gap: var(--const20px);
-  justify-items: center;
-  align-items: center;
+  height: 100%;
 }
 
 .product-description-text {
