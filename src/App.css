@@ -381,6 +381,10 @@ img {
   column-gap: 10px;
 }
 
+.product-description {
+height: 100%;
+}
+
 .product-description-text {
   text-align: left;
   font-size: 1.3rem;
