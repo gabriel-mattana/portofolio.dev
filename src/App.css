@@ -270,13 +270,15 @@ h2 {
 
 .meicon {
   border-radius: 100%;
+  max-width: 20vw;
 }
 
 /* DISPLAYER */
 .productdisplayer {
-  display: grid;
   width: 100%;
   gap: var(--const20px);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
 }
 
 .miniature-container {
@@ -522,41 +524,20 @@ footer {
 
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+}
+
+h2{
+  font-size: 2rem;
 }
 
 h3{
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 500;
-}
-
-
-/* higher than 1200px----------------------------------------- higher than 1200px*/
-@media (min-width:1201px) {
-
-  .productdisplayer {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 1fr;
-  }
-
-  .meicon {
-    max-width: 20vw;
-  }
-
-  /*product*/
-
-  h2 {
-    font-size: 2.4rem;
-  }
-
 }
 
 /* 1200px-------------------------------------------- 1200px*/
 @media (max-width:1200px) {
-
-  h1 {
-    font-size: 2.5rem;
-  }
 
   .productdisplayer {
     grid-template-columns: repeat(3, 1fr);
@@ -717,20 +698,12 @@ h3{
     font-size: 1.5rem;
   }
 
-  .meicon {
-    min-width: 200px;
-    max-width: 50%;
+  h2 {
+    font-size: 1.3rem;
   }
 
   .intro-font {
     font-size: 1.1rem;
-
-  }
-
-  /* product */
-
-  h2 {
-    font-size: 1.5rem;
   }
 
   .miniature-title{
@@ -743,6 +716,11 @@ h3{
 
   .productbtn {
     font-size: 1rem;
+  }
+
+  .meicon {
+    min-width: 200px;
+    max-width: 50%;
   }
 }
 

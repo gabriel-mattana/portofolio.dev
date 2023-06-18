@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Miniature from "./Miniature";
-import ProductInfo from "./ProductInfo";
-import { PlaceProductInView, ScrollToSection } from "../../../../utils";
+import { ScrollToSection } from "../../../../utils";
 import BookInfo from "./BookInfo";
 import GameInfo from "./GameInfo";
 
@@ -10,7 +9,7 @@ export default function ProductDisplayer({ productType, data }) {
   let displayerid = "displayer" + productType;
 
   let productDisplayer = (
-  <div id={displayerid} className="productdisplayer fadein">
+  <div id={displayerid} className="grid productdisplayer fadein">
     {data.map((item) => (
     <Miniature
       data={item}
