@@ -1,7 +1,7 @@
 import { useForm } from "@formspree/react";
 import SectionTemplate from "./SectionTemplate";
 import { useState } from "react";
-import InputField from "../components/form/ContactForm_InputField";
+import InputField from "../components/form/InputField";
 
 const MUST_BE_FULFILLED = "*Mandatory";
 

@@ -11,19 +11,11 @@ export default function ProductInfo({content, productData, mediaScreenMax, retur
     productInfo.classList.add("fadeout");
 
     setTimeout(() => {
-
-      if (window.matchMedia("(max-width:420px)").matches) {
-        returnToDisplayProducts();
-        setTimeout(() => {
-          ScrollToProduct(productData.title);
-        }, 100);
-      } 
-      else
-      {
-        returnToDisplayProducts();
-      }
-      
-    }, 500);   
+      returnToDisplayProducts();
+      setTimeout(() => {
+        ScrollToProduct(productData.title);
+      }, 100);
+    }, 500);
   }
 
   //TITLE CHANGE POSITION
