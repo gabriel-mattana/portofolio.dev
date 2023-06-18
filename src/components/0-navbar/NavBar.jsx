@@ -84,7 +84,7 @@ function NavBar({changeLangCallBack}) {
 
   return (
     <React.Fragment>
-    <nav id="navbar">
+    <nav id="navbar" className="flex">
       <div className="navbrand">
         <NavButton link={"introduction"} label="Gabriel Mattana" />
       </div>

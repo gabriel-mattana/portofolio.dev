@@ -198,7 +198,7 @@ let astraWorld = {
   pseudonyme: "Gehaimme",
   description: {
     en:
-      "When death strikes, the deads gain the Afterlife. An inhospitable world ruled by an eternal star, " +
+      "When death strikes, the dead reach the Afterlife. An inhospitable world ruled by an eternal star, " +
       "where souls seem condemned to an endless wandering. What is the purpose of this second existence? " +
       "Which dark secrets does this world hide? The answers exist, and the Star is their keeper. ",
     fr:

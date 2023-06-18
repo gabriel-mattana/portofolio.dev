@@ -32,11 +32,11 @@ export default function Miniature({ data, popupCallback }) {
 
   return (
     <div
-      className="miniature-container"
+      className="flex miniature-container"
       onMouseEnter={shrinkMiniature}
       onMouseLeave={restoreMiniature}
     >
-      <div id={data.title} className="miniature" onClick={onClick}>
+      <div id={data.title} className="grid miniature" onClick={onClick}>
         <img src={FindLocalImg(data.imgurl)} />
         <div className="grid center-children miniature-title">
           <p>{data.title}</p>

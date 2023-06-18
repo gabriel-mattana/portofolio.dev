@@ -25,7 +25,7 @@ export default function GameInfo({ productData, returnToDisplayProducts,}) {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
           allowFullScreen
         />
-        <div className="smallimgs_container">
+        <div className="grid smallimgs_container">
           {productData.small_imgsurl.map((imgurl, i) => (
             <img
               className="bd-bs1"
@@ -46,7 +46,7 @@ export default function GameInfo({ productData, returnToDisplayProducts,}) {
       <ProductInfo
         content={content}
         productData={productData}
-        mediaScreenMax={1000}
+        mediaScreenMax={1200}
         returnToDisplayProducts={returnToDisplayProducts}
       />
     );

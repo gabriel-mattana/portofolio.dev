@@ -118,7 +118,6 @@ h2 {
 
 /* HEADER */
 #navbar {
-  display: flex;
   position: fixed;
   background-color: grey;
   box-shadow: 0px 5px 15px 0px black;
@@ -282,7 +281,6 @@ h2 {
 }
 
 .miniature-container {
-  display: flex;
   min-height: 100%;
   max-height: 100%;
   justify-content: center;
@@ -292,7 +290,6 @@ h2 {
 .miniature {
   max-height: 100%;
   width: 100%;
-  display: grid;
   border: 1.5px solid rgb(0, 0, 0);
   border-radius: 15px;
   overflow: hidden;
@@ -404,7 +401,6 @@ img {
 }
 
 .smallimgs_container {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
 }
@@ -464,11 +460,6 @@ iframe {
 /* FORM */
 .text {
   justify-content: left;
-}
-
-.form-container {
-  display: grid;
-  padding: 5% 20%;
 }
 
 form {
@@ -533,7 +524,7 @@ h2{
 
 h3{
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* 1200px-------------------------------------------- 1200px*/
@@ -565,6 +556,20 @@ h3{
 
   .productbtn {
     font-size: 1.3rem;
+  }
+
+  .gamemedia{
+    grid-template-columns: 1fr;
+  }
+
+  .visualmedia{
+    grid-template-columns: 70% 1fr;
+    column-gap: var(--const10px);
+  }
+
+  .smallimgs_container {
+    grid-template-columns: 1fr;
+    row-gap: var(--const5px);
   }
 }
 
@@ -601,20 +606,6 @@ h3{
 
   /*Product*/
 
-  .gamemedia{
-    grid-template-columns: 1fr;
-  }
-
-  .visualmedia{
-    grid-template-columns: 70% 1fr;
-    column-gap: var(--const10px);
-  }
-
-  .smallimgs_container {
-    grid-template-columns: 1fr;
-    row-gap: var(--const5px);
-  }
-
   .productbtn {
     font-size: 1.2rem;
   }
@@ -630,6 +621,14 @@ h3{
 
   h1 {
     font-size: 2rem;
+  }
+
+  h2{
+    font-size: 1.8rem;
+  }
+
+  h3{
+    font-size: 1.4rem;
   }
 
   .section-container {
@@ -681,10 +680,7 @@ h3{
 
   .productbtn {
     font-size: 1.2rem;
-  }
-
-
-
+  } 
 }
 
 /* 600px-------------------------------------------- 600px*/
