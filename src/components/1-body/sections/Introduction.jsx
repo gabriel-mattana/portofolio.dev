@@ -10,7 +10,7 @@ export default function Introduction() {
 
   const content = (
     <div className="grid intro">
-      <div className="grid items-ch">
+      <div className="grid center-children">
         <img
           className="meicon bd-bs1"
           src={FindLocalImg("icons/me_icon.jpg")}
