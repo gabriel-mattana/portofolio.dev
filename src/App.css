@@ -34,6 +34,9 @@
   font-weight: 400;
 }
 
+img {
+  width: 100%;
+}
 
 /* UTILS */
 .flex {
@@ -50,44 +53,20 @@
   display: grid;
 }
 
-.rg10 {
-  row-gap: 10px;
-}
-
 .rg20 {
   row-gap: var(--const20px);
 }
 
-.cg20 {
-  column-gap: var(--const20px);
-}
-
-.cg10 {
-  column-gap: var(--const10px);
-}
-
-.bd-bs1 {
+.bordered {
   border: black solid 1px;
 }
 
-.bdr-round {
+.round {
   border-radius: var(--const20px);
 }
 
 .spacedAway {
   justify-content: space-between;
-}
-
-.items-ch {
-  justify-items: center;
-}
-
-.content-cv {
-  align-content: center;
-}
-
-h2 {
-  text-align: center;
 }
 
 .hidden{
@@ -103,7 +82,7 @@ h2 {
   z-index: 1;
 }
 
-.round{
+.circle{
   border-radius: 100%;
 }
 
@@ -116,6 +95,10 @@ h2 {
   align-items: center;
 }
 
+.w100{
+  width: 100%;
+}
+
 /* HEADER */
 #navbar {
   position: fixed;
@@ -123,7 +106,6 @@ h2 {
   box-shadow: 0px 5px 15px 0px black;
   color: wheat;
   height: var(--HeaderHeight);
-  width: 100%;
   z-index: 2;
   top: 0;
   background-color: var(--navbarColor);
@@ -209,7 +191,6 @@ h2 {
 
 #veil{
   position: fixed;
-  width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
@@ -274,7 +255,6 @@ h2 {
 
 /* DISPLAYER */
 .productdisplayer {
-  width: 100%;
   gap: var(--const20px);
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 1fr;
@@ -288,16 +268,12 @@ h2 {
 }
 
 .miniature {
+  max-width: 100%;
   max-height: 100%;
-  width: 100%;
   border: 1.5px solid rgb(0, 0, 0);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: var(--shadowBox);
-}
-
-img {
-  width: 100%;
 }
 
 .miniature-selected {
@@ -405,14 +381,6 @@ img {
   column-gap: 10px;
 }
 
-.smallimgs_container img {
-  width: 100%;
-}
-
-.product-description {
-  height: 100%;
-}
-
 .product-description-text {
   text-align: left;
   font-size: 1.3rem;
@@ -450,7 +418,6 @@ img {
 }
 
 iframe {
-  width: 100%;
   aspect-ratio: 16/9;
   align-self: center;
   border-color: black solid 10px;
@@ -511,6 +478,7 @@ footer {
 
 .visualmedia{
   align-content: center;
+  row-gap: var(--const10px);
 }
 
 
@@ -532,7 +500,6 @@ h3{
 
   .productdisplayer {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;
   }
 
   .intro {

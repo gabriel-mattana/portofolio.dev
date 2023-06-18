@@ -9,7 +9,7 @@ export default function ProductDisplayer({ productType, data }) {
   let displayerid = "displayer" + productType;
 
   let productDisplayer = (
-  <div id={displayerid} className="grid productdisplayer fadein">
+  <div id={displayerid} className="grid productdisplayer w100 fadein">
     {data.map((item) => (
     <Miniature
       data={item}

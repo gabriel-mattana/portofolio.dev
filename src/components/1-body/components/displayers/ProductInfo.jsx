@@ -53,7 +53,7 @@ export default function ProductInfo({content, productData, mediaScreenMax, retur
 
   return (
     <div
-      id={productdataId} className={content.gridClass + " product-info-panel bdr-round fadein"}>
+      id={productdataId} className={content.gridClass + " product-info-panel round fadein"}>
       {isSmallScreen == true ? title: undefined}
       {isSmallScreen == true ? <br/> : undefined}
       {content.visualContent}

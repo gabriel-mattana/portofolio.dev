@@ -36,7 +36,7 @@ export default function Miniature({ data, popupCallback }) {
       onMouseEnter={shrinkMiniature}
       onMouseLeave={restoreMiniature}
     >
-      <div id={data.title} className="grid miniature" onClick={onClick}>
+      <div id={data.title} className="grid miniature w100" onClick={onClick}>
         <img src={FindLocalImg(data.imgurl)} />
         <div className="grid center-children miniature-title">
           <p>{data.title}</p>

@@ -21,6 +21,7 @@ export default function GameInfo({ productData, returnToDisplayProducts,}) {
         <iframe
           src={productData.videosrc}
           title={productData.title}
+          className="w100"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
           allowFullScreen
