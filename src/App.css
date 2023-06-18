@@ -121,6 +121,7 @@ img {
   text-decoration: none;
   background-color: transparent;
   height: 100%;
+  min-height: var(--minHeaderHeight);
   border: 0;
   color: wheat;
   min-width: 120px;
