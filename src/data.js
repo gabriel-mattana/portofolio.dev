@@ -211,7 +211,7 @@ let astraWorld = {
 };
 
 let litius = {
-  title: "The enquiries of Litius Jurdal",
+  title: "The investigations of Litius Jurdal",
   imgurl: "/books/litius.jpg",
   year: "2018",
   genre: "steam-punk, thriller",

@@ -30,7 +30,6 @@
   color: rgb(255, 255, 255);
   background-color: var(--appbgColor);
   text-align: center;
-  font-size: 100%;
   font-family: sans-serif;
   font-weight: 400;
 }
@@ -147,7 +146,6 @@ h2 {
   border: 0;
   color: wheat;
   min-width: 120px;
-  font-size: 1.25rem;
   padding: 5px;
 }
 
@@ -292,7 +290,6 @@ h2 {
   max-height: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 1.3em
 }
 
 .miniature {
@@ -360,12 +357,12 @@ img {
   border-color: white;
 }
 
-.miniature-details {
+.miniature-title{
   height: 70px;
-  padding: 10px 5px;
-  display: grid;
+  padding: 2.5%;
   background-color: black;
   color: wheat;
+  font-size: 1.3em;
 }
 
 /* POPUP */
@@ -425,7 +422,7 @@ img {
 
 .product-description-text {
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.25;
 }
 
@@ -444,6 +441,7 @@ img {
   padding: 10px;
   min-width: 100px;
   height: 100%;
+  font-size: 1.4rem;
 }
 
 .okbtn {
@@ -528,12 +526,18 @@ footer {
 }
 
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h3{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+
 /* higher than 1200px----------------------------------------- higher than 1200px*/
 @media (min-width:1201px) {
-
-  h1 {
-    font-size: 2.5rem;
-  }
 
   .intro-font {
     font-size: 1.5rem;
@@ -554,13 +558,6 @@ footer {
     font-size: 2.4rem;
   }
 
-  .product-description-text {
-    font-size: 1.4rem;
-  }
-
-  .productbtn {
-    font-size: 1.4rem;
-  }
 }
 
 /* 1200px-------------------------------------------- 1200px*/
@@ -592,10 +589,6 @@ footer {
   /*Product*/
   h2 {
     font-size: 2rem;
-  }
-
-  .product-description-text {
-    font-size: 1.3rem;
   }
 
   .productbtn {
@@ -648,10 +641,6 @@ footer {
   .smallimgs_container {
     grid-template-columns: 1fr;
     row-gap: var(--const5px);
-  }
-
-  .product-description-text {
-    font-size: 1.2rem;
   }
 
   .productbtn {
@@ -722,6 +711,8 @@ footer {
     font-size: 1.2rem;
   }
 
+
+
 }
 
 /* 600px-------------------------------------------- 600px*/
@@ -751,6 +742,10 @@ footer {
     font-size: 1.5rem;
   }
 
+  .miniature-title{
+    font-size: 1.2em;
+  }
+
   .product-description-text {
     font-size: 1.1rem;
   }
@@ -763,6 +758,14 @@ footer {
 /* 420px-------------------------------------------- 420px*/
 @media (max-width:360px) {
 
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .miniature-title {
+    font-size: 1.1em;
+  }
+
   .navbutton{
     font-size: 1rem;
   }
@@ -771,13 +774,8 @@ footer {
     min-width: 150px;
   }
 
-  h1 {
-    font-size: 1.8rem;
-  }
-
   .productdisplayer {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
   }
-
 }

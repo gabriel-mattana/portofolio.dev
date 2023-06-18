@@ -38,9 +38,8 @@ export default function Miniature({ data, popupCallback }) {
     >
       <div id={data.title} className="miniature" onClick={onClick}>
         <img src={FindLocalImg(data.imgurl)} />
-        <div className="miniature-details">
+        <div className="grid center-children miniature-title">
           <p>{data.title}</p>
-          <p>{data.year}</p>
         </div>
       </div>
     </div>

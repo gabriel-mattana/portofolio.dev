@@ -10,8 +10,8 @@ export default function NavButton({link, label})
   }
 
   return (
-    <button className="navbutton"  onClick={GoToSection}>
-      {label}
+    <button className="navbutton fontmedia"  onClick={GoToSection}>
+     <h3>{label}</h3> 
     </button>
   );
 }
