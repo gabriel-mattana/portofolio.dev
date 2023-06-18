@@ -9,7 +9,7 @@ export default function Introduction() {
   const introToUse = lang == "fr" ? intro.fr : intro.en;
 
   const content = (
-    <div className="grid intro intro-font">
+    <div className="grid intro">
       <div className="grid items-ch">
         <img
           className="meicon bd-bs1"
