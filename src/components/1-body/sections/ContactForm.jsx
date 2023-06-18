@@ -3,7 +3,7 @@ import SectionTemplate from "./SectionTemplate";
 import { useState } from "react";
 import InputField from "../components/form/ContactForm_InputField";
 
-const MUST_BE_FULFILLED = "This field must be fulfilled";
+const MUST_BE_FULFILLED = "*Mandatory";
 
 export default function ContactForm() {
   let [httpResponseState, updateHttpPostRequest] = useForm("xoqzorwz");

@@ -1,5 +1,6 @@
 :root {
   --HeaderHeight: 10vh;
+  --minHeaderHeight: 60px;
   --offsetFromHeader: calc(var(--HeaderHeight) * 1.25);
   --navbtnFont: 18px;
   --posX: 0px;
@@ -106,6 +107,7 @@ img {
   box-shadow: 0px 5px 15px 0px black;
   color: wheat;
   height: var(--HeaderHeight);
+  min-height: 60px;
   z-index: 2;
   top: 0;
   background-color: var(--navbarColor);
@@ -118,7 +120,7 @@ img {
 .navbutton {
   text-decoration: none;
   background-color: transparent;
-  height: var(--HeaderHeight);
+  height: 100%;
   border: 0;
   color: wheat;
   min-width: 120px;
@@ -141,6 +143,8 @@ img {
 
 .btnlang{
   background-color: transparent;
+  min-height: var(--minHeaderHeight);
+  min-width: var(--minHeaderHeight);
   max-height: var(--HeaderHeight);
   max-width: var(--HeaderHeight);
   border: 0;
