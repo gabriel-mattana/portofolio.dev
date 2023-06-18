@@ -90,7 +90,7 @@ function NavBar({changeLangCallBack}) {
       </div>
       {screenSizeState == true ? hamburger : navButtons}
     </nav>
-    <div id="veil" className="hidden" onClick={toggleDropDown}/>
+    <div id="veil" className="w100 hidden" onClick={toggleDropDown}/>
     </React.Fragment>
   );
 }
