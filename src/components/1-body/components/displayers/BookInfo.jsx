@@ -9,7 +9,7 @@ export default function BookInfo({ productData, returnToDisplayProducts }) {
     visualContent: (
       <div name="cover">
         <img
-          className="bd-bs1 rounded"
+          className="bordered round"
           src={FindLocalImg(productData.imgurl)}
         />
       </div>

@@ -13,7 +13,7 @@ export let intro = {
   ],
   fr: [
     "Full stack programmeur au bureau, game developer sur mon temps libre, je fus également écrivain, juriste et policier. ",
-    "Ces experiences, ansi que mes voyages en terres étangères, m'ont guidé vers ce que j'aimais: créer, partager et apprendre. ",
+    "Ces experiences, ainsi que mes voyages, m'ont guidé vers ce que j'aime: créer, partager et apprendre. ",
     "L'inconnu est terrifiant, mais c'est en bravant nos peurs qu'on surpasse nos limites. ",
   ],
 };
